@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
     toggle.focus();
   }
 
-  var burgerMenu = document.querySelector('.header .menu-button');
+  /*var burgerMenu = document.querySelector('.header .menu-button');
   var userMenu = document.querySelector('#user-nav');
 
   burgerMenu.addEventListener('click', function(e) {
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (userMenu.children.length === 0) {
     burgerMenu.style.display = 'none';
-  }
+  }*/
 
   // Toggles expanded aria to collapsible elements
   var collapsible = document.querySelectorAll('.collapsible-nav, .collapsible-sidebar');

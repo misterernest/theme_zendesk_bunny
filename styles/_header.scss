@@ -2,16 +2,29 @@
 $header-height: 71px;
 
 .header {
-  @include max-width-container;
-  position: relative;
-  align-items: center;
-  display: flex;
-  height: $header-height;
-  justify-content: space-between;
+  background-color: $brand_background_color;
+
+  .header-container {
+    color: $brand_text_color;
+    @include max-width-container;
+    position: relative;
+    align-items: center;
+    display: flex;
+    height: $header-height;
+    justify-content: space-between;
+  }
 }
+
+
 
 .logo img {
   max-height: 37px;
+}
+
+.page-title {
+  flex: 1;
+  font-size: 15px;
+  padding: 0 0 3px 10px;
 }
 
 .user-nav {
@@ -59,7 +72,13 @@ $header-height: 71px;
       text-decoration: underline;
     }
 
-    &.sign-in { display: inline-block; }
+    &.sign-in {
+      display: inline-block;
+      color: $brand_text_color;
+      padding: 5px 10px;
+      background: $link_color;
+      border-radius: 6px;
+    }
   }
 
   .hide-on-mobile {
