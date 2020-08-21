@@ -1,6 +1,23 @@
 <footer class="footer">
-  <div class="footer-inner">
-    {{#link 'help_center'}}{{help_center.name}}{{/link}}
+  <div class="footer-inner footer-top">
+    <div class="footer__column">
+      <div class="title">For customer</div>
+      {{#link 'help_center'}}Help center{{/link}}
+      <a href="">Become an affiliate</a>
+      <a href="">API</a>
+      <a href="">Library</a>
+    </div>
+    <div class="footer__column">
+      <div class="title">For Pros</div>
+      <a href="">Apply as a pro</a>
+      {{#link 'help_center'}}Help center{{/link}}
+      <a href="">Community</a>
+    </div>
+    <div class="footer__column">
+        <div class="title">About</div>
+        <a href="">Our story</a>
+        <a href="">Careers</a>
+      </div>
 
     <div class="footer-language-selector">
       {{#if alternative_locales}}
@@ -21,5 +38,18 @@
         </div>
       {{/if}}
     </div>
+  </div>
+  <div class="footer-inner footer-middle">
+    <div class="logo-footer">
+      {{#link 'help_center'}}
+      <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}">
+      {{/link}}
+    </div>
+  </div>
+  <div class="footer-inner footer-bottom">
+    <span> 2020 Bunny Studio</span>
+    <a href="">Privacy</a>
+    <a href="">Term of use</a>
+    <a href="">Cookies policy</a>
   </div>
 </footer>
