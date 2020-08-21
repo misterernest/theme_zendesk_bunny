@@ -1,15 +1,10 @@
 /***** Footer *****/
-@font-face{
-  font-family: "Open Sans";
-  src: url("https://fonts.googleapis.com/css?family=Open+Sans");
-}
 
 .footer {
   border-top: 1px solid $border-color;
   margin-top: 60px;
   padding: 30px 0 15px 0;
   background-color: $brand_background_color;
-  font-family: "Open Sans";
 
   a { color: $secondary-text-color; }
 
@@ -22,7 +17,6 @@
 
     .footer__column {
       display: flex;
-      //justify-content: space-between;
       flex-flow: column nowrap;
       flex-grow: 1;
       align-items: flex-start;
