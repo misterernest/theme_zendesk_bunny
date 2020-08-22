@@ -39,17 +39,17 @@
             <div class="article-meta">
               {{#if settings.show_article_author}}
                 {{#link 'user_profile' id=article.author.id}}
-                  <b>{{article.author.name}}</b>
+                  <b>{{article.author.name}} #9221SAS</b>
                 {{/link}}
               {{/if}}
 
-              <ul class="meta-group">
-                {{#is article.created_at article.edited_at}}
-                  <li class="meta-data">{{date article.created_at timeago=true}}</li>
-                {{else}}
-                  <li class="meta-data">{{date article.edited_at timeago=true}}</li>
-                  <li class="meta-data">{{t 'updated'}}</li>
-                {{/is}}
+              <ul class="meta-group header__article-data">
+                <span class="fa-calendar-alt">22-07-2020</span>
+                <span class="fa-comment">3,456</span>
+                <span class="fa-eye">5 hours ago</span>
+                <span class="fa-thumbs-up">8,567</span>
+                <span class="header__button-completed">Completed</span>
+                <span class="header__button-answered">Answered</span>
               </ul>
             </div>
           </div>
@@ -77,7 +77,19 @@
             </div>
           </div>
         </section>
-        <footer class="article__footer"></footer>
+        <footer class="article__footer">
+          <div class="article__footer-tags">
+            <span class="article-tag">Booking</span>
+            <span class="article-tag">Rates</span>
+            <span class="article-tag">Treatment</span>
+          </div>
+          <div class="article__footer-buttons">
+            <div class="article-buttons">
+              <a href="#">Like</a>
+              <a href="#">Share</a>
+            </div>
+          </div>
+        </footer>
       </article>
 
     </div>
@@ -90,6 +102,6 @@
         {{#if settings.show_related_articles}}
           {{related_articles}}
         {{/if}}
-      </div>
+    </div>
   </div>
 </div>

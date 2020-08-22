@@ -3,6 +3,11 @@
   position: relative;
 
   input[type="search"] {
+
+    @include mobile {
+      width: 100%;
+    }
+
     border: 1px solid $border-color;
     border-radius: 5px;
     box-sizing: border-box;

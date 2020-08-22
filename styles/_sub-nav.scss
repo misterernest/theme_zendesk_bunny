@@ -28,6 +28,11 @@
   }
 
   .search-container {
+
+    @include mobile {
+      align-self: normal;
+    }
+    
     align-self: flex-end;
   }
 }
