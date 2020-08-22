@@ -1103,6 +1103,7 @@ ul {
 
 .footer-bottom span {
   color: $brand_text_color;
+  font-weight: 500;
 }
 
 .footer-bottom span::before, .footer-bottom span.notification-inline.notification-error::before {
@@ -1112,6 +1113,7 @@ ul {
 
 .footer-bottom a {
   color: $link_color;
+  font-weight: 700;
 }
 
 .footer-bottom a::before, .footer-bottom a.notification-inline.notification-error::before {
@@ -1161,14 +1163,14 @@ ul {
 
 .search input[type="search"] {
   border: 1px solid #ddd;
-  border-radius: 30px;
+  border-radius: 5px;
   box-sizing: border-box;
   color: #666;
   height: 40px;
   padding-left: 40px;
   padding-right: 20px;
   -webkit-appearance: none;
-  width: 100%;
+  width: 350px;
 }
 
 [dir="rtl"] .search input[type="search"] {
@@ -1282,9 +1284,9 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 30px;
   min-height: 50px;
   padding-bottom: 15px;
+  height: 80px;
 }
 
 @media (min-width: 768px) {
@@ -1302,6 +1304,14 @@ ul {
 
 .sub-nav input[type="search"]::after {
   font-size: 15px;
+}
+
+.sub-nav .breadcrumbs li > a {
+  color: #5e6174;
+}
+
+.sub-nav .search-container {
+  align-self: flex-end;
 }
 
 /***** Blocks *****/
@@ -1728,10 +1738,9 @@ ul {
 
 @media (min-width: 1024px) {
   .article {
-    flex: 1 0 66%;
-    max-width: 66%;
+    max-width: 90%;
     min-width: 640px;
-    padding: 0 30px;
+    padding: 0;
   }
 }
 
@@ -1742,8 +1751,12 @@ ul {
 
 @media (min-width: 1024px) {
   .article-container {
-    flex-direction: row;
+    flex-direction: column;
   }
+}
+
+.article-container-relatives {
+  padding-right: 20px;
 }
 
 .article-header {
@@ -1909,20 +1922,34 @@ ul {
 }
 
 .article-relatives {
-  border-top: 1px solid #ddd;
   display: flex;
-  flex-direction: column;
-  padding: 20px 0;
+  flex-direction: row;
+  padding: 4% 2%;
 }
 
 @media (min-width: 768px) {
   .article-relatives {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 
+.article-relatives span {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.article-relatives a {
+  background-color: $link_color;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 2%;
+  width: 70%;
+  align-self: center;
+  margin-bottom: 60px;
+}
+
 .article-relatives > * {
-  flex: 1 0 50%;
   min-width: 50%;
   overflow-wrap: break-word;
   margin-right: 0;
@@ -1979,6 +2006,10 @@ ul {
   transform: rotate(0.5turn);
 }
 
+.article .article__footer {
+  border-bottom: 1px solid #ddd;
+}
+
 .sidenav-title {
   font-size: 15px;
   position: relative;
@@ -2003,6 +2034,54 @@ ul {
 .recent-articles li,
 .related-articles li {
   margin-bottom: 15px;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.aside {
+  margin: 4% 0% 0 4%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 30%;
+}
+
+.aside .aside__text {
+  align-self: center;
+  text-align: center;
+}
+
+.aside .aside__button {
+  background-color: $link_color;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: bold;
+  padding: 1% 2%;
+  width: 70%;
+  align-self: center;
+  margin: 20px auto 60px auto;
+  text-decoration: none;
+}
+
+.aside .aside__button:hover {
+  text-decoration: none;
+}
+
+.aside .related-articles .related-articles-title {
+  color: $text_color;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.aside .related-articles ul > li > a {
+  color: $text_color;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 /***** Attachments *****/
@@ -4828,4 +4907,34 @@ html[dir="rtl"] .notification-left-aligned {
 
 .dropdown-chevron-icon {
   vertical-align: middle;
+}
+
+/******** Aside **********/
+.aside .article-relatives {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4%;
+}
+
+@media (min-width: 768px) {
+  .aside .article-relatives {
+    flex-direction: row;
+  }
+}
+
+.aside .article-relatives > * {
+  flex: 1 0 50%;
+  min-width: 50%;
+  overflow-wrap: break-word;
+  margin-right: 0;
+}
+
+.aside .article-relatives > *:last-child {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .aside .article-relatives > * {
+    padding-right: 20px;
+  }
 }

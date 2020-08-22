@@ -7,9 +7,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 30px;
+  //margin-bottom: 30px;
   min-height: 50px;
   padding-bottom: 15px;
+  height: 80px;
 
   //Inner pages search field
   input[type="search"] {
@@ -18,5 +19,15 @@
     }
 
     &::after { font-size: $font-size-base; }
+  }
+
+  .breadcrumbs {
+    li > a {
+      color: #5e6174;
+    }
+  }
+
+  .search-container {
+    align-self: flex-end;
   }
 }
