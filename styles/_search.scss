@@ -3,15 +3,20 @@
   position: relative;
 
   input[type="search"] {
+
+    @include mobile {
+      width: 100%;
+    }
+
     border: 1px solid $border-color;
-    border-radius: 30px;
+    border-radius: 5px;
     box-sizing: border-box;
     color: $field-text-color;
     height: 40px;
     padding-left: 40px;
     padding-right: 20px;
     -webkit-appearance: none;
-    width: 100%;
+    width: 350px;
 
     [dir="rtl"] & {
       padding-right: 40px;

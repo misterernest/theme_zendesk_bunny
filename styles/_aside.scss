@@ -1,0 +1,25 @@
+/******** Aside **********/
+
+.aside {
+    .article-relatives {
+      @include tablet {
+        flex-direction: row;
+      }
+  
+      //border-top: 1px solid $border-color;
+      display: flex;
+      flex-direction: column;
+      padding-left: 4%;
+  
+      > * {
+        flex: 1 0 50%; //Explicit values needed whith flex-direction: column for IE11
+        min-width: 50%;
+        overflow-wrap: break-word;
+        margin-right: 0;
+  
+        &:last-child { padding: 0; }
+  
+        @include tablet { padding-right: 20px; }
+      }
+    }
+  }
