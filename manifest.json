@@ -51,25 +51,18 @@
           "value": "#151D39"
         },
         {
-          "identifier": "background_color_main",
+          "identifier": "background_color_second",
           "type": "color",
           "description": "background_color_brand",
           "label": "background_color_label",
-          "value": "#151D39"
-        },
-        {
-          "identifier": "background_color_section_1",
-          "type": "color",
-          "description": "background_color_brand",
-          "label": "background_color_label_main_section",
           "value": "#f5f8ff"
         },
         {
-          "identifier": "background_color_section_2",
+          "identifier": "label_icon_color",
           "type": "color",
-          "description": "background_color_brand",
-          "label": "background_color_label_second_section",
-          "value": "#FFFFFF"
+          "description": "label icon color",
+          "label": "label_icon_color",
+          "value": "#5f6275"
         }
       ]
     },
