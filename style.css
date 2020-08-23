@@ -1993,11 +1993,6 @@ ul {
   text-decoration: none;
 }
 
-.article .article__footer .article__footer-buttons .article-buttons a::before {
-  content: "♣ ";
-  color: black;
-}
-
 .sidenav-title {
   font-size: 15px;
   position: relative;
@@ -2022,11 +2017,6 @@ ul {
 .header__article-data > span {
   margin-right: 10px;
   color: $link_color;
-}
-
-.header__article-data span:nth-child(-n+4)::before, .header__article-data .notification-inline.notification-error:nth-child(-n+4)::before {
-  content: '♣ ';
-  color: black;
 }
 
 .recent-articles li,
