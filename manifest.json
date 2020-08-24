@@ -254,6 +254,12 @@
           "type": "file",
           "description": "community_image_description",
           "label": "community_image_label"
+        },
+        {
+          "identifier": "bunnystudio_hc_main_banner_1",
+          "type": "file",
+          "description": "bunnystudio_hc_main_banner_1_description",
+          "label": "bunnystudio_hc_main_banner_1_label"
         }
       ]
     },

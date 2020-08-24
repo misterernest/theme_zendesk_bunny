@@ -444,6 +444,11 @@ ul {
   white-space: nowrap;
 }
 
+.fas:before, .fas.notification-inline.notification-error::before, .fas:after {
+  color: $label_icon_color;
+  margin-right: 5px;
+}
+
 /***** Buttons *****/
 .button, .pagination-next-link, .pagination-prev-link, .pagination-first-link, .pagination-last-link, .subscriptions-subscribe button, .requests-table-toolbar .organization-subscribe button, .community-follow button, .article-subscribe button, .section-subscribe button, .split-button button {
   background-color: transparent;
@@ -984,8 +989,8 @@ ul {
 }
 
 .avatar img {
-  height: 40px;
-  width: 40px;
+  height: 70px;
+  width: 70px;
 }
 
 .avatar .icon-agent {
@@ -1215,7 +1220,7 @@ ul {
 
 /***** Hero component *****/
 .hero {
-  background-image: url($homepage_background_image);
+  background-image: url($bunnystudio_hc_main_banner_1);
   background-position: center;
   background-size: cover;
   height: 300px;
@@ -1420,7 +1425,7 @@ ul {
 
 /***** Homepage *****/
 main {
-  background: $background_color_section_1;
+  background: $background_color_second;
 }
 
 .section {
@@ -1521,7 +1526,7 @@ main {
   box-shadow: 0px 0px 6px grey;
   border: 1px solid #bbb;
   border-radius: 5px;
-  background: $background_color_section_2;
+  background: $background_color;
 }
 
 @media (max-width: 768px) {
@@ -1565,7 +1570,7 @@ main {
 }
 
 .home__bottom-articles {
-  background: $background_color_section_2;
+  background: $background_color;
   padding: 4% 109px;
   box-shadow: 0px 0px 6px grey;
 }
@@ -1701,6 +1706,15 @@ main {
 .popu-articles .popu-article .article-container .article__bottom a::after {
   content: " >";
   color: $link_color;
+}
+
+.section__message {
+  display: inline-block;
+  width: 100%;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: $text_color;
 }
 
 /***** Recent activity *****/
@@ -2188,6 +2202,11 @@ main {
   text-decoration: none;
 }
 
+.article .article__footer .article__footer-buttons .article-buttons a::before {
+  content: "♣ ";
+  color: black;
+}
+
 .sidenav-title {
   font-size: 15px;
   position: relative;
@@ -2210,6 +2229,7 @@ main {
 }
 
 .header__article-data > span {
+  font-family: initial;
   margin-right: 10px;
   color: $link_color;
 }
