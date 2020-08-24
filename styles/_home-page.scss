@@ -1,4 +1,7 @@
 /***** Homepage *****/
+main {
+  background: $background_color_section_1;
+}
 
 .section {
   @include tablet {
@@ -76,4 +79,180 @@
 .activity {
   border-top: 1px solid $border-color;
   padding: 30px 0;
+}
+
+.cards {
+
+  display: flex;
+  flex-direction: row;
+
+  .card {
+
+    box-shadow: $shadows;
+    
+    @include mobile {
+      width: 100%;
+    }
+
+    @include tablet {
+      width: 30%;
+    }
+
+    @include desktop {
+      width: 23%;
+    }
+
+    border: 1px solid $bordercard_color;
+    border-radius: 5px;
+    background: $background_color_section_2;
+
+    .card-container {
+      padding: 5% 10%;
+      display: flex;
+      flex-direction: column;
+
+      .card__top {
+        width: 100%;
+
+        .card__image {
+          width: inherit;
+        }
+      }
+      .card__middle {
+        text-align: center;
+
+      }
+
+      .card__bottom {
+        text-align: center;
+      }
+    }
+}
+}
+
+.home__bottom-articles {
+  background: $background_color_section_2;
+  padding: 4% 109px;
+  box-shadow: 0px 0px 6px grey;
+
+  h3 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
+.home__publicity {
+  
+  display: flex;
+  padding: 75px 0 60px 0;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  > * {
+    background: #fff;
+  }
+
+  .section__image {
+    height: 100px;  
+    box-shadow: $shadows;
+
+    @include mobile {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    @include tablet {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    @include desktop {
+      width: 40%;
+    }
+  }
+}
+
+.popu-articles {
+
+  display: flex;
+  
+  @include desktop {
+    flex-flow: row nowrap;
+  }
+  
+  @include tablet {
+    flex-flow: row wrap;
+  }
+
+  @include mobile{
+    flex-direction: column;
+  }
+
+  .popu-article {
+
+    padding: 2.7% 0;
+    color: $text_color;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    @include tablet {
+      width: 33%;
+      padding-right: 3%;
+    }
+
+    @include desktop {
+      width: 25%;
+      padding-right: 8%;
+    }
+
+    .article-container {
+
+      display: flex;
+      flex-direction: column;
+
+      .article__top {
+        
+        h4 {
+          margin: 0 0 5px 0;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 15px;
+        }
+      }
+
+      .article__middle {
+        p {
+          margin: 0px;
+          line-height: 14px;
+          font-size: 13px;
+        }
+      }
+
+      .article__bottom {
+
+        a {
+          font-size: 12px;
+          text-decoration: none;
+        }
+
+        a::after {
+          content: " >";
+          color: $link_color;
+        }
+      }
+    }
+}
 }
