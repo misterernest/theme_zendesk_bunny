@@ -218,3 +218,11 @@ ul {
 .visibility-hidden {
   @include visually-hidden;
 }
+.fas {
+
+  &:before,
+  &:after {
+    color: $label_icon_color;
+    margin-right: 5px;
+  }
+}

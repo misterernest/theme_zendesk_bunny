@@ -228,13 +228,9 @@
 
 .header__article-data {
   > span {
+    font-family: initial;
     margin-right: 10px;
     color: $link_color;
-  }
-  
-  span:nth-child(-n+4)::before {
-    content: '♣ '; //Cambiar íconos (este es de relleno)
-    color: black;
   }
 }
 

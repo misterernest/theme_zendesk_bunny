@@ -39,17 +39,14 @@
             <div class="article-meta">
               {{#if settings.show_article_author}}
                 {{#link 'user_profile' id=article.author.id}}
-                  <b>{{article.author.name}} #9221SAS</b>
+                  <span>{{article.author.name}}</span>
+                  <span>#{{article.author.id}}</span>
                 {{/link}}
               {{/if}}
 
               <ul class="meta-group header__article-data">
-                <span class="fa-calendar-alt">22-07-2020</span>
-                <span class="fa-comment">3,456</span>
-                <span class="fa-eye">5 hours ago</span>
-                <span class="fa-thumbs-up">8,567</span>
-                <span class="header__button-completed">Completed</span>
-                <span class="header__button-answered">Answered</span>
+                <span><li class="fas fa-calendar-alt"></li>{{date article.edited_at class='metadata' format='short'}}</span>
+                <span><li class="fas fa-thumbs-up"></li>{{article.vote_count}}</span>
               </ul>
             </div>
           </div>
@@ -78,24 +75,20 @@
           </div>
         </section>
         <footer class="article__footer">
-          <div class="article__footer-tags">
-            <span class="article-tag">Booking</span>
-            <span class="article-tag">Rates</span>
-            <span class="article-tag">Treatment</span>
-          </div>
-          <div class="article__footer-buttons">
-            <div class="article-buttons">
-              <a href="#">Like</a>
-              <a href="#">Share</a>
+          {{#with article}}
+          <div class="article-votes">
+            <span class="article-votes-question" id="article-votes-label">{{t 'was_this_article_helpful'}}</span>
+            <div class="article-votes-controls" role="group" aria-labelledby="article-votes-label">
+              {{vote 'up' role='radio' class='button article-vote article-vote-up' selected_class="button-primary"}}
+              {{vote 'down' role='radio' class='button article-vote article-vote-down' selected_class="button-primary"}}
             </div>
           </div>
+          {{/with}}
         </footer>
       </article>
 
     </div>
     <div class="aside">
-        <span class="aside__text">Share with others creatives about your stories, experiences and ask the community for advice</span>
-        <a href="" class="aside__button">START YOUR CONVERSATION</a>
         {{#if settings.show_recently_viewed_articles}}
           {{recent_articles}}
         {{/if}}

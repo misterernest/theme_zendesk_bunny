@@ -1,6 +1,6 @@
 /***** Homepage *****/
 main {
-  background: $background_color_section_1;
+  background: $background_color_second;
 }
 
 .section {
@@ -104,7 +104,7 @@ main {
 
     border: 1px solid $bordercard_color;
     border-radius: 5px;
-    background: $background_color_section_2;
+    background: $background_color;
 
     .card-container {
       padding: 5% 10%;
@@ -131,7 +131,7 @@ main {
 }
 
 .home__bottom-articles {
-  background: $background_color_section_2;
+  background: $background_color;
   padding: 4% 109px;
   box-shadow: 0px 0px 6px grey;
 
