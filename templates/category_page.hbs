@@ -1,4 +1,104 @@
-<div class="container-divider"></div>
+<h1 class="visibility-hidden">{{ help_center.name }}</h1>
+
+<section id="main-content" class="section hero">
+  <div class="hero-inner">
+    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+    </svg>
+    {{search submit=false instant=settings.instant_search class='search search-full'}}
+  </div>
+</section>
+
+<div class="container">
+  <section class="section knowledge-base">
+    <h2 class="visibility-hidden">{{ t 'categories' }}</h2>
+    <section class="categories blocks">
+      <ul class="blocks-list">
+        {{!-- {{#each categories}}
+          {{#if ../has_multiple_categories}}
+            <li class="blocks-item">
+              <a href='{{url}}' class="blocks-item-link">
+                <span class="blocks-item-title">{{name}}</span>
+                <span class="blocks-item-description">{{excerpt description}}</span>
+              </a>
+            </li>
+          {{else}}
+            {{#each sections}}
+              <li class="blocks-item">
+                <a href='{{url}}' class="blocks-item-link">
+                  <span class="blocks-item-title">
+                    {{name}}
+                  </span>
+                  <span class="blocks-item-description">{{excerpt description}}</span>
+                </a>
+              </li>
+            {{/each}}
+          {{/if}}
+        {{/each}} --}}
+      </ul>
+      {{!-- {{pagination}} --}}
+    </section>
+    <div class="section__message">
+      Hey buddy! to facilitate your search, choose a category that is closest to your issue
+    </div>
+    <section class="cards">
+      <div class="card">
+        <div class="card-container">
+          <div class="card__top">
+            <img class="card__image" src="https://anthoncode.com/wp-content/uploads/2019/07/logo-instagra-png-transparent.png" alt="IMG" srcset="">
+          </div>
+          <div class="card__middle">
+            <b class="card__title">Card title</b>
+          </div>
+          <div class="card__bottom">
+            <p class="card__description">Card description card description card description ...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
+<section class="home__bottom-articles">
+    <h3>Most popular articles</h3>
+    <div class="popu-articles">
+      <div class="popu-article">
+        <div class="article-container">
+          <div class="article__top">
+            <h4 class="article__tittle">What payments methods do you have available?</h4>
+          </div>
+          <div class="article__middle">
+            <p class="article__desc">Clients can complete payments via PayPal, and Credit Card...</p>
+          </div>
+          <div class="article__bottom">
+            <a class="article__button" href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+        
+      <div class="popu-article">
+        <div class="article-container">
+          <div class="article__top">
+            <h4 class="article__tittle">What payments methods do you have available?</h4>
+          </div>
+          <div class="article__middle">
+            <p class="article__desc">Clients can complete payments via PayPal, and Credit Card...</p>
+          </div>
+          <div class="article__bottom">
+            <a class="article__button" href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<div class="container">
+  <div class="home__publicity">
+    <div class="section__image"></div>
+    <div class="section__image"></div>
+  </div>
+</div>
+{{!-- <div class="container-divider"></div>
 <div class="container">
   <nav class="sub-nav">
     {{breadcrumbs}}
@@ -61,3 +161,4 @@
     </div>
   </div>
 </div>
+ --}}

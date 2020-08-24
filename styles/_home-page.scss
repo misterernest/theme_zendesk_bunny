@@ -254,5 +254,14 @@ main {
         }
       }
     }
+  }
 }
+
+.section__message {
+  display: inline-block;
+  width: 100%;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: $text_color;
 }
