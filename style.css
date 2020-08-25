@@ -1571,8 +1571,25 @@ main {
 
 .home__bottom-articles {
   background: $background_color;
-  padding: 4% 109px;
   box-shadow: 0px 0px 6px grey;
+}
+
+@media (max-width: 768px) {
+  .home__bottom-articles {
+    padding: 10px 6%;
+  }
+}
+
+@media (min-width: 768px) {
+  .home__bottom-articles {
+    padding: 4% 109px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home__bottom-articles {
+    padding: 4% 109px;
+  }
 }
 
 .home__bottom-articles h3 {
