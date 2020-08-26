@@ -25,7 +25,7 @@
         {{/if}}
       </h1>
     </header>
-    <div class="community-header">
+{{!--     <div class="community-header">
       <p class="page-header-description">{{topic.description}}</p>
       {{#if settings.show_follow_topic}}
         <div class="community-follow">
@@ -67,14 +67,43 @@
           </span>
         </span>
       </span>
-    </div>
+    </div> --}}
 
     <div id="main-content" class="posts-list striped-list">
       {{#each posts}}
-        <section role="region" aria-labelledby="title-{{id}}">
-          <div class="striped-list-item {{#if featured}}post-featured{{/if}}">
-            <span class="striped-list-info">
-              <a href="{{url}}" id="title-{{id}}" class="striped-list-title">{{title}}</a>
+          <section role="region" aria-labelledby="title-{{id}}">
+            <div class="striped-list-item {{#if featured}}post-featured{{/if}}">
+              <span class="striped-list-info">
+                <img src="" alt="Avatar" srcset="">
+                <a href="{{url}}" id="title-{{id}}" class="striped-list-title">{{title}}</a>
+                
+                <span>In light of the recent events and changes all over the world, we´ve decided...</span>
+
+                <ul class="meta-group header__article-data">
+                  <span><li class="fas fa-calendar-alt"></li></span>
+                  <span><li class="fas fa-comment">{{comment_count}}</li></span>
+                  <span><li class="fas fa-eye"></li></span>
+                  <span><li class="fas fa-thumbs-up">{{vote_sum}}</li></span>
+                </ul>
+          
+          {{!--{{#if editor}}
+                  <li class="meta-data">{{date edited_at timeago=true}}</li>
+                  <li class="meta-data">{{t 'edited'}}</li>
+                {{else}}
+                  <li class="meta-data">{{date created_at timeago=true}}</li>
+                {{/if}} --}}
+              </span>
+
+              {{!-- <div class="post-overview-count striped-list-count">
+                <span class="striped-list-count-item">
+                  <span class="striped-list-number">{{vote_sum}}</span>
+                  {{t 'vote' count=vote_sum}}
+                </span>
+                <span class="striped-list-count-item">
+                  <span class="striped-list-number">{{comment_count}}</span>
+                  {{t 'comment' count=comment_count}}
+                </span>
+              </div> --}}
               <span class="post-overview-item">
                 {{#if pinned}}
                   <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
@@ -87,30 +116,8 @@
                   <span class="status-label-{{status_dasherized}} status-label striped-list-status">{{status_name}}</span>
                 {{/is}}
               </span>
-
-              <ul class="meta-group">
-                <li class="meta-data">{{author.name}}</li>
-                {{#if editor}}
-                  <li class="meta-data">{{date edited_at timeago=true}}</li>
-                  <li class="meta-data">{{t 'edited'}}</li>
-                {{else}}
-                  <li class="meta-data">{{date created_at timeago=true}}</li>
-                {{/if}}
-              </ul>
-            </span>
-
-            <div class="post-overview-count striped-list-count">
-              <span class="striped-list-count-item">
-                <span class="striped-list-number">{{vote_sum}}</span>
-                {{t 'vote' count=vote_sum}}
-              </span>
-              <span class="striped-list-count-item">
-                <span class="striped-list-number">{{comment_count}}</span>
-                {{t 'comment' count=comment_count}}
-              </span>
             </div>
-          </div>
-        </section>
+          </section>
       {{/each}}
     </div>
     {{pagination}}
@@ -121,8 +128,7 @@
     </section>
   </div>
 
-  </div>
-    <div class="community-topic-container-right">
+  <div class="community-topic-container-right">
       <section class="community__topic-aside">
         <div class="topic-aside-top">
           <p class="topic-aside-text">Share with others creatives about your stories, experiences and ask the community for advice.</p>
@@ -130,7 +136,7 @@
             {{link 'new_post' topic_id=topic.id class='button button-large'}}
           </span>
         </div>
-        
+
         <div class="topic-aside-middle">
           <div class="topic-aside-labels-section">
             <h2>Labels</h2>
@@ -160,7 +166,7 @@
           </div>
         </div>
       </section>
-    </div>
   </div>
+</div>
 
   
