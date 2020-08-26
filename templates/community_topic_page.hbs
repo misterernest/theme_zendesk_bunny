@@ -24,6 +24,7 @@
           </svg>
         {{/if}}
       </h1>
+      <span>Sharing is caring Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, beatae libero, aliquid optio non neque.</span>
     </header>
 {{!--     <div class="community-header">
       <p class="page-header-description">{{topic.description}}</p>
@@ -73,38 +74,21 @@
       {{#each posts}}
           <section role="region" aria-labelledby="title-{{id}}">
             <div class="striped-list-item {{#if featured}}post-featured{{/if}}">
+              <span class="striped-list-picture">
+                <img src="{{author.avatar_url}}" alt="Avatar" srcset="">
+              </span>
               <span class="striped-list-info">
-                <img src="" alt="Avatar" srcset="">
                 <a href="{{url}}" id="title-{{id}}" class="striped-list-title">{{title}}</a>
-                
-                <span>In light of the recent events and changes all over the world, we´ve decided...</span>
+                <span>{{author.name}} #{{author.id}}</span>
 
                 <ul class="meta-group header__article-data">
-                  <span><li class="fas fa-calendar-alt"></li></span>
+                  <span><li class="fas fa-calendar-alt">{{date created_at class='metadata' format='short'}}</li></span>
                   <span><li class="fas fa-comment">{{comment_count}}</li></span>
                   <span><li class="fas fa-eye"></li></span>
                   <span><li class="fas fa-thumbs-up">{{vote_sum}}</li></span>
                 </ul>
-          
-          {{!--{{#if editor}}
-                  <li class="meta-data">{{date edited_at timeago=true}}</li>
-                  <li class="meta-data">{{t 'edited'}}</li>
-                {{else}}
-                  <li class="meta-data">{{date created_at timeago=true}}</li>
-                {{/if}} --}}
-              </span>
 
-              {{!-- <div class="post-overview-count striped-list-count">
-                <span class="striped-list-count-item">
-                  <span class="striped-list-number">{{vote_sum}}</span>
-                  {{t 'vote' count=vote_sum}}
-                </span>
-                <span class="striped-list-count-item">
-                  <span class="striped-list-number">{{comment_count}}</span>
-                  {{t 'comment' count=comment_count}}
-                </span>
-              </div> --}}
-              <span class="post-overview-item">
+                <div class="post-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique earum repellendus numquam ratione quam, sit, nisi ipsum architecto</div>
                 {{#if pinned}}
                   <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
                 {{/if}}
@@ -124,7 +108,7 @@
 
     <section class="container community-footer">
       <h2 class="community-footer-title">{{t 'suggest_new_post'}}</h2>
-      {{link 'new_post' class='button button-large'}}
+      {{#link 'new_post' class='button button-large'}}START YOUR CONVERSATION{{/link}}
     </section>
   </div>
 
@@ -133,7 +117,7 @@
         <div class="topic-aside-top">
           <p class="topic-aside-text">Share with others creatives about your stories, experiences and ask the community for advice.</p>
           <span class="post-to-community">
-            {{link 'new_post' topic_id=topic.id class='button button-large'}}
+            {{#link 'new_post' class='button button-large'}}START YOUR CONVERSATION{{/link}}
           </span>
         </div>
 
