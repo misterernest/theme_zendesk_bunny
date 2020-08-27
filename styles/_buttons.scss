@@ -18,6 +18,7 @@
   white-space: nowrap;
   width: 100%;
   -webkit-touch-callout: none;
+  text-transform: uppercase;
 
   &:hover,
   &:active,
@@ -57,12 +58,13 @@
   line-height: 2.72;
   min-width: 190px;
   padding: 0 1.9286em;
+  text-transform: uppercase;
   width: 100%;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $hover-button-color;
+    background-color: zass-darken($button-color, 3%);
   }
 
 

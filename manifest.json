@@ -13,7 +13,14 @@
           "type": "color",
           "description": "brand_color_description",
           "label": "brand_color_label",
-          "value": "#161d39"
+          "value": "#E67E22"
+        },
+        {
+          "identifier": "brand_button_color",
+          "type": "color",
+          "description": "brand_button_color_description",
+          "label": "brand_button_color",
+          "value": "#E67E22"
         },
         {
           "identifier": "brand_text_color",

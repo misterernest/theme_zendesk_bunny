@@ -1,5 +1,7 @@
 /***** Header *****/
-$header-height: 71px;
+$header_height: 106px;
+$logo_max-height:50px;
+$page__title_font-size: 20px;
 
 .header {
   background-color: $brand_background_color;
@@ -10,7 +12,7 @@ $header-height: 71px;
     position: relative;
     align-items: center;
     display: flex;
-    height: $header-height;
+    height: $header_height;
     justify-content: space-between;
   }
 }
@@ -18,13 +20,14 @@ $header-height: 71px;
 
 
 .logo img {
-  max-height: 37px;
+  max-height: $logo_max-height;
 }
 
 .page-title {
   flex: 1;
-  font-size: 15px;
-  padding: 0 0 3px 10px;
+  font-size: $page__title_font-size;
+  padding-left: 10px;
+  font-weight: 600;
 }
 
 .user-nav {
@@ -39,7 +42,7 @@ $header-height: 71px;
     border: solid 1px #ddd;
     right: 0;
     left: 0;
-    top: $header-height;
+    top: $header_height;
     z-index: 1;
 
     > a {
@@ -75,9 +78,12 @@ $header-height: 71px;
     &.sign-in {
       display: inline-block;
       color: $brand_text_color;
-      padding: 5px 10px;
+      padding: 10px 27px;
       background: $link_color;
       border-radius: 6px;
+      font-size: 15px;
+      line-height: 1;
+      text-transform: uppercase;
     }
   }
 

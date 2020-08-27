@@ -130,19 +130,16 @@ main {
 }
 }
 
-.home__bottom-articles {
+.container-articles {
   background: $background_color;
   box-shadow: 0px 0px 6px grey;
 
-  @include mobile { padding: 10px 6%; }
-  
-  @include tablet {
-    padding: 4% 109px;
-  }
+  @include mobile { padding: 50px 0 60px; }
 
-  @include desktop {
-    padding: 4% 109px;
-  }
+  @include tablet { padding: 50px 0 60px; }
+
+  @include desktop { padding: 82px 0 100px; }
+
 
   h3 {
     font-size: 25px;
