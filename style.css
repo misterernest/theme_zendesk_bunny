@@ -394,12 +394,12 @@ textarea:focus {
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 5%;
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 1500px) {
   .container {
     padding: 0;
     width: 90%;
@@ -418,12 +418,12 @@ ul {
 }
 
 .error-page {
-  max-width: 1160px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 5%;
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 1500px) {
   .error-page {
     padding: 0;
     width: 90%;
@@ -452,9 +452,9 @@ ul {
 /***** Buttons *****/
 .button, .pagination-next-link, .pagination-prev-link, .pagination-first-link, .pagination-last-link, .subscriptions-subscribe button, .requests-table-toolbar .organization-subscribe button, .community-follow button, .article-subscribe button, .section-subscribe button, .split-button button {
   background-color: transparent;
-  border: 1px solid $brand_color;
+  border: 1px solid $brand_button_color;
   border-radius: 4px;
-  color: $brand_color;
+  color: $brand_button_color;
   cursor: pointer;
   display: inline-block;
   font-size: 12px;
@@ -467,6 +467,7 @@ ul {
   white-space: nowrap;
   width: 100%;
   -webkit-touch-callout: none;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
@@ -482,8 +483,8 @@ ul {
 }
 
 .button.button-primary:hover, .button-primary.pagination-next-link:hover, .button-primary.pagination-prev-link:hover, .button-primary.pagination-first-link:hover, .button-primary.pagination-last-link:hover, .subscriptions-subscribe button.button-primary:hover, .subscriptions-subscribe button[data-selected="true"]:hover, .requests-table-toolbar .organization-subscribe button.button-primary:hover, .requests-table-toolbar .organization-subscribe button[data-selected="true"]:hover, .community-follow button.button-primary:hover, .article-subscribe button.button-primary:hover, .article-subscribe button[data-selected="true"]:hover, .section-subscribe button.button-primary:hover, .section-subscribe button[data-selected="true"]:hover, .split-button button:hover, .button.button-primary:focus, .button-primary.pagination-next-link:focus, .button-primary.pagination-prev-link:focus, .button-primary.pagination-first-link:focus, .button-primary.pagination-last-link:focus, .subscriptions-subscribe button.button-primary:focus, .subscriptions-subscribe button[data-selected="true"]:focus, .requests-table-toolbar .organization-subscribe button.button-primary:focus, .requests-table-toolbar .organization-subscribe button[data-selected="true"]:focus, .community-follow button.button-primary:focus, .article-subscribe button.button-primary:focus, .article-subscribe button[data-selected="true"]:focus, .section-subscribe button.button-primary:focus, .section-subscribe button[data-selected="true"]:focus, .split-button button.button-primary:focus, .button.button-primary:active, .button-primary.pagination-next-link:active, .button-primary.pagination-prev-link:active, .button-primary.pagination-first-link:active, .button-primary.pagination-last-link:active, .subscriptions-subscribe button.button-primary:active, .subscriptions-subscribe button[data-selected="true"]:active, .requests-table-toolbar .organization-subscribe button.button-primary:active, .requests-table-toolbar .organization-subscribe button[data-selected="true"]:active, .community-follow button.button-primary:active, .article-subscribe button.button-primary:active, .article-subscribe button[data-selected="true"]:active, .section-subscribe button.button-primary:active, .section-subscribe button[data-selected="true"]:active, .split-button button.button-primary:active {
-  background-color: darken($brand_color, 20%);
-  border-color: darken($brand_color, 20%);
+  background-color: darken($brand_button_color, 20%);
+  border-color: darken($brand_button_color, 20%);
 }
 
 .button[data-disabled], .pagination-next-link[data-disabled], .pagination-prev-link[data-disabled], .pagination-first-link[data-disabled], .pagination-last-link[data-disabled], .subscriptions-subscribe button[data-disabled], .requests-table-toolbar .organization-subscribe button[data-disabled], .community-follow button[data-disabled], .article-subscribe button[data-disabled], .section-subscribe button[data-disabled], .split-button button[data-disabled] {
@@ -492,7 +493,7 @@ ul {
 
 .button-large, input[type="submit"] {
   cursor: pointer;
-  background-color: $brand_color;
+  background-color: $brand_button_color;
   border: 0;
   border-radius: 4px;
   color: $brand_text_color;
@@ -501,6 +502,7 @@ ul {
   line-height: 2.72;
   min-width: 190px;
   padding: 0 1.9286em;
+  text-transform: uppercase;
   width: 100%;
 }
 
@@ -511,7 +513,7 @@ ul {
 }
 
 .button-large:hover, .split-button button.button-large:hover, .button-large:active, .button-large:focus, input[type="submit"]:hover, .split-button button[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
-  background-color: darken($brand_color, 20%);
+  background-color: darken($brand_button_color, 3%);
 }
 
 .button-large[disabled], input[type="submit"][disabled] {
@@ -751,31 +753,36 @@ ul {
 
 .header .header-container {
   color: $brand_text_color;
-  max-width: 1160px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 5%;
   position: relative;
   align-items: center;
   display: flex;
-  height: 71px;
+  height: 106px;
   justify-content: space-between;
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 1500px) {
   .header .header-container {
     padding: 0;
     width: 90%;
   }
 }
 
+.logo {
+  line-height: 1;
+}
+
 .logo img {
-  max-height: 37px;
+  max-height: 50px;
 }
 
 .page-title {
   flex: 1;
-  font-size: 15px;
-  padding: 0 0 3px 10px;
+  font-size: 20px;
+  padding-left: 10px;
+  font-weight: 600;
 }
 
 .user-nav {
@@ -796,7 +803,7 @@ ul {
   border: solid 1px #ddd;
   right: 0;
   left: 0;
-  top: 71px;
+  top: 106px;
   z-index: 1;
 }
 
@@ -833,9 +840,12 @@ ul {
 .nav-wrapper a.sign-in {
   display: inline-block;
   color: $brand_text_color;
-  padding: 5px 10px;
+  padding: 10px 27px;
   background: $link_color;
   border-radius: 6px;
+  font-size: 15px;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -1020,7 +1030,7 @@ ul {
 }
 
 .footer-inner {
-  max-width: 1160px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 5%;
   display: flex;
@@ -1029,7 +1039,7 @@ ul {
   flex-wrap: wrap;
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 1500px) {
   .footer-inner {
     padding: 0;
     width: 90%;
@@ -1170,7 +1180,7 @@ ul {
   border-radius: 5px;
   box-sizing: border-box;
   color: #666;
-  height: 40px;
+  height: 45px;
   padding-left: 40px;
   padding-right: 20px;
   -webkit-appearance: none;
@@ -1189,12 +1199,26 @@ ul {
 }
 
 .search input[type="search"]:focus {
-  border: 1px solid $brand_color;
+  border: 3px solid #c7c9d8;
   color: #555;
 }
 
 .search-full input[type="search"] {
-  border: 1px solid #fff;
+  border: 2px solid #c7c9d8;
+  width: 80%;
+}
+
+.search-full input[type="search"]::placeholder {
+  color: #77777777;
+}
+
+.search-full input[type="submit"] {
+  width: 19%;
+  min-width: auto;
+  height: 45px;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 0;
 }
 
 .search-icon {
@@ -1206,7 +1230,7 @@ ul {
   z-index: 1;
   width: 18px;
   height: 18px;
-  color: #777;
+  color: #77777777;
 }
 
 [dir="rtl"] .search-icon {
@@ -1223,7 +1247,7 @@ ul {
   background-image: url($homepage_background_image);
   background-position: center;
   background-size: cover;
-  height: 300px;
+  height: 400px;
   padding: 0 20px;
   text-align: center;
   width: 100%;
@@ -1233,6 +1257,7 @@ ul {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  top: 290px;
   max-width: 610px;
   margin: 0 auto;
 }
@@ -1569,30 +1594,30 @@ main {
   text-align: center;
 }
 
-.home__bottom-articles {
+.container-articles {
   background: $background_color;
   box-shadow: 0px 0px 6px grey;
 }
 
 @media (max-width: 768px) {
-  .home__bottom-articles {
-    padding: 10px 6%;
+  .container-articles {
+    padding: 50px 0 60px;
   }
 }
 
 @media (min-width: 768px) {
-  .home__bottom-articles {
-    padding: 4% 109px;
+  .container-articles {
+    padding: 50px 0 60px;
   }
 }
 
 @media (min-width: 1024px) {
-  .home__bottom-articles {
-    padding: 4% 109px;
+  .container-articles {
+    padding: 82px 0 100px;
   }
 }
 
-.home__bottom-articles h3 {
+.container-articles h3 {
   font-size: 25px;
   font-weight: bold;
 }
@@ -2712,7 +2737,7 @@ main {
 }
 
 .vote-voted:hover, .split-button button.vote-voted:hover {
-  color: darken($brand_color, 20%);
+  color: darken($brand_button_color, 20%);
 }
 
 /***** Actions *****/
@@ -2877,14 +2902,14 @@ main {
 }
 
 .community-follow button[data-selected="true"]:hover {
-  background-color: darken($brand_color, 20%);
-  border-color: darken($brand_color, 20%);
+  background-color: darken($brand_button_color, 20%);
+  border-color: darken($brand_button_color, 20%);
 }
 
 .community-follow button::after {
-  border-left: 1px solid $brand_color;
+  border-left: 1px solid $brand_button_color;
   content: attr(data-follower-count);
-  color: $brand_color;
+  color: $brand_button_color;
   display: inline-block;
   font-family: $heading_font;
   margin-left: 15px;
@@ -2901,7 +2926,7 @@ main {
 
 [dir="rtl"] .community-follow button::after {
   border-left: 0;
-  border-right: 1px solid $brand_color;
+  border-right: 1px solid $brand_button_color;
   margin: 0 10px 0 0;
   padding: 0 10px 0 0;
 }
