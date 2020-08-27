@@ -1,4 +1,7 @@
 /***** Search field *****/
+$input-color-border: #c7c9d8;
+$input-submit-height: 45px;
+$input-placeholder-color: #77777777;
 .search {
   position: relative;
 
@@ -12,7 +15,7 @@
     border-radius: 5px;
     box-sizing: border-box;
     color: $field-text-color;
-    height: 40px;
+    height: $input-submit-height;
     padding-left: 40px;
     padding-right: 20px;
     -webkit-appearance: none;
@@ -24,13 +27,29 @@
     }
 
     &:focus {
-      border: 1px solid $brand_color;
+      border: 3px solid $input-color-border;
       color: $field-text-focus-color;
     }
   }
 
-  &-full input[type="search"] {
-    border: 1px solid #fff;
+  &-full {
+    input[type="search"] {
+      border: 2px solid $input-color-border;
+      width: 80%;
+
+      &::placeholder {
+        color: $input-placeholder-color;
+      }
+    }
+    input[type="submit"] {
+      width: 19%;
+      min-width: auto;
+      height: $input-submit-height;
+      font-weight: 600;
+      font-size: 17px;
+      padding: 0;
+    }
+
   }
 }
 
@@ -41,7 +60,7 @@
   z-index: 1;
   width: 18px;
   height: 18px;
-  color: #777;
+  color: $input-placeholder-color;
 
   [dir="rtl"] & {
     right: 15px;

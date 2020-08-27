@@ -10,6 +10,7 @@
 
   &-inner {
     @include vertical-align;
+    top: 290px;
     max-width: 610px;
     margin: 0 auto;
   }
