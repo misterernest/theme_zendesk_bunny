@@ -75,30 +75,37 @@
           <section role="region" aria-labelledby="title-{{id}}">
             <div class="striped-list-item {{#if featured}}post-featured{{/if}}">
               <span class="striped-list-picture">
-                <img src="{{author.avatar_url}}" alt="Avatar" srcset="">
+                <img src="{{author.avatar_url}}" alt="Avatar" class="community-posts-user-avatar" srcset="">
               </span>
               <span class="striped-list-info">
                 <a href="{{url}}" id="title-{{id}}" class="striped-list-title">{{title}}</a>
-                <span>{{author.name}} #{{author.id}}</span>
-
-                <ul class="meta-group header__article-data">
-                  <span><li class="fas fa-calendar-alt">{{date created_at class='metadata' format='short'}}</li></span>
-                  <span><li class="fas fa-comment">{{comment_count}}</li></span>
-                  <span><li class="fas fa-eye"></li></span>
-                  <span><li class="fas fa-thumbs-up">{{vote_sum}}</li></span>
-                </ul>
-
-                <div class="post-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique earum repellendus numquam ratione quam, sit, nisi ipsum architecto</div>
-                {{#if pinned}}
-                  <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
-                {{/if}}
-                 {{#if featured}}
-                  <span class="status-label status-label-featured">{{t 'featured'}}</span>
-                {{/if}}
-                 {{#is status 'none'}}
-                {{else}}
-                  <span class="status-label-{{status_dasherized}} status-label striped-list-status">{{status_name}}</span>
-                {{/is}}
+                
+                <div class="meta-group">
+                  {{#link 'user_profile' id=author.id}}
+                    <span>{{author.name}} #{{author.id}}</span>
+                  {{/link}}
+                  <ul class="header__article-data">
+                    <span><li class="fas fa-calendar-alt">{{date created_at class='metadata' format='short'}}</li></span>
+                    <span><li class="fas fa-comment">{{comment_count}}</li></span>
+                    <span><li class="fas fa-eye"></li></span>
+                    <span><li class="fas fa-thumbs-up">{{vote_sum}}</li></span>
+                  </ul>
+                </div>
+                
+                <div class="striped-list-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique earum repellendus numquam ratione quam, sit, nisi ipsum architecto</div>
+                
+                <div>
+                  {{#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                  {{/if}}
+                  {{#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                  {{/if}}
+                  {{#is status 'none'}}
+                  {{else}}
+                    <span class="status-label-{{status_dasherized}} status-label striped-list-status">{{status_name}}</span>
+                  {{/is}}
+                </div>
               </span>
             </div>
           </section>
@@ -125,8 +132,12 @@
           <div class="topic-aside-labels-section">
             <h2>Labels</h2>
             <div class="topic-aside-labels">
-              <a href="#">Booking</a>
-              <a href="#">Rates</a>
+              <a href="#" class="tag">Booking</a>
+              <a href="#" class="tag">Rates</a>
+              <a href="#" class="tag">Booking</a>
+              <a href="#" class="tag">Rates</a>
+              <a href="#" class="tag">Booking</a>
+              <a href="#" class="tag">Rates</a>
             </div>
           </div>
         </div>
@@ -138,13 +149,29 @@
           <div class="topic-aside-contributors-cards">
             <div class="topic-aside-contributors-card">
               <div class="topic-aside-contributors-picture">
-                <img src="" alt="" class="user-avatar"/>
+                <img src="https://i.pinimg.com/originals/c8/62/3b/c8623b908b8db5f2dbd604cdc41d05d0.jpg" alt="AVATAR" class="topic-aside-avatar"/>
               </div>
               <div class="topic-aside-contributors-data">
-                <span>Katie #91KMIA8</span>
-                <span>Colonia, Germany</span>
-                <span>3,456</span>
-                <span>8,567</span>
+                <a href="#" class="topic-contributor-data-top">Katie #91KMIA8</a>
+                <span class="topic-contributor-data-middle">Colonia, Germany</span>
+                <span class="topic-contributor-data-bottom">
+                  <span class="fas fa-comment">3,456</span>
+                  <span class="fas fa-thumbs-up">8,567</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="topic-aside-contributors-card">
+              <div class="topic-aside-contributors-picture">
+                <img src="https://i.pinimg.com/originals/c8/62/3b/c8623b908b8db5f2dbd604cdc41d05d0.jpg" alt="AVATAR" class="topic-aside-avatar"/>
+              </div>
+              <div class="topic-aside-contributors-data">
+                <a href="#" class="topic-contributor-data-top">Katie #91KMIA8</a>
+                <span class="topic-contributor-data-middle">Colonia, Germany</span>
+                <span class="topic-contributor-data-bottom">
+                  <span class="fas fa-comment">3,456</span>
+                  <span class="fas fa-thumbs-up">8,567</span>
+                </span>
               </div>
             </div>
           </div>
