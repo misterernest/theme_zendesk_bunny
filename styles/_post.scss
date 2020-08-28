@@ -8,6 +8,7 @@
   @include desktop {
     flex: 1 0 70%;
     max-width: 70%;
+    padding-right: 90px;
   }
 
   flex: 1;
@@ -38,12 +39,16 @@
   }
 
   &-title {
+    width: 100%;
+
     @include tablet {
       margin-bottom: 0;
       padding-right: 10px;
     }
-    margin-bottom: 20px;
-    width: 100%;
+
+    @include desktop {
+      margin-bottom: 20px;
+    }
 
     h1 {
       @include tablet { margin-right: 5px; }
@@ -56,6 +61,7 @@
     align-items: flex-start;
     display: flex;
     justify-content: space-between;
+    height: 96px;
   }
 
   &-avatar {
@@ -88,11 +94,17 @@
     display: inline-block;
     flex: 1;
     margin-left: 10px;
+    padding-top: 10px;
     vertical-align: middle;
 
     [dir="rtl"] & {
       margin-left: 0;
       margin-right: 10px;
+    }
+
+    span > a {
+      font-weight: bold;
+      text-decoration: none;
     }
   }
 
@@ -101,10 +113,14 @@
   }
 
   &-footer {
-    align-items: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+
+    &__button {
+      margin: 0 25px 0 0;
+    }
   }
 
   &-comment-count {
@@ -129,25 +145,41 @@
     @include desktop {
       border: 0;
       flex: 1 0 30%;
-      padding: 0 0 0 50px;
       text-align: initial;
+      flex-direction: column;
 
       [dir="rtl"] & { padding: 0 50px 0 0; }
     }
 
     border-top: 1px solid $border-color;
     flex: 1;
-    padding: 30px 0;
+    padding: 12px 0;
     text-align: center;
+    display: flex;
 
-    &-title {
-      font-size: 18px;
-      font-weight: $font-weight-semibold;
+    &__text {
+      font-size: 15px;
+      text-align: center;
+    }
+
+    &__button {
+      a {
+        margin: 0 50px;
+      }
+    }
+
+    &__title {
+      margin: 75px 0 30px 0;
+      font-size: 25px;
+      font-weight: bold;
     }
   }
 
   &-comments {
-    @include desktop { margin-bottom: 0; }
-    margin-bottom: 20px;
+    @include desktop { margin: 50px 0 65px 0; }
+    margin: 50px 0 65px 0;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
   }
 }
