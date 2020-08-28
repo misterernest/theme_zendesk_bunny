@@ -86,8 +86,14 @@
     }
   }
 
+  &-list { padding: 10px; }
+
   &-meta {
     flex: 1 0 auto;
+
+    span > a {
+      font-weight: bold;
+    }
   }
 
   &-labels {
@@ -106,8 +112,14 @@
 
   &-form {
     display: flex;
-    padding-top: 30px;
+    padding: 30px;
     word-wrap: break-word;
+    flex-direction: column;
+
+    &__title {
+      font-size: 20px;
+      font-weight: bold;
+    }
   }
 
   &-container { width: 100%; }

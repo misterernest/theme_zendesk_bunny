@@ -1,6 +1,9 @@
 /***** Metadata *****/
 .meta-group {
   display: block;
+  margin-top: 5px;
+
+  &--wide { padding: 34px 0 8px 5px; }
 }
 
 .meta-group * {
