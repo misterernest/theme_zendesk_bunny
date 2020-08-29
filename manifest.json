@@ -60,9 +60,16 @@
         {
           "identifier": "background_color_second",
           "type": "color",
-          "description": "background_color_brand",
+          "description": "background_color_first_page",
           "label": "background_color_label",
-          "value": "#f5f8ff"
+          "value": "#F5F8FF"
+        },
+        {
+          "identifier": "background_color_third_page",
+          "type": "color",
+          "description": "background_color_third_page",
+          "label": "background_color_label",
+          "value": "#FFFFFF"
         },
         {
           "identifier": "label_icon_color",

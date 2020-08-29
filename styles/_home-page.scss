@@ -1,6 +1,10 @@
 /***** Homepage *****/
 main {
   background: $background_color_second;
+
+  &.third-page {
+    background: $background_color_third_page;
+  }
 }
 
 .section {
