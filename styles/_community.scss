@@ -149,6 +149,19 @@
   }
 }
 
+.tag {
+  background: #e1e2e6;
+  color: #666666;
+  padding: 10px 10px;
+  margin: 10px 10px 0 0;
+  border-radius: 4px;
+  text-decoration: none;
+
+  &--light {
+    padding: 2px 10px;
+  }
+}
+
 .community-topic-container {
   display: flex;
   
@@ -202,15 +215,6 @@
       .topic-aside-labels {
         display: flex;
         flex-wrap: wrap;
-
-        .tag {
-          background: #e1e2e6;
-          color: #666666;
-          padding: 10px;
-          margin: 10px;
-          border-radius: 4px;
-          text-decoration: none;
-        }
       }
     }
 

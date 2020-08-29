@@ -60,9 +60,16 @@
         {
           "identifier": "background_color_second",
           "type": "color",
-          "description": "background_color_brand",
+          "description": "background_color_first_page",
           "label": "background_color_label",
-          "value": "#f5f8ff"
+          "value": "#F5F8FF"
+        },
+        {
+          "identifier": "background_color_third_page",
+          "type": "color",
+          "description": "background_color_third_page",
+          "label": "background_color_label",
+          "value": "#FFFFFF"
         },
         {
           "identifier": "label_icon_color",
@@ -261,6 +268,12 @@
           "type": "file",
           "description": "community_image_description",
           "label": "community_image_label"
+        },
+        {
+          "identifier": "pro_join_community_banner",
+          "type": "file",
+          "description": "pro_join_community_banner_description",
+          "label": "pro_join_community_banner_label"
         }
       ]
     },

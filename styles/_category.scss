@@ -53,3 +53,26 @@
   color: $brand_color;
   font-size: 18px;
 }
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+
+.pro-join-community-banner__image {
+  background-image: url($pro_join_community_banner);
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+
+  .pro-join-community-banner__button {
+    position: absolute;
+    background: #fff;
+    color: $text_color;
+    border: 1px solid $text_color;
+    border-radius: 2px;
+    padding: 2px 5px;
+  }
+}
