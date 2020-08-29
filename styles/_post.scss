@@ -15,6 +15,14 @@
   margin-bottom: 10px;
 
   &-container {
+    @include mobile {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+
     @include desktop {
       flex-direction: row;
     }
@@ -40,6 +48,11 @@
 
   &-title {
     width: 100%;
+
+    h1 {
+      font-size: 25px;
+      font-weight: bold;
+    }
 
     @include tablet {
       margin-bottom: 0;
@@ -106,6 +119,11 @@
       font-weight: bold;
       text-decoration: none;
     }
+
+    &__data {
+      margin-right: 10px;
+      color: $link_color;
+    }
   }
 
   &-body {
@@ -142,6 +160,10 @@
   }
 
   &-sidebar {
+    @include mobile { flex-direction: column; }
+
+    @include tablet { flex-direction: column; }
+
     @include desktop {
       border: 0;
       flex: 1 0 30%;
@@ -153,9 +175,9 @@
 
     border-top: 1px solid $border-color;
     flex: 1;
-    padding: 12px 0;
     text-align: center;
     display: flex;
+    padding: 12px 0 30px 10px;
 
     &__text {
       font-size: 15px;
@@ -164,7 +186,14 @@
 
     &__button {
       a {
-        margin: 0 50px;
+        @include mobile { margin: auto; }
+
+        @include tablet { margin: auto; }
+
+        @include desktop { margin: 0 18%; }
+        
+        padding: 0 15px;
+        line-height: 1.8;
       }
     }
 

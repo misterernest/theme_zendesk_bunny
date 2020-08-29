@@ -58,16 +58,16 @@
 
                 <ul class="meta-group">
                   <span>
-                    <li class="fas fa-calendar-alt"></li>
+                    <li class="fas fa-calendar-alt post-meta__data">{{date post.created_at class='metadata' format='short' }}</li>
                   </span>
                   <span>
-                    <li class="fas fa-comment"></li>
+                    <li class="fas fa-comment post-meta__data">{{post.comment_count}}</li>
                   </span>
                   <span>
-                    <li class="fas fa-eye"></li>
+                    <li class="fas fa-eye post-meta__data"></li>
                   </span>
                   <span>
-                    <li class="fas fa-thumbs-up"></li>
+                    <li class="fas fa-thumbs-up post-meta__data">{{post.vote_sum}}</li>
                   </span>
                   {{#if post.pinned}}
                   <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
@@ -207,16 +207,13 @@
 
                   <ul class="meta-group">
                     <span>
-                      <li class="fas fa-calendar-alt"></li>
+                      <li class="fas fa-calendar-alt post-meta__data">{{date created_at class='metadata' format='short' }}</li>
                     </span>
                     <span>
-                      <li class="fas fa-comment"></li>
+                      <li class="fas fa-eye post-meta__data"></li>
                     </span>
                     <span>
-                      <li class="fas fa-eye"></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-thumbs-up"></li>
+                      <li class="fas fa-thumbs-up post-meta__data">{{vote_sum}}</li>
                     </span>
                   </ul>
                 </div>
@@ -283,7 +280,7 @@
           <div class="comment-form-controls">
             {{checkbox 'official'}}
             {{label 'official'}}
-            {{input type='submit' class="button button-large"}}
+            {{input type='submit' class="button button-large" value="SEND"}}
           </div>
         </div>
         {{/form}}

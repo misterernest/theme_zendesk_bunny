@@ -1,8 +1,12 @@
 .sub-nav {
+  @include mobile { margin-bottom: 40px; }
+
   @include tablet {
     align-items: baseline;
     flex-direction: row;
   }
+
+  @include desktop { margin-bottom: 5px; }
 
   display: flex;
   flex-direction: column;
@@ -11,7 +15,6 @@
   min-height: 50px;
   padding-bottom: 15px;
   height: 80px;
-  margin-bottom: 5px;
 
   //Inner pages search field
   input[type="search"] {
