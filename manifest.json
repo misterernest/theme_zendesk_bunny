@@ -274,6 +274,18 @@
           "type": "file",
           "description": "pro_join_community_banner_description",
           "label": "pro_join_community_banner_label"
+        },
+        {
+          "identifier": "img_banner_pro_contact_us",
+          "type": "file",
+          "description": "img_banner_pro_contact_us_description",
+          "label": "img_banner_pro_contact_us_label"
+        },
+        {
+          "identifier": "img_banner_pro_join_conversation",
+          "type": "file",
+          "description": "img_banner_pro_join_conversation_description",
+          "label": "img_banner_pro_join_conversation_label"
         }
       ]
     },

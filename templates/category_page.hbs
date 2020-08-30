@@ -3,9 +3,10 @@
 <section id="main-content" class="section hero">
   <div class="hero-inner">
     <h2 class="visibility-hidden">{{ t 'search' }}</h2>
-    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
+      class="search-icon" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor" />
+      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5" />
     </svg>
     {{search submit=false instant=settings.instant_search class='search search-full'}}
   </div>
@@ -20,9 +21,10 @@
         <a href="#" class="pro-join-community-banner__button">JOIN TO COMMUNITY</a>
       </div>
     </div>
-    
+
     <div class="section__message">
       Hey buddy! to facilitate your search, choose a category that is closest to your issue
+      {{sections.id}}
     </div>
     <section class="cards">
       {{#each sections }}
@@ -43,41 +45,42 @@
     </section>
   </section>
 </div>
+{{#if promoted_articles}}
 <section class="home__bottom-articles">
-    <h3>Most popular articles</h3>
-    <div class="popu-articles">
-      <div class="popu-article">
-        <div class="article-container">
-          <div class="article__top">
-            <h4 class="article__tittle">What payments methods do you have available?</h4>
-          </div>
-          <div class="article__middle">
-            <p class="article__desc">Clients can complete payments via PayPal, and Credit Card...</p>
-          </div>
-          <div class="article__bottom">
-            <a class="article__button" href="#">Read more</a>
-          </div>
+  <h3>{{t 'promoted_articles'}}</h3>
+  <div class="popu-articles">
+    {{#each promoted_articles}}
+    <div class="popu-article">
+      <div class="article-container">
+        <div class="article__top">
+          <a href="{{url}}" class="article__tittle">{{title}}</a>
+          {{#if internal}}
+          <span class="icon-lock" title="{{t 'internal'}}"></span>
+          {{/if}}
         </div>
-      </div>
-        
-      <div class="popu-article">
-        <div class="article-container">
-          <div class="article__top">
-            <h4 class="article__tittle">What payments methods do you have available?</h4>
-          </div>
-          <div class="article__middle">
-            <p class="article__desc">Clients can complete payments via PayPal, and Credit Card...</p>
-          </div>
-          <div class="article__bottom">
-            <a class="article__button" href="#">Read more</a>
-          </div>
+        <div class="article__middle">
+          <p class="article__desc">{{excerpt body characters=50}}</p>
+        </div>
+        <div class="article__bottom">
+          <a class="article__button" href="{{url}}">Read more</a>
         </div>
       </div>
     </div>
+    {{/each}}
+  </div>
 </section>
+{{/if}}
+
 <div class="container">
   <div class="home__publicity">
-    <div class="section__image"></div>
-    <div class="section__image"></div>
+    <div class="pro-contact-us-banner__image">
+      <span class="banner__text banner__text--bold">Didnt find the solution to your issue?</span>
+      <span class="banner__text banner__text--normal">Dot not worry, take it easy!</span>
+      <a href="#" class="button button-large">CONTACT US HERE</a>
+    </div>
+    <div class="pro-join-banner__image">
+      <span class="banner__text banner__text--bold">Community for Pros</span>
+      <a href="#" class="button button-large">JOIN OUR CONVERSATION</a>
+    </div>
   </div>
 </div>
