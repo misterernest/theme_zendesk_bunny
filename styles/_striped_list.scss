@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 20px 0;
+    padding: 62px 0;
   }
 
   &-info {
@@ -37,6 +37,13 @@
 
   .meta-group {
     margin: 5px 0;
+
+    a{
+      font-size: 16px;
+    }
+    .header__article-data {
+
+    }
   }
 
   &-count {
