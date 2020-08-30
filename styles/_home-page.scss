@@ -86,68 +86,6 @@ main {
   padding: 30px 0;
 }
 
-.cards {
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  .card {
-
-    box-shadow: $shadows;
-    
-    @include mobile {
-      width: 100%;
-    }
-
-    @include tablet {
-      width: 30%;
-    }
-
-    @include desktop {
-      width: 21%;
-    }
-
-    border: 1px solid $bordercard_color;
-    border-radius: 5px;
-    background: $background_color;
-    margin: 25px 0;
-    text-decoration: none;
-    color: $text_color;
-    height: 225px;
-
-    &-container {
-      @include mobile { padding: 2% 10%; }
-
-      @include tablet { padding: 10% 10%; }
-
-      @include desktop { padding: 10% 10%; }
-    
-      display: flex;
-      flex-direction: column;
-
-      .card__top {
-        width: 100%;
-        margin-bottom: 10px;
-        display: flex;
-
-        .card__image {
-          width: 100px;
-          margin: 0 auto;
-        }
-      }
-      .card__middle {
-        text-align: center;
-
-      }
-
-      .card__bottom {
-        text-align: center;
-      }
-    }
-}
-}
 
 .container-articles {
   background: $background_color;

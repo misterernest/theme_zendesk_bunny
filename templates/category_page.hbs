@@ -24,6 +24,7 @@
 
     <div class="section__message">
       Hey buddy! to facilitate your search, choose a category that is closest to your issue
+      {{sections.id}}
     </div>
     <section class="cards">
       {{#each sections }}
@@ -44,42 +45,31 @@
     </section>
   </section>
 </div>
+{{#if promoted_articles}}
 <section class="home__bottom-articles">
-  <h3>Most popular articles</h3>
+  <h3>{{t 'promoted_articles'}}</h3>
   <div class="popu-articles">
+    {{#each promoted_articles}}
     <div class="popu-article">
       <div class="article-container">
         <div class="article__top">
-          <h4 class="article__tittle">What payments methods do you have available?</h4>
+          <a href="{{url}}" class="article__tittle">{{title}}</a>
+          {{#if internal}}
+          <span class="icon-lock" title="{{t 'internal'}}"></span>
+          {{/if}}
         </div>
         <div class="article__middle">
-          <p class="article__desc">Clients can complete payments via PayPal, and Credit Card...</p>
+          <p class="article__desc">{{excerpt body characters=50}}</p>
         </div>
         <div class="article__bottom">
-          <a class="article__button" href="#">Read more</a>
+          <a class="article__button" href="{{url}}">Read more</a>
         </div>
       </div>
     </div>
+    {{/each}}
   </div>
 </section>
-
-{{!#if promoted_articles}}
-<section class="articles">
-  <h3>{{t 'promoted_articles'}}</h3>
-  <ul class="article-list promoted-articles">
-    {{#each promoted_articles}}
-    <li class="promoted-articles-item">
-      <a href="{{url}}">
-        {{title}}
-      </a>
-      {{#if internal}}
-      <span class="icon-lock" title="{{t 'internal'}}"></span>
-      {{/if}}
-    </li>
-    {{/each}}
-  </ul>
-</section>
-{{!/if}}
+{{/if}}
 
 <div class="container">
   <div class="home__publicity">
