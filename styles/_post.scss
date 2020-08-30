@@ -36,13 +36,6 @@
       align-items: baseline;
       flex-direction: row;
     }
-
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 10px;
-
     .status-label { vertical-align: super; }
   }
 
@@ -50,7 +43,7 @@
     width: 100%;
 
     h1 {
-      font-size: 25px;
+      font-size: 35px;
       font-weight: bold;
     }
 
@@ -78,13 +71,12 @@
   }
 
   &-avatar {
-    margin-bottom: 30px;
+    margin-right: 17px;
   }
 
   &-content {
-    font-family: $text_font;
-    line-height: 1.6;
-    word-break: break-word;
+    line-height: 29px;
+    font-size: 18px;
   }
 
   &-info-container {
@@ -116,12 +108,11 @@
     }
 
     span > a {
-      font-weight: bold;
-      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
     }
 
     &__data {
-      margin-right: 10px;
       color: $link_color;
     }
   }
@@ -133,7 +124,7 @@
   &-footer {
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     border-bottom: 1px solid #ddd;
 
     &__button {
@@ -159,6 +150,38 @@
     }
   }
 
+  &-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+
+    > span {
+      color: $link_color;
+    }
+
+    .post-share {
+      display: none;
+      position: absolute;
+      bottom: -35px;
+      height: 40px;
+      left: 25px;
+      box-shadow: 3px 3px 5px #5f6275;
+      padding: 10px;
+      svg * {
+        color: $label_icon_color;
+      }
+    }
+
+    &:hover {
+      .post-share {
+        z-index: 3;
+        display: block;
+      }
+    }
+  }
   &-sidebar {
     @include mobile { flex-direction: column; }
 

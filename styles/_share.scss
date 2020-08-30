@@ -15,15 +15,21 @@
 }
 
 .share a {
-  color: $secondary-text-color;
+  color: $label_icon_color;
   &:hover {
     text-decoration: none;
     color: $brand_color;
+
+    svg,
+    svg *{
+      color: $brand_color;
+    }
   }
   
   & svg {
     height: 18px;
     width: 18px;
-    display: block;  
+    display: block;
+    color: $label_icon_color;
   }
 }

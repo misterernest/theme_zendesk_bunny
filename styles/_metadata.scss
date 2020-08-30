@@ -6,8 +6,23 @@
   &--wide { padding: 34px 0 8px 5px; }
 }
 
-.meta-group * {
-  display: inline;
+.meta-group {
+  * {
+    display: inline;
+    font-family: inherit;
+    color: $link_color;
+  }
+  span {
+    margin-right: 10px;
+  }
+
+  &--status-label {
+
+    status-label {
+      position: relative;
+    }
+
+  }
 }
 
 .meta-data {
