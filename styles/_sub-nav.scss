@@ -6,7 +6,7 @@
     flex-direction: row;
   }
 
-  @include desktop { margin-bottom: 5px; }
+  @include desktop { margin-bottom: 20px; }
 
   display: flex;
   flex-direction: column;

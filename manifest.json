@@ -34,7 +34,7 @@
           "type": "color",
           "description": "text_color_description",
           "label": "text_color_label",
-          "value": "#333333"
+          "value": "#151d39"
         },
         {
           "identifier": "link_color",

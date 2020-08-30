@@ -219,10 +219,13 @@ ul {
   @include visually-hidden;
 }
 .fas {
-
+  span {
+    display: none;
+  }
   &:before,
   &:after {
     color: $label_icon_color;
     margin-right: 5px;
+    font-size: 14.5px;
   }
 }

@@ -17,10 +17,12 @@
       <h1>
         {{section.name}}
       </h1>
-      <p>{{section.description}}</p>
+      {{#if section.description}}
+        <p class="page-header-description">{{section.description}}</p>
+      {{/if}}
     </header>
-
-    <div id="main-content" class="posts-list striped-list">
+    {{#if section.articles}}
+      <div id="main-content" class="posts-list striped-list">
       {{#each section.articles}}
           <section role="region" aria-labelledby="title-">
             <div class="striped-list-item">
@@ -41,13 +43,12 @@
                     <span>{{author.name}} #{{author.id}}</span>
                   {{/link}}
                   <ul class="header__article-data">
-                    <span><li class="fas fa-calendar-alt">{{date created_at class='metadata' format='short'}}</li></span>
-                    <span><li class="fas fa-comment">{{comment_count}}</li></span>
-                    <span><li class="fas fa-eye"></li></span>
-                    <span><li class="fas fa-thumbs-up">{{upvote_count}}</li></span>
+                    <span><li class="fas fa-calendar-alt"><span>calendar</span></li>{{date created_at class='metadata' format='short'}}</span>
+                    {{#if comments_disabled }}<span><li class="fas fa-comment"><span>comment</span></li>{{comment_count}}</span>{{/if}}
+                    <span><li class="fas fa-thumbs-up"><span>like</span></li>{{upvote_count}}</span>
                   </ul>
                 </div>
-                
+
                 <div>
                   <span class="striped-list-details">{{excerpt body characters=200}}</span>
                   <a href="{{url}}" id="title-{{id}}">read more.</a>
@@ -57,12 +58,17 @@
           </section>
       {{/each}}
     </div>
+    {{else}}
+      <i class="section-empty">
+        <a href="{{section.url}}">{{t 'empty'}}</a>
+      </i>
+    {{/if}}
     {{pagination}}
 
   </div>
 
   <div class="community-topic-container-right">
-      
+
   </div>
 </div>
 <script src="{{asset 'js_sub-page.js'}}"></script>
