@@ -43,7 +43,7 @@
   }
 
   &-avatar {
-    margin-right: 10px;
+    margin-right: 17px;
   }
 
   &-author {
@@ -75,6 +75,20 @@
   &-meta {
     display: inline-block;
     vertical-align: middle;
+
+    > a {
+      font-size: 18px;
+      font-weight: 700;
+
+      .header__article-data {
+        span {
+          font-size: 14px;
+        }
+        .fa {
+          font-size: 14.5px;
+        }
+      }
+    }
   }
 
   &-body {
@@ -84,8 +98,16 @@
 
   &-content {
     line-height: 1.6;
-    margin: 40px 0;
+    margin: 40px 0 80px;
     word-wrap: break-word;
+
+    .article-body {
+      font-size: 18px;
+
+      p span {
+        line-height: 29px;
+      }
+    }
   }
 
   &-footer {
@@ -156,9 +178,25 @@
   }
 
   .article__footer {
-    border-bottom: 1px solid $articledivider-color;
-    margin-bottom: 2%;
+    border-top: 1px solid $articledivider-color;
+    padding-top: 108px;
 
+    .article-votes {
+      text-align: center;
+
+      .article-votes-question {
+        font-size: 20px;
+      }
+      .article-votes-controls {
+        padding-top: 15px;
+        .article-vote {
+          height: 49px;
+          width: 113px;
+          font-size: 18px;
+          margin: 0 5px;
+        }
+      }
+    }
     .article__footer-tags {
       display: flex;
       flex-direction: row;
@@ -227,8 +265,6 @@
 }
 
 .header__article-data {
-  margin-left: 30px;
-
   > span {
     font-family: inherit;
     margin-right: 10px;
@@ -307,17 +343,15 @@
     text-decoration: none;
   }
 
-  .related-articles {
-    .related-articles-title {
-      color: $text_color;
-      font-weight: bold;
-      font-size: 25px;
-      margin-bottom: 20px;
-    }
+  .related-articles,
+  .recent-articles {
     ul > li > a {
       color: $text_color;
-      font-size: 15px;
-      font-weight: 600;
+      font-size: 20px;
+      font-weight: 500;
     }
+  }
+  .recent-articles {
+    margin-bottom: 93px;
   }
 }
