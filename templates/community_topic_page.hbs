@@ -24,51 +24,10 @@
           </svg>
         {{/if}}
       </h1>
-      <span>Sharing is caring Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, beatae libero, aliquid optio non neque.</span>
-    </header>
-{{!--     <div class="community-header">
-      <p class="page-header-description">{{topic.description}}</p>
-      {{#if settings.show_follow_topic}}
-        <div class="community-follow">
-          {{subscribe}}
-        </div>
+      {{#if topic.description}}
+        <p class="page-header-description">{{topic.description}}</p>
       {{/if}}
-    </div>
-
-    <div class="topic-header">
-      <span class="topic-filters">
-        <span class="dropdown">
-          <button class="dropdown-toggle" aria-haspopup="true">
-            {{current_filter.label}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-          </button>
-          <span class="dropdown-menu" role="menu">
-            {{#each filters}}
-              <a href="{{url}}" aria-selected="{{selected}}" role="menuitem">
-                {{name}}
-              </a>
-            {{/each}}
-          </span>
-        </span>
-        <span class="dropdown">
-          <button class="dropdown-toggle" aria-haspopup="true">
-            {{current_sorter.label}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-          </button>
-          <span class="dropdown-menu" role="menu">
-            {{#each sorters}}
-              <a href="{{url}}" aria-selected="{{selected}}" role="menuitem">
-                {{name}}
-              </a>
-            {{/each}}
-          </span>
-        </span>
-      </span>
-    </div> --}}
+    </header>
 
     <div id="main-content" class="posts-list striped-list">
       {{#each posts}}
@@ -84,16 +43,21 @@
                   {{#link 'user_profile' id=author.id}}
                     <span>{{author.name}} #{{author.id}}</span>
                   {{/link}}
-                  <ul class="header__article-data">
-                    <span><li class="fas fa-calendar-alt">{{date created_at class='metadata' format='short'}}</li></span>
-                    <span><li class="fas fa-comment">{{comment_count}}</li></span>
-                    <span><li class="fas fa-eye"></li></span>
-                    <span><li class="fas fa-thumbs-up">{{vote_sum}}</li></span>
+                  <ul class="header--post-data">
+                    <span><li class="fas fa-calendar-alt"><span>calendar</span></li>{{date created_at class='metadata' format='short'}}</span>
+                    <span><li class="fas fa-comment"><span>coment</span></li>{{comment_count}}</span>
+                    <span><li class="fas fa-eye"><span>viewed</span></li></span>
+                    <span><li class="fas fa-thumbs-up"><span>likes</span></li>{{vote_sum}}</span>
                   </ul>
                 </div>
-                
-                <div class="striped-list-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique earum repellendus numquam ratione quam, sit, nisi ipsum architecto</div>
-                
+                <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                {{!-- Agregar el resumen del post actual
+                  <div>
+                    <span class="striped-list-details">{{excerpt 'aaa' characters=200}}</span>
+                    <a href="{{url}}" id="title-{{id}}">read more.</a>
+                  </div>
+                --}}
+
                 <div>
                   {{#if pinned}}
                     <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
@@ -122,12 +86,13 @@
   <div class="community-topic-container-right">
       <section class="community__topic-aside">
         <div class="topic-aside-top">
-          <p class="topic-aside-text">Share with others creatives about your stories, experiences and ask the community for advice.</p>
+          <p class="topic-aside-top-text">Share with others creatives about your stories, experiences and ask the community for advice.</p>
           <span class="post-to-community">
             {{#link 'new_post' class='button button-large'}}START YOUR CONVERSATION{{/link}}
           </span>
         </div>
 
+        {{!--
         <div class="topic-aside-middle">
           <div class="topic-aside-labels-section">
             <h2>Labels</h2>
@@ -141,7 +106,8 @@
             </div>
           </div>
         </div>
-
+        --}}
+        {{!--
         <div class="topic-aside-bottom">
           <div class="topic-aside-contributors-title">
             <h2>Top contributors</h2>
@@ -176,6 +142,7 @@
             </div>
           </div>
         </div>
+        --}}
       </section>
   </div>
 </div>
