@@ -2,13 +2,13 @@
 /* Styles comments inside articles, posts and requests */
 .comment {
   border-bottom: 1px solid $border-color;
-  padding: 20px 0;
+  padding: 40px 0;
 
   &-heading {
     margin-bottom: 5px;
     margin-top: 0;
-    font-size: 18px;
-    font-weight: $font-weight-semibold;
+    font-size: 30px;
+    font-weight: 900;
   }
 
   &-overview {
@@ -46,14 +46,11 @@
   }
 
   &-wrapper {
-    display: flex;
     position: relative;
 
     &.comment-official {
-      @include tablet { padding-top: 20px; }
-
-      border: 1px solid $brand_color;
-      padding: 40px 20px 20px; // 20 + 20 of official commment badge
+      @include tablet { padding-top: 0; }
+      padding: 0; // 20 + 20 of official commment badge
     }
   }
 
@@ -68,17 +65,52 @@
     }
   }
 
+  &-actions-container {
+    display: flex;
+    flex-flow: row nowrap;
+
+  }
+  &-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+
+    > span {
+      color: $link_color;
+    }
+
+    .post-share {
+      display: none;
+      position: absolute;
+      bottom: -35px;
+      height: 40px;
+      left: 25px;
+      box-shadow: 3px 3px 5px #5f6275;
+      padding: 10px;
+    }
+
+    &:hover {
+      .post-share {
+        display: block;
+        z-index: 3;
+      }
+    }
+  }
+
   &-author {
-    align-items: flex-end;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    align-items: center;
 
     @include tablet { justify-content: space-between; }
   }
 
   &-avatar {
-    margin-right: 10px;
+    margin-right: 17px;
 
     [dir="rtl"] & {
       margin-left: 10px;
@@ -86,13 +118,32 @@
     }
   }
 
-  &-list { padding: 10px; }
+  &-list { padding: 0 20px; }
 
   &-meta {
     flex: 1 0 auto;
 
     span > a {
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .meta-group {
+
+      span {
+        font-size: 14px;
+      }
+      button {
+        border: none;
+        background: transparent;
+        font-size: 14.5px;
+        padding: 0;
+
+        &:focus {
+          border: none;
+          outline-color: transparent;
+        }
+      }
     }
   }
 
@@ -122,7 +173,10 @@
     }
   }
 
-  &-container { width: 100%; }
+  &-container {
+    width: 100%;
+    margin-top: 20px;
+  }
 
   &-form-controls {
     @include tablet {
@@ -165,8 +219,12 @@
     @include text-overflow;
     @include content-body;
     font-family: $text_font;
-    line-height: 1.6;
+    line-height: 29px;
     overflow-x: auto;
+
+    p {
+      font-size: 18px;
+    }
   }
 
   &-mark-as-solved {

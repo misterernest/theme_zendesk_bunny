@@ -76,3 +76,29 @@
     padding: 2px 5px;
   }
 }
+
+.pro-contact-us-banner__image {
+  background-image: url($img_banner_pro_contact_us);
+  width: 728px;
+  height: 223px;
+}
+
+.pro-join-banner__image {
+  background-image: url($img_banner_pro_join_conversation);
+  width: 728px;
+  height: 223px;
+}
+
+.banner__text {
+  color: #fff;
+  
+  &--bold {
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  &--normal {
+    font-weight: normal;
+    font-size: 35px;
+  }
+}

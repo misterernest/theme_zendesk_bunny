@@ -1,6 +1,6 @@
 /***** Search field *****/
 $input-color-border: #c7c9d8;
-$input-submit-height: 35px;
+$input-submit-height: 49px;
 $input-placeholder-color: #77777777;
 .search {
   position: relative;
@@ -15,11 +15,16 @@ $input-placeholder-color: #77777777;
     border-radius: 5px;
     box-sizing: border-box;
     color: $field-text-color;
-    height: $input-submit-height;
+    height: $input-submit-height - 2px;
     padding-left: 40px;
     padding-right: 20px;
     -webkit-appearance: none;
-    width: 350px;
+    width: 462px;
+
+    &::placeholder {
+      color: $input-placeholder-color;
+      font-size: 16px;
+    }
 
     [dir="rtl"] & {
       padding-right: 40px;
@@ -39,6 +44,7 @@ $input-placeholder-color: #77777777;
 
       &::placeholder {
         color: $input-placeholder-color;
+        font-size: 16px;
       }
     }
     input[type="submit"] {
