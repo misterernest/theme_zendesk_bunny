@@ -8,56 +8,42 @@
     justify-content: space-between;
   
     .card {
-  
       box-shadow: $shadows;
-      
-      @include mobile {
-        width: 100%;
-      }
-  
-      @include tablet {
-        width: 30%;
-      }
-  
-      @include desktop {
-        width: 21%;
-      }
-  
-      border: 1px solid $bordercard_color;
       border-radius: 5px;
       background: $background_color;
-      margin: 25px 0;
+      margin: 0 0 50px;
       text-decoration: none;
       color: $text_color;
-      height: 225px;
+      height: 301px;
+      flex: 0 1 335px;
   
       &-container {
-        @include mobile { padding: 2% 10%; }
-  
-        @include tablet { padding: 10% 10%; }
-  
-        @include desktop { padding: 10% 10%; }
-      
         display: flex;
         flex-direction: column;
+        padding: 29px 10px 24px;
   
         .card__top {
-          width: 100%;
-          margin-bottom: 10px;
-          display: flex;
-  
+          text-align: center;
           .card__image {
-            width: 100px;
             margin: 0 auto;
           }
         }
         .card__middle {
+          margin: 19px auto 12px;
+          font-size: 18px;
+          font-weight: 900;
           text-align: center;
   
         }
   
         .card__bottom {
+          font-size: 17px;
+          font-weight: 400;
           text-align: center;
+
+          .card__description {
+            margin: 0;
+          }
         }
       }
   }
