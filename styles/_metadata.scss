@@ -7,7 +7,7 @@
 }
 
 .meta-group {
-  * {
+  > *:not(.status-label) {
     display: inline;
     font-family: inherit;
     color: $link_color;
