@@ -22,25 +22,42 @@
       <img src="{{asset 'img_nav_arrow_right.png'}}" alt="">
     </div>
     <div class="nav--button-client">
-      <img src="{{asset 'img_nav_button_client_off.png'}}" alt="">
+      {{#is category.id 200296637}}
+        <img src="{{asset 'img_nav_button_client_off.png'}}" alt="button client">
+      {{/is}}
+      {{#is category.id 200296218}}
+        <a href="/hc/en-us/categories/200296637-Help-for-Clients">
+            <img src="{{asset 'img_nav_button_client_on.png'}}" alt="button client">
+        </a>
+      {{/is}}
     </div>
     <div class="nav--button-pros">
-      <img src="{{asset 'img_nav_button_pros_off.png'}}" alt="">
+      <div class="nav--button-client">
+        {{#is category.id 200296637}}
+          <a href="/hc/en-us/categories/200296218-Help-for-Pros">
+            <img src="{{asset 'img_nav_button_pros_on.png'}}" alt="button pros">
+          </a>
+        {{/is}}
+        {{#is category.id 200296218}}
+          <img src="{{asset 'img_nav_button_pros_off.png'}}" alt="button pros">
+        {{/is}}
+      </div>
     </div>
   </nav>
 </section>
 <div class="container">
   <section class="section knowledge-base">
     <h2 class="visibility-hidden">{{ t 'categories' }}</h2>
-    <div class="banner">
+    <div class="banner" {{#is category.id 200296637}}hidden{{/is}}>
       <div class="pro-join-community-banner__image">
-        <a href="#" class="pro-join-community-banner__button">JOIN TO COMMUNITY</a>
+        {{#link 'community' class="pro-join-community-banner__button"}}JOIN OUR COMMUNITY{{/link}}
         <div class="banner-community__text">
           <span class="banner-community__text_big">We waiting for you</span>
           <span class="banner-community__text_medium">in our Community for pros</span>
         </div>
       </div>
     </div>
+
 
     <span class="section__message">
         Hey buddy! to facilitate your search, choose a category that is closest to your issue
@@ -50,7 +67,80 @@
       <a href="{{url}}" class="card">
         <div class="card-container">
           <div class="card__top">
-            <img class="card__image" src="{{asset 'img_icon_account_preferences.png'}}" alt="IMG" srcset="">
+            {{#is name 'Update'}}
+            <img class="card__image" src="{{asset 'img_sec_update.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Updates'}}
+            <img class="card__image" src="{{asset 'img_sec_update.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'General'}}
+            <img class="card__image" src="{{asset 'img_sec_general.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Payments'}}
+            <img class="card__image" src="{{asset 'img_sec_payments.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Copyright'}}
+            <img class="card__image" src="{{asset 'img_sec_copyright.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Revisions'}}
+            <img class="card__image" src="{{asset 'img_sec_revisions.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Add-on'}}
+            <img class="card__image" src="{{asset 'img_sec_add-on.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Account Preferences'}}
+            <img class="card__image" src="{{asset 'img_sec_account preferences.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Account'}}
+            <img class="card__image" src="{{asset 'img_sec_account preferences.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Afiliates and API'}}
+            <img class="card__image" src="{{asset 'img_sec_afiliates and api.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Getting Started'}}
+            <img class="card__image" src="{{asset 'img_sec_getting started.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Getting started'}}
+            <img class="card__image" src="{{asset 'img_sec_getting started.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Samples'}}
+            <img class="card__image" src="{{asset 'img_sec_samples.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Stats'}}
+            <img class="card__image" src="{{asset 'img_sec_stats.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Projects'}}
+            <img class="card__image" src="{{asset 'img_sec_projects.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Rejections'}}
+            <img class="card__image" src="{{asset 'img_sec_rejections.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Rates'}}
+            <img class="card__image" src="{{asset 'img_sec_rates.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+            {{#is name 'Quality Control Standards'}}
+            <img class="card__image" src="{{asset 'img_sec_quality control standards.png'}}" id="cat-{{id}}" alt="{{name}}">
+            {{/is}}
+
+
+
           </div>
           <div class="card__middle">
             <b class="card__title">{{name}}</b>
@@ -64,10 +154,167 @@
     </section>
   </section>
 </div>
-{{#if promoted_articles}}
-<section class="home__bottom-articles">
-  <h3>{{t 'promoted_articles'}}</h3>
-  <div class="popu-articles">
+{{!--#if promoted_articles--}}
+<div class="container-articles section">
+  <section class="container">
+    <h3>{{t 'promoted_articles'}}</h3>
+    <!-- TODO para borrar-->
+    <div class="list-articles">
+      <div class="popular-article">
+        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
+        <div class="popular-article-content">
+          <div class="popular-article-content--title">
+            <a href="">What payment methods do you have available</a>
+          </div>
+          <div class="popular-article-content--excerpt">
+            <p ">Clients can complete payments via PayPal, and Credit Card...</p>
+          </div>
+          <div class="popular-article-content--more">
+            <a href="">
+            <span>
+              Read more
+              <i class="fas fa-chevron-right"><span>more</span></i>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="popular-article">
+        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
+        <div class="popular-article-content">
+          <div class="popular-article-content--title">
+            <a href="">What payment methods do you have available</a>
+          </div>
+          <div class="popular-article-content--excerpt">
+            <p ">Clients can complete payments via PayPal, and Credit Card...</p>
+          </div>
+          <div class="popular-article-content--more">
+            <a href="">
+            <span>
+              Read more
+              <i class="fas fa-chevron-right"><span>more</span></i>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="popular-article">
+        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
+        <div class="popular-article-content">
+          <div class="popular-article-content--title">
+            <a href="">What payment methods do you have available</a>
+          </div>
+          <div class="popular-article-content--excerpt">
+            <p ">Clients can complete payments via PayPal, and Credit Card...</p>
+          </div>
+          <div class="popular-article-content--more">
+            <a href="">
+            <span>
+              Read more
+              <i class="fas fa-chevron-right"><span>more</span></i>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="popular-article">
+        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
+        <div class="popular-article-content">
+          <div class="popular-article-content--title">
+            <a href="">What payment methods do you have available</a>
+          </div>
+          <div class="popular-article-content--excerpt">
+            <p ">Clients can complete payments via PayPal, and Credit Card...</p>
+          </div>
+          <div class="popular-article-content--more">
+            <a href="">
+            <span>
+              Read more
+              <i class="fas fa-chevron-right"><span>more</span></i>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="popular-article">
+        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
+        <div class="popular-article-content">
+          <div class="popular-article-content--title">
+            <a href="">What payment methods do you have available</a>
+          </div>
+          <div class="popular-article-content--excerpt">
+            <p ">Clients can complete payments via PayPal, and Credit Card...</p>
+          </div>
+          <div class="popular-article-content--more">
+            <a href="">
+            <span>
+              Read more
+              <i class="fas fa-chevron-right"><span>more</span></i>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="popular-article">
+        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
+        <div class="popular-article-content">
+          <div class="popular-article-content--title">
+            <a href="">What payment methods do you have available</a>
+          </div>
+          <div class="popular-article-content--excerpt">
+            <p ">Clients can complete payments via PayPal, and Credit Card...</p>
+          </div>
+          <div class="popular-article-content--more">
+            <a href="">
+            <span>
+              Read more
+              <i class="fas fa-chevron-right"><span>more</span></i>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="popular-article">
+        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
+        <div class="popular-article-content">
+          <div class="popular-article-content--title">
+            <a href="">What payment methods do you have available</a>
+          </div>
+          <div class="popular-article-content--excerpt">
+            <p ">Clients can complete payments via PayPal, and Credit Card...</p>
+          </div>
+          <div class="popular-article-content--more">
+            <a href="">
+            <span>
+              Read more
+              <i class="fas fa-chevron-right"><span>more</span></i>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="popular-article">
+        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
+        <div class="popular-article-content">
+          <div class="popular-article-content--title">
+            <a href="">What payment methods do you have available</a>
+          </div>
+          <div class="popular-article-content--excerpt">
+            <p ">Clients can complete payments via PayPal, and Credit Card...</p>
+          </div>
+          <div class="popular-article-content--more">
+            <a href="">
+            <span>
+              Read more
+              <i class="fas fa-chevron-right"><span>more</span></i>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- fin TODO-->
     {{#each promoted_articles}}
     <div class="popu-article">
       <div class="article-container">
@@ -86,20 +333,41 @@
       </div>
     </div>
     {{/each}}
-  </div>
-</section>
-{{/if}}
+  </section>
+</div>
+{{!--/if--}}
 
 <div class="container">
-  <div class="home__publicity">
-    <div class="pro-contact-us-banner__image">
-      <span class="banner__text banner__text--bold">Didnt find the solution to your issue?</span>
-      <span class="banner__text banner__text--normal">Dot not worry, take it easy!</span>
-      <a href="#" class="button button-large">CONTACT US HERE</a>
+  <div class="second-banner banners-container">
+    {{#is category.id 200296637}}
+      <div class="second-banner second-banner--left client">
+    {{/is}}
+    {{#is category.id 200296218}}
+      <div class="second-banner second-banner--left pros">
+    {{/is}}
+        <div class="second-banner--container-text">
+          <span class="second-banner--left-first-text">Didnt find the solution to your issue?</span>
+          <span class="second-banner--left-second-text">Dot not worry, take it easy!</span>
+          {{#link 'new_post' class='button button-large'}}CONTACT US HERE{{/link}}
+        </div>
     </div>
-    <div class="pro-join-banner__image">
-      <span class="banner__text banner__text--bold">Community for Pros</span>
-      <a href="#" class="button button-large">JOIN OUR CONVERSATION</a>
+    {{#is category.id 200296637}}
+      <div class="second-banner second-banner--right client">
+    {{/is}}
+    {{#is category.id 200296218}}
+      <div class="second-banner second-banner--right pros">
+    {{/is}}
+        <div class="second-banner--container-text">
+          {{#is category.id 200296637}}
+            <span class="second-banner--right-first-text">What kind of talent creative work do you need?</span>
+            <a href="#" class="button button-large">submit your project</a>
+          {{/is}}
+          {{#is category.id 200296218}}
+              <span class="second-banner--right-first-text">Community for Pros</span>
+              {{#link class="button button-large"}}<a href="#" class="button button-large">JOIN OUR CONVERSATION</a>
+          {{/is}}
+
+        </div>
     </div>
   </div>
 </div>

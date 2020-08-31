@@ -276,10 +276,10 @@
           "label": "client_banner_left_label"
         },
         {
-          "identifier": "client_banner_rigth",
+          "identifier": "client_banner_right",
           "type": "file",
-          "description": "category_client_banner_rigth",
-          "label": "client_banner_rigth_label"
+          "description": "category_client_banner_right",
+          "label": "client_banner_right_label"
         },
         {
           "identifier": "pros_banner_left",
@@ -288,10 +288,10 @@
           "label": "ipros_banner_left_label"
         },
         {
-          "identifier": "pros_banner_rigth",
+          "identifier": "pros_banner_right",
           "type": "file",
-          "description": "category_pros_banner_rigth",
-          "label": "pros_banner_rigth_label"
+          "description": "category_pros_banner_right",
+          "label": "pros_banner_right_label"
         }
       ]
     },
