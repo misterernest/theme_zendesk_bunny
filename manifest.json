@@ -264,28 +264,34 @@
           "label": "community_background_image_label"
         },
         {
-          "identifier": "community_image",
+          "identifier": "community_image_pros",
           "type": "file",
           "description": "community_image_description",
           "label": "community_image_label"
         },
         {
-          "identifier": "pro_join_community_banner",
+          "identifier": "client_banner_left",
           "type": "file",
-          "description": "pro_join_community_banner_description",
-          "label": "pro_join_community_banner_label"
+          "description": "category_client_banner_left",
+          "label": "client_banner_left_label"
         },
         {
-          "identifier": "img_banner_pro_contact_us",
+          "identifier": "client_banner_rigth",
           "type": "file",
-          "description": "img_banner_pro_contact_us_description",
-          "label": "img_banner_pro_contact_us_label"
+          "description": "category_client_banner_rigth",
+          "label": "client_banner_rigth_label"
         },
         {
-          "identifier": "img_banner_pro_join_conversation",
+          "identifier": "pros_banner_left",
           "type": "file",
-          "description": "img_banner_pro_join_conversation_description",
-          "label": "img_banner_pro_join_conversation_label"
+          "description": "category_pros_banner_left",
+          "label": "ipros_banner_left_label"
+        },
+        {
+          "identifier": "pros_banner_rigth",
+          "type": "file",
+          "description": "category_pros_banner_rigth",
+          "label": "pros_banner_rigth_label"
         }
       ]
     },

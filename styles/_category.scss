@@ -61,37 +61,63 @@
 
 
 .pro-join-community-banner__image {
-  background-image: url($pro_join_community_banner);
-  height: 160px;
+  background-image: url($community_image_pros);
+  height: 8.1vw;
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
 
   .pro-join-community-banner__button {
+    font-size: 1.1vw;
+    white-space: nowrap;
     position: absolute;
     background: #fff;
     color: $text_color;
     border: 1px solid $text_color;
     border-radius: 2px;
-    padding: 2px 5px;
+    top: 40%;
+    right: 10%;
+    height: 30.7%;
+    width: 16.9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner-community {
+
+    &__text {
+      display: flex;
+      left: 13%;
+      top: 1vw;
+      position: absolute;
+      flex-flow: column;
+      &_big {
+        font-size: 3vw;
+        font-weight: bold;
+      }
+      &_medium {
+        font-size: 1.5vw;
+        font-weight: 600;
+      }
+    }
   }
 }
 
 .pro-contact-us-banner__image {
-  background-image: url($img_banner_pro_contact_us);
+  background-image: url($pros_banner_left);
   width: 728px;
   height: 223px;
 }
 
 .pro-join-banner__image {
-  background-image: url($img_banner_pro_join_conversation);
+  background-image: url($community_image_pros);
   width: 728px;
   height: 223px;
 }
 
 .banner__text {
   color: #fff;
-  
+
   &--bold {
     font-weight: bold;
     font-size: 35px;
@@ -101,4 +127,14 @@
     font-weight: normal;
     font-size: 35px;
   }
+}
+.section__message {
+  margin: 60px 0 51px;
+  display: inline-block;
+  width: 100%;
+  justify-content: center;
+  font-weight: 500;
+  color: $text_color;
+  text-align: center;
+  font-size: 26px;
 }
