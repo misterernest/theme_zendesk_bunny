@@ -23,25 +23,23 @@
     </div>
     <div class="nav--button-client">
       {{#is category.id 200296637}}
-        <img src="{{asset 'img_nav_button_client_off.png'}}" alt="button client">
+        <img src="{{asset 'img_nav_button_client_on.png'}}" alt="button client">
       {{/is}}
       {{#is category.id 200296218}}
         <a href="/hc/en-us/categories/200296637-Help-for-Clients">
-            <img src="{{asset 'img_nav_button_client_on.png'}}" alt="button client">
+            <img src="{{asset 'img_nav_button_client_off.png'}}" alt="button client">
         </a>
       {{/is}}
     </div>
     <div class="nav--button-pros">
-      <div class="nav--button-client">
-        {{#is category.id 200296637}}
-          <a href="/hc/en-us/categories/200296218-Help-for-Pros">
-            <img src="{{asset 'img_nav_button_pros_on.png'}}" alt="button pros">
-          </a>
-        {{/is}}
-        {{#is category.id 200296218}}
+      {{#is category.id 200296637}}
+        <a href="/hc/en-us/categories/200296218-Help-for-Pros">
           <img src="{{asset 'img_nav_button_pros_off.png'}}" alt="button pros">
-        {{/is}}
-      </div>
+        </a>
+      {{/is}}
+      {{#is category.id 200296218}}
+        <img src="{{asset 'img_nav_button_pros_on.png'}}" alt="button pros">
+      {{/is}}
     </div>
   </nav>
 </section>
@@ -60,8 +58,8 @@
 
 
     <span class="section__message">
-        Hey buddy! to facilitate your search, choose a category that is closest to your issue
-      </span>
+      Hey buddy! to facilitate your search, choose a category that is closest to your issue
+    </span>
     <section class="cards">
       {{#each sections }}
       <a href="{{url}}" class="card">
@@ -83,7 +81,7 @@
             <img class="card__image" src="{{asset 'img_sec_payments.png'}}" id="cat-{{id}}" alt="{{name}}">
             {{/is}}
 
-            {{#is name 'Copyright'}}
+            {{#is name 'Copyrights'}}
             <img class="card__image" src="{{asset 'img_sec_copyright.png'}}" id="cat-{{id}}" alt="{{name}}">
             {{/is}}
 
@@ -91,7 +89,7 @@
             <img class="card__image" src="{{asset 'img_sec_revisions.png'}}" id="cat-{{id}}" alt="{{name}}">
             {{/is}}
 
-            {{#is name 'Add-on'}}
+            {{#is name 'Add-ons'}}
             <img class="card__image" src="{{asset 'img_sec_add_on.png'}}" id="cat-{{id}}" alt="{{name}}">
             {{/is}}
 
@@ -103,7 +101,7 @@
             <img class="card__image" src="{{asset 'img_sec_account_preferences.png'}}" id="cat-{{id}}" alt="{{name}}">
             {{/is}}
 
-            {{#is name 'Afiliates and API'}}
+            {{#is name 'Affiliates and API'}}
             <img class="card__image" src="{{asset 'img_sec_afiliates_and_api.png'}}" id="cat-{{id}}" alt="{{name}}">
             {{/is}}
 
