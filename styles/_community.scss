@@ -348,9 +348,37 @@
 
   &--firstline {
     text-align: center;
+    margin: 0;
   }
 
   &--secondline {
     text-align: center;
+    margin: 0;
+  }
+}
+
+.articles-section-container {
+  
+  display: flex;
+  flex-direction: row;
+
+  > * {
+    background: $background_color;
+  }
+
+  &-posts {
+    padding: 10px;
+    flex: 70%;
+  }
+
+  &-aside {
+    display: flex;
+    flex: 30%;
+    background: $background_color_second;
+
+    &-content {
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 }
