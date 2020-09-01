@@ -12,11 +12,11 @@
 </section>
 
 <div class="container">
-  <nav class="sub-nav">
+  {{!-- <nav class="sub-nav">
     {{breadcrumbs}}
-  </nav>
+  </nav> --}}
 
-  <header class="page-header community-header">
+  {{!-- <header class="page-header community-header">
       <span class="dropdown">
           <button class="dropdown-toggle" aria-haspopup="true">
             <h2 class="title">
@@ -38,37 +38,73 @@
     <span class="post-to-community">
       {{link 'new_post' class='button button-large'}}
     </span>
-  </header>
+  </header> --}}
+  <div class="description__text">
+    <span class="description__text--firstline">Here you can share your experience and ideas, ask and answer questions, and meet, other creatives like you.</span>
+    <span class="description__text--secondline">Choose the creative group in wich you work. If you want participate you must login with your Bunny account.</span>
+  </div>
+  
+  <nav class="sub-nav sub-nav--centered">
+    <li><a href="#">Voice-overs</a></li>
+    <li><a href="#">Video</a></li>
+    <li><a href="#">Audio</a></li>
+    <li><a href="#">Design</a></li>
+    <li><a href="#">Post-production</a></li>
+    <li><a href="#">Traslation</a></li>
+    <li><a href="#">Transcription</a></li>
+    <li><a href="#">Writing</a></li>
+  </nav>
 
   {{#unless topics}}
     <p>{{t 'no_content'}}</p>
   {{/unless}}
 
-  <div id="main-content" class="blocks topics">
-    <ul class="blocks-list topics-list">
-      {{#each topics}}
-        <li class="blocks-item topics-item {{#if internal}}blocks-item-internal{{/if}}">
-           <a href="{{url}}" class="blocks-item-link">
-             <span class="blocks-item-title">
-               {{name}}
+  <section class="cards">
+    {{#each topics}}
+      <a href="{{url}}" class="card">
+        <div class="card-container">
+          <div class="card__top">
+                {{! Descomentar para realizar las condiciones y cargar las imágenes}}
+                
+                {{!-- {{#is name '[VoiceBunny] Tips and Advice'}}
+                <img class="card__image" src="{{asset 'img_sec_update.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{/is}}
 
-               {{#if internal}}
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
-                  <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
-                  <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
-                </svg>
-               {{/if}}
-             </span>
-             <span class="blocks-item-description">{{excerpt description}}</span>
-             <ul class="meta-group">
-               <li class="meta-data">{{t 'post_count' count=post_count}}</li>
-               <li class="meta-data">{{t 'follower_count' count=follower_count}}</li>
-             </ul>
-           </a>
-        </li>
-      {{/each}}
-    </ul>
-  </div>
+                {{#is name '[VoiceBunny] Working with Us'}}
+                <img class="card__image" src="{{asset 'img_sec_update.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{/is}}
+
+                {{#is name 'General'}}
+                <img class="card__image" src="{{asset 'img_sec_general.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{/is}}
+
+                {{#is name 'Payments'}}
+                <img class="card__image" src="{{asset 'img_sec_payments.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{/is}}
+
+                {{#is name 'Copyright'}}
+                <img class="card__image" src="{{asset 'img_sec_copyright.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{/is}}
+
+                {{#is name 'Revisions'}}
+                <img class="card__image" src="{{asset 'img_sec_revisions.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{/is}}
+
+                {{#is name 'Add-on'}}
+                <img class="card__image" src="{{asset 'img_sec_add_on.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{/is}} --}}
+
+            </div>
+          <div class="card__middle">
+            <b class="card__title">{{name}}</b>
+          </div>
+          <div class="card__bottom">
+            <p class="card__description">{{excerpt description}}</p>
+          </div>
+        </div>
+      </a>
+    {{/each}}
+  </section>
 
   {{pagination}}
 
