@@ -339,3 +339,18 @@
     background: $link_color;
   }
 }
+
+.description__text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 65px;
+
+  &--firstline {
+    text-align: center;
+  }
+
+  &--secondline {
+    text-align: center;
+  }
+}

@@ -39,4 +39,13 @@
     
     align-self: flex-end;
   }
+
+  &--centered {
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 126px;
+  }
 }
