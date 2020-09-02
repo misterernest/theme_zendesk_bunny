@@ -292,6 +292,12 @@
           "type": "file",
           "description": "category_pros_banner_right",
           "label": "pros_banner_right_label"
+        },
+        {
+          "identifier": "community_banner_topic_list",
+          "type": "file",
+          "description": "community_banner_topic_list",
+          "label": "community_banner_topic_list_label"
         }
       ]
     },
