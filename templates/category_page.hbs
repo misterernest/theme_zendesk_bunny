@@ -1,6 +1,10 @@
 <h1 class="visibility-hidden">{{ help_center.name }}</h1>
 
 <section id="main-content" class="section hero">
+  <div class="hero-text">
+    <span class="hero-text--first-text">Hi there, welcome to our community!</span>
+    <span class="hero-text--second-text">How can <i>we help you?</i></span>
+  </div>
   <div class="hero-inner">
     <h2 class="visibility-hidden">{{ t 'search' }}</h2>
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
@@ -50,15 +54,15 @@
       <div class="pro-join-community-banner__image">
         {{#link 'community' class="pro-join-community-banner__button"}}JOIN OUR COMMUNITY{{/link}}
         <div class="banner-community__text">
-          <span class="banner-community__text_big">We waiting for you</span>
-          <span class="banner-community__text_medium">in our Community for pros</span>
+          <span class="banner-community__text_big">Would you like to have a conversation?</span>
+          <span class="banner-community__text_medium">Let us take you to our Community for Pros!</span>
         </div>
       </div>
     </div>
 
 
     <span class="section__message">
-      Hey buddy! to facilitate your search, choose a category that is closest to your issue
+      Choose the topic that best matches your question
     </span>
     <section class="cards">
       {{#each sections }}
@@ -155,7 +159,7 @@
 {{!--#if promoted_articles--}}
 <div class="container-articles section">
   <section class="container">
-    <h3>{{t 'promoted_articles'}}</h3>
+    <h3><h3>Most popular articles</h3></h3>
     <!-- TODO para borrar-->
     <div class="list-articles">
       <div class="popular-article">
