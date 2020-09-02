@@ -69,13 +69,13 @@
   position: relative;
 
   .pro-join-community-banner__button {
-    font-size: 1.1vw;
+    font-size: 0.875vw;
     white-space: nowrap;
     position: absolute;
     background: #fff;
     color: $text_color;
-    border: 1px solid $text_color;
-    border-radius: 2px;
+    border: 2px solid $text_color;
+    border-radius: 4px;
     top: 40%;
     right: 10%;
     height: 30.7%;
@@ -83,21 +83,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
   }
   .banner-community {
 
     &__text {
       display: flex;
       left: 13%;
-      top: 1vw;
+      top: 22%;
       position: absolute;
       flex-flow: column;
       &_big {
-        font-size: 3vw;
+        font-size: 2.1vw;
         font-weight: bold;
       }
       &_medium {
-        font-size: 1.5vw;
+        font-size: 1.40625vw;
         font-weight: 600;
       }
     }
@@ -121,7 +122,7 @@
       height: 223px;
       background-repeat: no-repeat;
       background-size: 100%;
-      font-weight: 900;
+      font-weight: 700;
       padding: 35px 0 35px 35px;
       line-height: 32px;
 
@@ -176,12 +177,11 @@
 }
 
 .section__message {
-  margin: 60px 0 51px;
+  margin: 50px 0 50px;
   display: inline-block;
   width: 100%;
   justify-content: center;
   font-weight: 500;
-  color: $text_color;
   text-align: center;
   font-size: 26px;
 }
@@ -189,9 +189,10 @@
 .container-articles {
   background: $background_color;
   box-shadow: $shadows;
+  margin-bottom: 96px;
 
   .container {
-      padding: 88px 0 50px;
+      padding: 87px 0 50px;
   }
 
   h3 {

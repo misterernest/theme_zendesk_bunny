@@ -9,9 +9,31 @@
   width: 100%;
 
   &-inner {
-    @include vertical-align;
-    top: 290px;
+    position: relative;
+    top: 44%;
+    transform: translateY(-50%);
     max-width: 610px;
     margin: 0 auto;
+  }
+
+  &-text {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    top: 112px;
+    &--first-text {
+      font-size: 50px;
+      word-spacing: 5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    &--second-text {
+      font-size: 33px;
+      font-weight: 600;
+      i {
+        color: $brand_color;
+        font-style: normal;
+      }
+    }
   }
 }
