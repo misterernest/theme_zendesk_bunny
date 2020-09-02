@@ -118,128 +118,130 @@
   </div>
 
   <div class="articles-section-container">
-    <div class="articles-section-container-posts tab_container">
+    <div class="articles-section-container-posts">
       <ul class="tabs">
         <li><a href="#top">Top</a></li>
         <li><a href="#recent">Recent</a></li>
       </ul>
-      <div class="top-section tab_content" id="top">
-        <div id="main-content" class="posts-list striped-list">
-          {{!#each posts}}
-          <section role="region" aria-labelledby="title-{{!id}}">
-            <div class="striped-list-item">
-              <span class="striped-list-picture">
-                <img
-                  src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
-                  alt="Avatar" class="community-posts-user-avatar" srcset="">
-              </span>
-              <span class="striped-list-info">
-                <a href="#" id="title-" class="striped-list-title">Top</a>
+      <div class="tab_container">
+        <div class="top-section tab_content" id="top">
+          <div id="main-content" class="posts-list">
+          {{!#each promoted_articles}}
+            <section role="region" aria-labelledby="title-{{!id}}">
+              <div class="striped-list-item">
+                <span class="striped-list-picture">
+                  <img
+                    src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
+                    alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+                <span class="striped-list-info">
+                  <a href="#" id="title-" class="striped-list-title">Top</a>
 
-                <div class="meta-group">
-                  {{!#link 'user_profile' id=author.id}}
-                  <span> #</span>
-                  {{!/link}}
-                  <ul class="header--post-data">
-                    <span>
-                      <li class="fas fa-calendar-alt"><span>calendar</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-comment"><span>coment</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-eye"><span>viewed</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-thumbs-up"><span>likes</span></li>
-                    </span>
-                  </ul>
-                </div>
-                <!-- TODO: RESUMEN DEL POST ACTUAL-->
-                {{!-- Agregar el resumen del post actual
+                  <div class="meta-group">
+                    {{!#link 'user_profile' id=author.id}}
+                    <span> #</span>
+                    {{!/link}}
+                    <ul class="header--post-data">
+                      <span>
+                        <li class="fas fa-calendar-alt"><span>calendar</span></li>
+                      </span>
+                      <span>
+                        <li class="fas fa-comment"><span>coment</span></li>
+                      </span>
+                      <span>
+                        <li class="fas fa-eye"><span>viewed</span></li>
+                      </span>
+                      <span>
+                        <li class="fas fa-thumbs-up"><span>likes</span></li>
+                      </span>
+                    </ul>
+                  </div>
+                  <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                  {{!-- Agregar el resumen del post actual
                   <div>
                     <span class="striped-list-details">{{excerpt 'aaa' characters=200}}</span>
                     <a href="{{url}}" id="title-{{id}}">read more.</a>
                   </div>
                 --}}
 
-                <div>
-                  {{!#if pinned}}
-                  <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
-                  {{!/if}}
-                  {{!#if featured}}
-                  <span class="status-label status-label-featured">{{t 'featured'}}</span>
-                  {{!/if}}
-                  {{!#is status 'none'}}
-                  {{!else}}
-                  <span
-                    class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
-                  {{!/is}}
-                </div>
-              </span>
-            </div>
-          </section>
-          {{!/each}}
+                  <div>
+                    {{!#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{!/if}}
+                    {{!#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{!/if}}
+                    {{!#is status 'none'}}
+                    {{!else}}
+                    <span
+                      class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
+                    {{!/is}}
+                  </div>
+                </span>
+              </div>
+            </section>
+            {{!/each}}
+          </div>
         </div>
-      </div>
 
-      <div class="recent-section tab_content" id="recent">
-        <div id="main-content" class="posts-list striped-list">
-          {{!#each posts}}
-          <section role="region" aria-labelledby="title-{{!id}}">
-            <div class="striped-list-item">
-              <span class="striped-list-picture">
-                <img
-                  src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
-                  alt="Avatar" class="community-posts-user-avatar" srcset="">
-              </span>
-              <span class="striped-list-info">
-                <a href="#" id="title-" class="striped-list-title">Recent</a>
+        <div class="recent-section tab_content" id="recent">
+          <div id="main-content" class="posts-list striped-list">
+            {{!#each posts}}
+            <section role="region" aria-labelledby="title-{{!id}}">
+              <div class="striped-list-item">
+                <span class="striped-list-picture">
+                  <img
+                    src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
+                    alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+                <span class="striped-list-info">
+                  <a href="#" id="title-" class="striped-list-title">Recent</a>
 
-                <div class="meta-group">
-                  {{!#link 'user_profile' id=author.id}}
-                  <span> #</span>
-                  {{!/link}}
-                  <ul class="header--post-data">
-                    <span>
-                      <li class="fas fa-calendar-alt"><span>calendar</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-comment"><span>coment</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-eye"><span>viewed</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-thumbs-up"><span>likes</span></li>
-                    </span>
-                  </ul>
-                </div>
-                <!-- TODO: RESUMEN DEL POST ACTUAL-->
-                {{!-- Agregar el resumen del post actual
+                  <div class="meta-group">
+                    {{!#link 'user_profile' id=author.id}}
+                    <span> #</span>
+                    {{!/link}}
+                    <ul class="header--post-data">
+                      <span>
+                        <li class="fas fa-calendar-alt"><span>calendar</span></li>
+                      </span>
+                      <span>
+                        <li class="fas fa-comment"><span>coment</span></li>
+                      </span>
+                      <span>
+                        <li class="fas fa-eye"><span>viewed</span></li>
+                      </span>
+                      <span>
+                        <li class="fas fa-thumbs-up"><span>likes</span></li>
+                      </span>
+                    </ul>
+                  </div>
+                  <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                  {{!-- Agregar el resumen del post actual
                   <div>
                     <span class="striped-list-details">{{excerpt 'aaa' characters=200}}</span>
                     <a href="{{url}}" id="title-{{id}}">read more.</a>
                   </div>
                 --}}
 
-                <div>
-                  {{!#if pinned}}
-                  <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
-                  {{!/if}}
-                  {{!#if featured}}
-                  <span class="status-label status-label-featured">{{t 'featured'}}</span>
-                  {{!/if}}
-                  {{!#is status 'none'}}
-                  {{!else}}
-                  <span
-                    class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
-                  {{!/is}}
-                </div>
-              </span>
-            </div>
-          </section>
-          {{!/each}}
+                  <div>
+                    {{!#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{!/if}}
+                    {{!#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{!/if}}
+                    {{!#is status 'none'}}
+                    {{!else}}
+                    <span
+                      class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
+                    {{!/is}}
+                  </div>
+                </span>
+              </div>
+            </section>
+            {{!/each}}
+          </div>
         </div>
       </div>
     </div>
@@ -298,6 +300,7 @@
   <script>
     $(document).ready(function () {
 
+      //Función para manejar el cambio entre las pestañas "Top" y "Recent"
       $(".tab_content").hide();
       $("ul.tabs li:first").addClass("active").show();
       $(".tab_content:first").show();

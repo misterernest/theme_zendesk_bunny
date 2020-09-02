@@ -16,12 +16,13 @@
 
   &-item-parent {
     font-size: $font-size-bigger;
+    display: none;
   }
 
-  &-item-parent,
+  //&-item-parent,
   &-item-link {
     @include tablet {
-      width: 70%;
+      width: 100%;
       margin: 0;
     }
 
@@ -33,7 +34,7 @@
 
   &-item-link {
     font-size: 14px;
-    font-weight: $font-weight-light;
+    font-weight: $font-weight-bold;
   }
 
   &-item-meta {
@@ -57,7 +58,15 @@
     font-weight: $font-weight-light;
   }
 
+  &-item-time::before {
+    content: "\f017";
+    color: #5f6275;
+    margin-right: 5px;
+    font-size: 14.5px;
+  }
+
   &-item-comment {
+    display: none;
     padding-left: 5px;
 
     [dir="rtl"] & { padding: 0 5px 0 0; }
