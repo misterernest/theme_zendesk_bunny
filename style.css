@@ -182,106 +182,6 @@ template {
 }
 
 /***** Base *****/
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 300;
-  font-display: swap;
-  src: local("Open Sans Light Italic"), local("OpenSans-LightItalic"), url(assets/fonts/OpenSans-LightItalic.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Open Sans Italic"), local("OpenSans-Italic"), url(assets/fonts/OpenSans-Italic.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 600;
-  font-display: swap;
-  src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic"), url(assets/fonts/OpenSans-SemiBoldItalic.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url(assets/fonts/OpenSans-BoldItalic.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 800;
-  font-display: swap;
-  src: local("Open Sans ExtraBold Italic"), local("OpenSans-ExtraBoldItalic"), url(assets/fonts/OpenSans-ExtraBoldItalic.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local("Open Sans Light"), local("OpenSans-Light"), url(assets/fonts/OpenSans-Light.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(assets/fonts/OpenSans-Regular.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url(assets/fonts/OpenSans-SemiBold.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(assets/fonts/OpenSans-Bold.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url(assets/fonts/OpenSans-ExtraBold.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -1267,11 +1167,34 @@ ul {
 
 .hero-inner {
   position: relative;
-  top: 50%;
+  top: 44%;
   transform: translateY(-50%);
-  top: 290px;
   max-width: 610px;
   margin: 0 auto;
+}
+
+.hero-text {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  top: 112px;
+}
+
+.hero-text--first-text {
+  font-size: 50px;
+  word-spacing: 5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero-text--second-text {
+  font-size: 33px;
+  font-weight: 600;
+}
+
+.hero-text--second-text i {
+  color: $brand_color;
+  font-style: normal;
 }
 
 .page-header {
@@ -1303,7 +1226,7 @@ ul {
 .page-header h1 {
   flex-grow: 1;
   margin-bottom: 20px;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 35px;
 }
 
@@ -1486,7 +1409,7 @@ ul {
 /***** Homepage *****/
 main {
   background: $background_color_second;
-  padding-bottom: 119px;
+  padding-bottom: 68px;
 }
 
 main.third-page {
@@ -1910,13 +1833,13 @@ main.third-page {
 }
 
 .pro-join-community-banner__image .pro-join-community-banner__button {
-  font-size: 1.1vw;
+  font-size: 0.875vw;
   white-space: nowrap;
   position: absolute;
   background: #fff;
   color: $text_color;
-  border: 1px solid $text_color;
-  border-radius: 2px;
+  border: 2px solid $text_color;
+  border-radius: 4px;
   top: 40%;
   right: 10%;
   height: 30.7%;
@@ -1924,23 +1847,24 @@ main.third-page {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
 }
 
 .pro-join-community-banner__image .banner-community__text {
   display: flex;
   left: 13%;
-  top: 1vw;
+  top: 22%;
   position: absolute;
   flex-flow: column;
 }
 
 .pro-join-community-banner__image .banner-community__text_big {
-  font-size: 3vw;
+  font-size: 2.1vw;
   font-weight: bold;
 }
 
 .pro-join-community-banner__image .banner-community__text_medium {
-  font-size: 1.5vw;
+  font-size: 1.40625vw;
   font-weight: 600;
 }
 
@@ -1966,7 +1890,7 @@ main.third-page {
   height: 223px;
   background-repeat: no-repeat;
   background-size: 100%;
-  font-weight: 900;
+  font-weight: 700;
   padding: 35px 0 35px 35px;
   line-height: 32px;
 }
@@ -2031,12 +1955,11 @@ main.third-page {
 }
 
 .section__message {
-  margin: 60px 0 51px;
+  margin: 50px 0 50px;
   display: inline-block;
   width: 100%;
   justify-content: center;
   font-weight: 500;
-  color: $text_color;
   text-align: center;
   font-size: 26px;
 }
@@ -2044,10 +1967,11 @@ main.third-page {
 .container-articles {
   background: $background_color;
   box-shadow: 0px 0px 5px #5f627540;
+  margin-bottom: 96px;
 }
 
 .container-articles .container {
-  padding: 88px 0 50px;
+  padding: 87px 0 50px;
 }
 
 .container-articles h3 {
@@ -2651,7 +2575,7 @@ main.third-page {
   margin-bottom: 5px;
   margin-top: 0;
   font-size: 30px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .comment-overview {
@@ -3429,10 +3353,111 @@ main.third-page {
 
 .description__text--firstline {
   text-align: center;
+  margin: 0;
 }
 
 .description__text--secondline {
   text-align: center;
+  margin: 0;
+}
+
+.articles-section-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.articles-section-container-posts {
+  padding: 10px;
+  flex: 1 0 1059px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #5f627540;
+}
+
+.articles-section-container-posts > * {
+  background: $background_color;
+}
+
+.articles-section-container-aside {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 413px;
+  margin-left: 47px;
+}
+
+.articles-section-container-aside > * {
+  background: $background_color;
+  margin-bottom: 47px;
+}
+
+.articles-section-container-aside__image {
+  background: url($community_banner_topic_list);
+  background-size: 100%;
+  height: 453px;
+}
+
+.articles-section-container-aside__box {
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #5f627540;
+  padding: 33px 25px;
+}
+
+ul.tabs {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: none;
+  height: 32px;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
+  width: 100%;
+}
+
+ul.tabs li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  height: 31px;
+  line-height: 31px;
+  border: 1px solid #999;
+  border-left: none;
+  margin-bottom: -1px;
+  overflow: hidden;
+  position: relative;
+  background: #e0e0e0;
+}
+
+ul.tabs li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  font-size: 1.2em;
+  padding: 0 20px;
+  border: 1px solid #fff;
+  outline: none;
+}
+
+ul.tabs li a:hover {
+  background: #ccc;
+}
+
+html ul.tabs li.active, html ul.tabs li.active a:hover {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.tab_container {
+  border: 1px solid #999;
+  border-top: none;
+  overflow: hidden;
+  clear: both;
+  float: left;
+  width: 100%;
+  background: #fff;
+}
+
+.tab_content {
+  padding: 20px;
+  font-size: 1.2em;
 }
 
 /***** Striped list *****/
@@ -5950,7 +5975,7 @@ html[dir="rtl"] .notification-left-aligned {
 .cards .card-container .card__middle {
   margin: 19px auto 12px;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 700;
   text-align: center;
 }
 
