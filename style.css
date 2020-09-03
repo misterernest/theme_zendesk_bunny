@@ -1185,6 +1185,7 @@ ul {
   word-spacing: 5px;
   font-weight: 700;
   letter-spacing: 1px;
+  line-height: 40px;
 }
 
 .hero-text--second-text {
@@ -1853,7 +1854,7 @@ main.third-page {
 .pro-join-community-banner__image .banner-community__text {
   display: flex;
   left: 13%;
-  top: 22%;
+  top: 28%;
   position: absolute;
   flex-flow: column;
 }
@@ -1861,6 +1862,8 @@ main.third-page {
 .pro-join-community-banner__image .banner-community__text_big {
   font-size: 2.1vw;
   font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 2.1vw;
 }
 
 .pro-join-community-banner__image .banner-community__text_medium {
@@ -1871,6 +1874,7 @@ main.third-page {
 .second-banner.banners-container {
   display: flex;
   justify-content: space-between;
+  margin: 0 5px;
 }
 
 @media (max-width: 768px) {
@@ -1915,7 +1919,7 @@ main.third-page {
 }
 
 .second-banner.banners-container .second-banner--left-first-text {
-  font-size: 28px;
+  font-size: 1.47059vw;
   margin-bottom: 10px;
 }
 
@@ -1925,8 +1929,12 @@ main.third-page {
 }
 
 .second-banner.banners-container .second-banner--left a.button.button-large, .second-banner.banners-container .second-banner--left a.button-large.pagination-next-link, .second-banner.banners-container .second-banner--left a.button-large.pagination-prev-link, .second-banner.banners-container .second-banner--left a.button-large.pagination-first-link, .second-banner.banners-container .second-banner--left a.button-large.pagination-last-link {
-  width: 237px;
-  height: 42px;
+  width: 12.448vw;
+  height: 2.206vw;
+  font-size: 0.892856vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .second-banner.banners-container .second-banner--right.client {
@@ -1942,12 +1950,16 @@ main.third-page {
 }
 
 .second-banner.banners-container .second-banner--right .second-banner--container-text a.button.button-large, .second-banner.banners-container .second-banner--right .second-banner--container-text a.button-large.pagination-next-link, .second-banner.banners-container .second-banner--right .second-banner--container-text a.button-large.pagination-prev-link, .second-banner.banners-container .second-banner--right .second-banner--container-text a.button-large.pagination-first-link, .second-banner.banners-container .second-banner--right .second-banner--container-text a.button-large.pagination-last-link {
-  width: 283px;
-  height: 42px;
+  width: 14.8635vw;
+  height: 2.206vw;
+  font-size: 0.892856vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .second-banner.banners-container .second-banner--right-first-text {
-  font-size: 28px;
+  font-size: 1.47059vw;
 }
 
 .second-banner.banners-container .second-banner--right-second-text {
@@ -5890,9 +5902,11 @@ html[dir="rtl"] .notification-left-aligned {
 
 .menu-categories {
   width: 100%;
+  background: transparent;
 }
 
 .menu-categories .nav {
+  background: inherit;
   max-width: 560px;
   margin: 0 auto;
   display: grid;
