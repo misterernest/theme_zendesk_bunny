@@ -309,44 +309,45 @@
       var endpoint3 = "https://help.bunnystudio.com/api/v2/help_center/community/posts.json?page=2&per_page=30";
 
       fetchConsoleTest = async () => {
-        let posts = [];
         const pages = 1;
-
         //for (i = 1; i <= pages; i++) {
         await $.ajax({
           url: `https://help.bunnystudio.com/api/v2/help_center/community/posts.json?page=1&per_page=2`,
           type: "GET",
           dataType: "json",
           success: function (data) {
-
+            let posts = [];
+            console.log("---------------POST--------------------")
+            console.log(posts)
+            console.log("--------------- FIN POST--------------------")
             let n;
             let j = 0;
             n = data.posts.length;
-
+            console.log('+++++++++++++++++++++++++++++++++++++++++');
+            console.log(data.posts);
+            console.log('+++++++++++++++++++++++++++++++++++++++++');
 
             for (i = 0; i < n; i++) {
-              console.log("i", i)
               if (posts.length > 0) {
-                console.log("if 1")
                 for (j = 0; j < posts.length; j++) {
-                    console.log("post_count en j",posts[j].post_count)
                   if(data.posts[i].author_id == posts[j].author_id){
-                    console.log("if 2")
                     let postCountTemp = posts[j].post_count+1;
                     posts[j].post_count = postCountTemp;
                     j = posts.length;
-                  }else{
-                    console.log("else for")
+                  }else if(j == (posts.length -1)) {
                     posts.push({
                       author_id: data.posts[i].author_id, 
                       post_count: 1, 
                       vote_count: data.posts[i].vote_count
                       })
+                    console.log("---------------POST--------------------")
+                    console.log(posts)
+                    console.log("--------------- FIN POST--------------------")
 
                   }
                 }
               } else {
-                console.log("else")
+                console.log("else del primer for")
                 posts.push({
                   author_id: data.posts[i].author_id,
                   post_count: 1,
