@@ -90,12 +90,14 @@
     &__text {
       display: flex;
       left: 13%;
-      top: 22%;
+      top: 28%;
       position: absolute;
       flex-flow: column;
       &_big {
         font-size: 2.1vw;
         font-weight: bold;
+        letter-spacing: -1px;
+        line-height: 2.1vw;
       }
       &_medium {
         font-size: 1.40625vw;
@@ -109,6 +111,7 @@
   &.banners-container{
     display: flex;
     justify-content: space-between;
+    margin: 0 5px;
 
     @include mobile {
       flex-flow: column;
@@ -142,7 +145,7 @@
         &.client {background-image: url("$client_banner_left");}
         &.pros {background-image: url("$pros_banner_left");}
         &-first-text {
-          font-size: 28px;
+          font-size: 1.47059vw;
           margin-bottom: 10px;
         }
         &-second-text {
@@ -150,8 +153,12 @@
           margin-bottom: 10px;
         }
         a.button.button-large {
-          width: 237px;
-          height: 42px;
+          width: 12.448vw;
+          height: 2.206vw;
+          font-size: 0.892856vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
       &--right {
@@ -161,12 +168,16 @@
           width: 60%;
 
           a.button.button-large {
-            width: 283px;
-            height: 42px;
+            width: 14.8635vw;
+            height: 2.206vw;
+            font-size: 0.892856vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
         }
         &-first-text {
-          font-size: 28px;
+          font-size: 1.47059vw;
         }
         &-second-text {
           font-size: 22px;

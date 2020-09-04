@@ -1,6 +1,8 @@
 .menu-categories {
   width: 100%;
+  background: transparent;
   .nav {
+    background: inherit;
     max-width: 560px;
     margin: 0 auto;
     display: grid;

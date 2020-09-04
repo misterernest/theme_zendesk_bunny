@@ -24,34 +24,7 @@
               </svg>
             {{/if}}
           </h1>
-
-          <div class="article-author">
-            {{#if settings.show_article_author}}
-              <div class="avatar article-avatar">
-                {{#if article.author.agent}}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="icon-agent">
-                    <path fill="currentColor" d="M6 0C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm2.3 7H3.7c-.3 0-.4-.3-.3-.5C3.9 7.6 4.9 7 6 7s2.1.6 2.6 1.5c.1.2 0 .5-.3.5z"/>
-                  </svg>
-                {{/if}}
-                <img src="{{article.author.avatar_url}}" alt="" class="user-avatar"/>
-              </div>
-            {{/if}}
-            <div class="article-meta">
-              {{#if settings.show_article_author}}
-                {{#link 'user_profile' id=article.author.id}}
-                  <span>{{article.author.name}}</span>
-                  <span>#{{article.author.id}}</span>
-                {{/link}}
-              {{/if}}
-
-              <ul class="meta-group header__article-data">
-                <span><li class="fas fa-calendar-alt"></li>{{date article.edited_at class='metadata' format='short'}}</span>
-                <span><li class="fas fa-thumbs-up"></li>{{article.vote_count}}</span>
-              </ul>
-            </div>
-          </div>
         </header>
-
         <section class="article-info">
           <div class="article-content">
             <div class="article-body">{{article.body}}</div>

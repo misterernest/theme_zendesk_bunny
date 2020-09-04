@@ -17,7 +17,7 @@
     .footer__column {
       display: flex;
       flex-flow: column nowrap;
-      flex-grow: 1;
+      flex: 0 1 244px;
       align-items: flex-start;
 
       .title { 
