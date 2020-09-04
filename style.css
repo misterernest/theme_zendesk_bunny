@@ -955,7 +955,7 @@ ul {
 .footer-inner .footer__column {
   display: flex;
   flex-flow: column nowrap;
-  flex-grow: 1;
+  flex: 0 1 244px;
   align-items: flex-start;
 }
 
@@ -1185,7 +1185,7 @@ ul {
   word-spacing: 5px;
   font-weight: 700;
   letter-spacing: 1px;
-  line-height: 40px;
+  line-height: 50px;
 }
 
 .hero-text--second-text {
@@ -2343,7 +2343,8 @@ main.third-page {
 }
 
 .article .article__footer .article-votes .article-votes-question {
-  font-size: 20px;
+  font-size: 23px;
+  font-weight: 600;
 }
 
 .article .article__footer .article-votes .article-votes-controls {
@@ -2351,10 +2352,12 @@ main.third-page {
 }
 
 .article .article__footer .article-votes .article-votes-controls .article-vote {
-  height: 49px;
-  width: 113px;
-  font-size: 18px;
+  height: 31px;
+  width: 74px;
+  font-size: 15px;
+  font-weight: 600;
   margin: 0 5px;
+  line-height: 31px;
 }
 
 .article .article__footer .article__footer-tags {
@@ -2423,7 +2426,7 @@ main.third-page {
 
 .recent-articles li,
 .related-articles li {
-  margin-bottom: 15px;
+  line-height: 40px;
 }
 
 @media (max-width: 768px) {
@@ -2499,7 +2502,7 @@ main.third-page {
 .aside .recent-articles ul > li > a {
   color: $text_color;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .aside .recent-articles {
@@ -2584,7 +2587,7 @@ main.third-page {
 
 .comment-heading, .recent-articles-title,
 .related-articles-title {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   margin-top: 0;
   font-size: 30px;
   font-weight: 700;
@@ -3327,6 +3330,7 @@ main.third-page {
 .striped-list .striped-list-info {
   display: flex;
   flex-direction: column;
+  padding-left: 15px;
 }
 
 .striped-list .striped-list-info .striped-list-title {
