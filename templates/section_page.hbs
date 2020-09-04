@@ -26,9 +26,6 @@
       {{#each section.articles}}
           <section role="region" aria-labelledby="title-">
             <div class="striped-list-item">
-              <span class="striped-list-picture">
-                <img src="{{author.avatar_url}}" alt="Avatar" class="community-posts-user-avatar" srcset="">
-              </span>
               <span class="striped-list-info">
                 <a href="{{url}}" id="title-{{id}}" class="striped-list-title">{{title}}</a>
                 {{#if internal}}
@@ -39,12 +36,8 @@
                 {{/if}}
 
                 <div class="meta-group">
-                  {{#link 'user_profile' id=author.id}}
-                    <span>{{author.name}} #{{author.id}}</span>
-                  {{/link}}
                   <ul class="header__article-data">
                     <span><li class="fas fa-calendar-alt"><span>calendar</span></li>{{date created_at class='metadata' format='short'}}</span>
-                    {{#if comments_disabled }}<span><li class="fas fa-comment"><span>comment</span></li>{{comment_count}}</span>{{/if}}
                     <span><li class="fas fa-thumbs-up"><span>like</span></li>{{upvote_count}}</span>
                   </ul>
                 </div>
