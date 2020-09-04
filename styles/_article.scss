@@ -185,15 +185,18 @@
       text-align: center;
 
       .article-votes-question {
-        font-size: 20px;
+        font-size: 23px;
+        font-weight: 600;
       }
       .article-votes-controls {
         padding-top: 15px;
         .article-vote {
-          height: 49px;
-          width: 113px;
-          font-size: 18px;
+          height: 31px;
+          width: 74px;
+          font-size: 15px;
+          font-weight: 600;
           margin: 0 5px;
+          line-height: 31px;
         }
       }
     }
@@ -275,11 +278,11 @@
 .recent-articles,
 .related-articles {
   &-title {
-    @extend .comment-heading
+    @extend .comment-heading;
   }
 
   li {
-    margin-bottom: 15px;
+    line-height: 40px;
   }
 }
 
@@ -348,7 +351,7 @@
     ul > li > a {
       color: $text_color;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 600;
     }
   }
   .recent-articles {
