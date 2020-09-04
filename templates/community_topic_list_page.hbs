@@ -69,40 +69,44 @@
         <div class="card__top">
           {{! Descomentar para realizar las condiciones y cargar las imágenes}}
 
-          {{!-- {{#is name '[VoiceBunny] Tips and Advice'}}
-                <img class="card__image" src="{{asset 'img_sec_update.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{#is name 'Tips and advice'}}
+                <img class="card__image" src="{{asset 'img_sec_tips_and_advice.png'}}" id="cat-{{id}}" alt="{{name}}">
                 {{/is}}
 
-                {{#is name '[VoiceBunny] Working with Us'}}
-                <img class="card__image" src="{{asset 'img_sec_update.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{#is name 'Working with us'}}
+                <img class="card__image" src="{{asset 'img_sec_working_with_us.png'}}" id="cat-{{id}}" alt="{{name}}">
                 {{/is}}
 
-                {{#is name 'General'}}
-                <img class="card__image" src="{{asset 'img_sec_general.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{#is name 'Get feedback'}}
+                <img class="card__image" src="{{asset 'img_sec_get_feedback.png'}}" id="cat-{{id}}" alt="{{name}}">
                 {{/is}}
 
-                {{#is name 'Payments'}}
-                <img class="card__image" src="{{asset 'img_sec_payments.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{#is name 'Suggest features'}}
+                <img class="card__image" src="{{asset 'img_sec_suggest_features.png'}}" id="cat-{{id}}" alt="{{name}}">
                 {{/is}}
 
-                {{#is name 'Copyright'}}
-                <img class="card__image" src="{{asset 'img_sec_copyright.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{#is name 'Why was my submission rejected?'}}
+                <img class="card__image" src="{{asset 'img_sec_rejections.png'}}" id="cat-{{id}}" alt="{{name}}">
                 {{/is}}
 
-                {{#is name 'Revisions'}}
-                <img class="card__image" src="{{asset 'img_sec_revisions.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{#is name 'Audio discussions'}}
+                <img class="card__image" src="{{asset 'img_sec_rates.png'}}" id="cat-{{id}}" alt="{{name}}">
                 {{/is}}
-
-                {{#is name 'Add-on'}}
-                <img class="card__image" src="{{asset 'img_sec_add_on.png'}}" id="cat-{{id}}" alt="{{name}}">
-                {{/is}} --}}
+                
+                {{#is name 'Webinars recaps'}}
+                <img class="card__image" src="{{asset 'img_sec_webinar_recaps.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{/is}}
+                
+                {{#is name 'Report an issue!'}}
+                <img class="card__image" src="{{asset 'img_sec_report_an_issue.png'}}" id="cat-{{id}}" alt="{{name}}">
+                {{/is}}
 
         </div>
         <div class="card__middle">
           <b class="card__title">{{name}}</b>
         </div>
         <div class="card__bottom">
-          <p class="card__description">{{excerpt description}}</p>
+          <p class="card__description">{{excerpt description characters=70}}</p>
         </div>
       </div>
     </a>
@@ -126,7 +130,7 @@
       <div class="tab_container">
         <div class="top-section tab_content" id="top">
           <div id="main-content" class="posts-list">
-          {{!#each promoted_articles}}
+            {{!#each promoted_articles}}
             <section role="region" aria-labelledby="title-{{!id}}">
               <div class="striped-list-item">
                 <span class="striped-list-picture">
@@ -299,6 +303,83 @@
 
   <script>
     $(document).ready(function () {
+
+      var endpoint = "/api/v2/help_center/community/posts.json";
+      var endpoint2 = "/api/v2/community/posts/360009628040/votes.json"
+      var endpoint3 = "https://help.bunnystudio.com/api/v2/help_center/community/posts.json?page=2&per_page=30";
+
+      fetchConsoleTest = async () => {
+        let posts = [];
+        const pages = 1;
+
+        //for (i = 1; i <= pages; i++) {
+        await $.ajax({
+          url: `https://help.bunnystudio.com/api/v2/help_center/community/posts.json?page=1&per_page=2`,
+          type: "GET",
+          dataType: "json",
+          success: function (data) {
+
+            let n;
+            let j = 0;
+            n = data.posts.length;
+
+
+            for (i = 0; i < n; i++) {
+              console.log("i", i)
+              if (posts.length > 0) {
+                console.log("if 1")
+                for (j = 0; j < posts.length; j++) {
+                    console.log("post_count en j",posts[j].post_count)
+                  if(data.posts[i].author_id == posts[j].author_id){
+                    console.log("if 2")
+                    let postCountTemp = posts[j].post_count+1;
+                    posts[j].post_count = postCountTemp;
+                    j = posts.length;
+                  }else{
+                    console.log("else for")
+                    posts.push({
+                      author_id: data.posts[i].author_id, 
+                      post_count: 1, 
+                      vote_count: data.posts[i].vote_count
+                      })
+
+                  }
+                }
+              } else {
+                console.log("else")
+                posts.push({
+                  author_id: data.posts[i].author_id,
+                  post_count: 1,
+                  vote_count: data.posts[i].vote_count
+                  }) 
+                
+              }
+            }
+          }
+        });
+        console.log("=== Res ====");
+        console.log(posts);
+      };
+
+      fetchConsoleTest();
+
+      /*     
+           fetchConsole = (endpoint) => {
+             $.ajax({
+                 url: endpoint,
+                 type: "GET",
+                 dataType: "json",
+                 success: function (data) {
+                   console.log(data)
+                 }
+               });
+           }
+     
+           fetchConsole(endpoint2);
+     */
+      //fetchConsole(endpoint2);
+      //fetchConsole(endpoint3);
+
 
       //Función para manejar el cambio entre las pestañas "Top" y "Recent"
       $(".tab_content").hide();
