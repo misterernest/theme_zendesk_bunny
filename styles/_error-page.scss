@@ -15,7 +15,7 @@
           margin: auto 15px;
         }
         @include tablet {
-          width: auto;
+          min-width: 156px;
           margin: auto 42px auto 0;
         }
 
