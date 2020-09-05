@@ -298,6 +298,12 @@
           "type": "file",
           "description": "community_banner_topic_list",
           "label": "community_banner_topic_list_label"
+        },
+        {
+          "identifier": "img_sec_top_contributor",
+          "type": "file",
+          "description": "img_sec_top_contributor",
+          "label": "img_sec_top_contributor_label"
         }
       ]
     },
