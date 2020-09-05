@@ -1,0 +1,60 @@
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  .content.error-page-container {
+    max-width: 600px;
+    display: flex;
+    flex-flow: row nowrap;
+
+    .error-page {
+      &-img {
+        @include mobile {
+          width: 100px;
+          margin: auto 15px;
+        }
+        @include tablet {
+          width: auto;
+          margin: auto 42px auto 0;
+        }
+
+        img {
+          max-width: 100%;
+        }
+      }
+      .container-info-error {
+
+      }
+    }
+
+    .container-info-error {
+      h1 {
+        font-size: 70px;
+        font-weight: 900;
+        color: $brand_color;
+        text-transform: capitalize;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 25px;
+      }
+
+      .button {
+        font-size: 19px;
+        font-weight: 600;
+        width: 236px;
+        height: 40px;
+      }
+    }
+  }
+}
