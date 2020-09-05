@@ -219,62 +219,117 @@
         flex-wrap: wrap;
       }
     }
+  }
+}
 
-    .topic-aside-bottom {
-      @include mobile { margin-bottom: 25px; }
+.contributors-title {
+  padding: 20px;
+  font-size: 26px;
+  font-weight: $font-weight-semibold;
+}
 
-      border: 1px solid $bordercard_color;
-      box-shadow: $shadows;
-      margin-top: 30px;
+.contributors {
+  display: flex;
+  flex-direction: column;
+  
+  // contributor card: card desde la posición 2 en adelante en el TOP
+  &-card {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    border-bottom: 1px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
 
-      .topic-aside-contributors-title {
-        padding: 20px 24px;
-        
-        h2 { font-weight: bold; }
+    &-picture {
+      flex: 1;
+      display: flex;
+    }
+
+    &-data {
+      flex: 2;
+
+      &-top {
+        display: block;
+        color: $link_color;
+        text-decoration: none;
+        font-weight: $font-weight-semibold;
+        font-size: 17px;
       }
 
-      .topic-aside-contributors-cards {
+      &-middle {
+        display: block;
+        font-size: 14.5px;
+        font-weight: $font-weight-regular;
+      }
+
+      &-bottom {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        color: $link_color;
 
-        .topic-aside-contributors-card {
-          display: flex;
-          flex-direction: row;
-          padding: 25px;
-          border-bottom: 1px solid #ddd;
-          width: 90%;
-          margin: 0 auto;
+        span {
+          font-size: 11.5px;
+          font-weight: $font-weight-regular;
+          width: 50%;
+          align-self: flex-start;
+        }
+      }
+    }
+  }
 
-          .topic-aside-contributors-picture {
-            flex: 1;
-            display: flex;
-          }
+  //contributor card first: clase para el TOP contributor, primero en la lita
+  &-card--first {
+    background-image: url($img_sec_top_contributor);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+    > * { color: white;}
 
-          .topic-aside-contributors-data {
-            flex: 2;
+    .contributors-card-picture {
+      flex: 40%;
+      display: flex;
+    }
 
-            .topic-contributor-data-top {
-              display: block;
-              color: $link_color;
-              text-decoration: none;
-              font-weight: bold;
-            }
+    .contributors-card-data {
+      flex: 60%;
+      display: flex;
+      flex-direction: column;
 
-            .topic-contributor-data-middle {
-              display: block
-            }
+      > * {
+        flex: 1 1 33%;
+      }
 
-            .topic-contributor-data-bottom {
-              display: flex;
-              flex-direction: row;
-              color: $link_color;
+      .contributors-card-data-top {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-weight: $font-weight-semibold;
+        font-size: 20px;
+      }
 
-              span {
-                width: 50%;
-                align-self: flex-start;
-              }
-            }
-          }
+      .contributors-card-data-middle {
+        display: block;
+        font-size: 14.5px;
+        font-weight: $font-weight-regular;
+        color: #fff;
+      }
+
+      .contributors-card-data-bottom {
+        display: flex;
+        flex-direction: row;
+        color: #fff;
+        font-size: 14.5px;
+        font-weight: $font-weight-regular;
+
+        span {
+          width: 30%;
+          align-self: flex-start;
+        }
+
+        .fas:before {
+          color: #fff;
         }
       }
     }
@@ -287,10 +342,18 @@
   vertical-align: middle;
 }
 
-.topic-aside-avatar {
+.contributors-avatar {
   @extend .user-avatar;
   height: 50px;
   width: 50px;
+  margin: 0 auto;
+}
+
+// Foto del top contributor número 1
+.contributors-avatar--first {
+  @extend .user-avatar;
+  height: 100px;
+  width: 100px;
   margin: 0 auto;
 }
 
@@ -364,13 +427,34 @@
   flex-direction: row;
 
   &-posts {
-    padding: 10px;
     flex: 1 0 1059px;
-    border-radius: 5px;
-    box-shadow: $shadows;
 
-    > * {
-      background: $background_color;
+    .posts-list {
+      .striped-list-title {
+        color: $text_color;
+        font-size: 24px;
+        font-weight: $font-weight-semibold;
+      }
+      .meta-group {
+        a {
+          font-size: 16px;
+          font-weight: $font-weight-semibold;
+        }
+      } 
+      .striped-list-details, a {
+        font-size: 14px;
+        font-weight: $font-weight-regular;
+      }
+      
+      .striped-list-info-body {
+        margin: 20px 0;
+      }
+      .header--post-data {
+        span {
+          font-size: 14.5px;
+          font-weight: $font-weight-regular;
+        }
+      }
     }
   }
 
@@ -395,6 +479,17 @@
       border-radius: 5px;
       box-shadow: $shadows;
       padding: 33px 25px;
+
+      .community-activity, .activity {
+        padding: 0;
+        border: none;
+      }
+    }
+
+    &__contributors {
+      box-shadow: $shadows;
+      display: flex;
+      flex-direction: column;
     }
   }
 }
@@ -404,52 +499,53 @@ ul.tabs {
 	padding: 0;
 	float: left;
 	list-style: none;
-  height: 32px;
-  
-	border-bottom: 1px solid #999;
-	border-left: 1px solid #999;
+  //height: 32px;
 	width: 100%;
 }
 ul.tabs li {
 	float: left;
 	margin: 0;
 	padding: 0;
-	height: 31px; 
+  height: 62px;
+  width: 335px; 
 	line-height: 31px; 
-	border: 1px solid #999;
-	border-left: none;
 	margin-bottom: -1px; 
 	overflow: hidden;
 	position: relative;
-	background: #e0e0e0;
+  background: #e0e0e0;
+  //box-shadow: $shadows;
 }
 ul.tabs li a {
 	text-decoration: none;
-	color: #000;
 	display: block;
 	font-size: 1.2em;
 	padding: 0 20px;
-	border: 1px solid #fff; 
-	outline: none;
+  outline: none;
+  height: 100%;
 }
 ul.tabs li a:hover {
 	background: #ccc;
 }
 html ul.tabs li.active, html ul.tabs li.active a:hover  { 
 	background: #fff;
-	border-bottom: 1px solid #fff; 
+  border-bottom: 1px solid #fff;
+  color: #000;
 }
 
 .tab_container {
-	border: 1px solid #999;
 	border-top: none;
 	overflow: hidden;
 	clear: both;
 	float: left; width: 100%;
-	background: #fff;
+  background: #fff;
+  box-shadow: $shadows;
 }
 .tab_content {
 	padding: 20px;
 	font-size: 1.2em;
 }
   
+.h3 {
+  font-size: 28px;
+  font-weight: $font-weight-semibold;
+}

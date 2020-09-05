@@ -98,7 +98,7 @@
 
   &-content {
     line-height: 1.6;
-    margin: 40px 0 80px;
+    margin: 40px 0 35px;
     word-wrap: break-word;
 
     .article-body {
@@ -179,7 +179,7 @@
 
   .article__footer {
     border-top: 1px solid $articledivider-color;
-    padding-top: 108px;
+    padding-top: 96px;
 
     .article-votes {
       text-align: center;
@@ -189,13 +189,13 @@
         font-weight: 600;
       }
       .article-votes-controls {
-        padding-top: 15px;
+        padding: 25px 0 22px;
         .article-vote {
           height: 31px;
           width: 74px;
           font-size: 15px;
           font-weight: 600;
-          margin: 0 5px;
+          margin: 0 13px;
           line-height: 31px;
         }
       }

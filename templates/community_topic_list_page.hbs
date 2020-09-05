@@ -69,40 +69,44 @@
         <div class="card__top">
           {{! Descomentar para realizar las condiciones y cargar las imágenes}}
 
-          {{!-- {{#is name '[VoiceBunny] Tips and Advice'}}
-                <img class="card__image" src="{{asset 'img_sec_update.png'}}" id="cat-{{id}}" alt="{{name}}">
-                {{/is}}
+          {{#is name 'Tips and advice'}}
+          <img class="card__image" src="{{asset 'img_sec_tips_and_advice.png'}}" id="cat-{{id}}" alt="{{name}}">
+          {{/is}}
 
-                {{#is name '[VoiceBunny] Working with Us'}}
-                <img class="card__image" src="{{asset 'img_sec_update.png'}}" id="cat-{{id}}" alt="{{name}}">
-                {{/is}}
+          {{#is name 'Working with us'}}
+          <img class="card__image" src="{{asset 'img_sec_working_with_us.png'}}" id="cat-{{id}}" alt="{{name}}">
+          {{/is}}
 
-                {{#is name 'General'}}
-                <img class="card__image" src="{{asset 'img_sec_general.png'}}" id="cat-{{id}}" alt="{{name}}">
-                {{/is}}
+          {{#is name 'Get feedback'}}
+          <img class="card__image" src="{{asset 'img_sec_get_feedback.png'}}" id="cat-{{id}}" alt="{{name}}">
+          {{/is}}
 
-                {{#is name 'Payments'}}
-                <img class="card__image" src="{{asset 'img_sec_payments.png'}}" id="cat-{{id}}" alt="{{name}}">
-                {{/is}}
+          {{#is name 'Suggest features'}}
+          <img class="card__image" src="{{asset 'img_sec_suggest_features.png'}}" id="cat-{{id}}" alt="{{name}}">
+          {{/is}}
 
-                {{#is name 'Copyright'}}
-                <img class="card__image" src="{{asset 'img_sec_copyright.png'}}" id="cat-{{id}}" alt="{{name}}">
-                {{/is}}
+          {{#is name 'Why was my submission rejected?'}}
+          <img class="card__image" src="{{asset 'img_sec_rejections.png'}}" id="cat-{{id}}" alt="{{name}}">
+          {{/is}}
 
-                {{#is name 'Revisions'}}
-                <img class="card__image" src="{{asset 'img_sec_revisions.png'}}" id="cat-{{id}}" alt="{{name}}">
-                {{/is}}
+          {{#is name 'Audio discussions'}}
+          <img class="card__image" src="{{asset 'img_sec_rates.png'}}" id="cat-{{id}}" alt="{{name}}">
+          {{/is}}
 
-                {{#is name 'Add-on'}}
-                <img class="card__image" src="{{asset 'img_sec_add_on.png'}}" id="cat-{{id}}" alt="{{name}}">
-                {{/is}} --}}
+          {{#is name 'Webinars recaps'}}
+          <img class="card__image" src="{{asset 'img_sec_webinar_recaps.png'}}" id="cat-{{id}}" alt="{{name}}">
+          {{/is}}
+
+          {{#is name 'Report an issue!'}}
+          <img class="card__image" src="{{asset 'img_sec_report_an_issue.png'}}" id="cat-{{id}}" alt="{{name}}">
+          {{/is}}
 
         </div>
         <div class="card__middle">
           <b class="card__title">{{name}}</b>
         </div>
         <div class="card__bottom">
-          <p class="card__description">{{excerpt description}}</p>
+          <p class="card__description">{{excerpt description characters=70}}</p>
         </div>
       </div>
     </a>
@@ -111,135 +115,561 @@
 
   {{pagination}}
 
-  <h3>Most popular articles</h3>
+  <h3 class="h3">Most popular articles</h3>
 
-  <div class="carousel">
+  <div class="carousel" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+
+    <div class="carousel-container">
+      <div class="carousel-container-item">
+        <div class="carousel-container-item__text">
+          <p>How long does a client have to request a project revisions on a project?</p>
+        </div>
+        <div class="carousel-container-item__user-data">
+          <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
+          <a href="#" class="">Katie #91KMIA8</a>
+        </div>
+        <div class="carousel-container-item__post-data">
+          <span class="fas fa-comment">45</span><span class="fas fa-thumbs-up">145</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel-container-item">
+        <div class="carousel-container-item__text">
+          <p>How long does a client have to request a project revisions on a project?</p>
+        </div>
+        <div class="carousel-container-item__user-data">
+          <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
+          <a href="#" class="">Katie #91KMIA8</a>
+        </div>
+        <div class="carousel-container-item__post-data">
+          <span class="fas fa-comment">45</span><span class="fas fa-thumbs-up">145</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel-container-item">
+        <div class="carousel-container-item__text">
+          <p>How long does a client have to request a project revisions on a project?</p>
+        </div>
+        <div class="carousel-container-item__user-data">
+          <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
+          <a href="#" class="">Katie #91KMIA8</a>
+        </div>
+        <div class="carousel-container-item__post-data">
+          <span class="fas fa-comment">45</span><span class="fas fa-thumbs-up">145</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel-container-item">
+        <div class="carousel-container-item__text">
+          <p>How long does a client have to request a project revisions on a project?</p>
+        </div>
+        <div class="carousel-container-item__user-data">
+          <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
+          <a href="#" class="">Katie #91KMIA8</a>
+        </div>
+        <div class="carousel-container-item__post-data">
+          <span class="fas fa-comment">45</span><span class="fas fa-thumbs-up">145</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel-container-item">
+        <div class="carousel-container-item__text">
+          <p>How long does a client have to request a project revisions on a project?</p>
+        </div>
+        <div class="carousel-container-item__user-data">
+          <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
+          <a href="#" class="">Katie #91KMIA8</a>
+        </div>
+        <div class="carousel-container-item__post-data">
+          <span class="fas fa-comment">45</span><span class="fas fa-thumbs-up">145</span>
+        </div>
+      </div>
+    </div>
+
 
   </div>
 
   <div class="articles-section-container">
-    <div class="articles-section-container-posts tab_container">
+    <div class="articles-section-container-posts">
       <ul class="tabs">
         <li><a href="#top">Top</a></li>
         <li><a href="#recent">Recent</a></li>
       </ul>
-      <div class="top-section tab_content" id="top">
-        <div id="main-content" class="posts-list striped-list">
-          {{!#each posts}}
-          <section role="region" aria-labelledby="title-{{!id}}">
-            <div class="striped-list-item">
-              <span class="striped-list-picture">
-                <img
-                  src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
-                  alt="Avatar" class="community-posts-user-avatar" srcset="">
-              </span>
-              <span class="striped-list-info">
-                <a href="#" id="title-" class="striped-list-title">Top</a>
+      <div class="tab_container">
+        <div class="top-section tab_content" id="top">
+          <div id="main-content" class="posts-list">
+            {{!#each promoted_articles}}
+            <section role="region" aria-labelledby="title-{{!id}}">
+              <div class="striped-list-item">
+                <span class="striped-list-picture">
+                  <img
+                    src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
+                    alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+                <span class="striped-list-info">
+                  <a href="#" id="title-" class="striped-list-title">Webinar: How To Opimize Your Remote Work Experience</a>
 
-                <div class="meta-group">
-                  {{!#link 'user_profile' id=author.id}}
-                  <span> #</span>
-                  {{!/link}}
-                  <ul class="header--post-data">
-                    <span>
-                      <li class="fas fa-calendar-alt"><span>calendar</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-comment"><span>coment</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-eye"><span>viewed</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-thumbs-up"><span>likes</span></li>
-                    </span>
-                  </ul>
-                </div>
-                <!-- TODO: RESUMEN DEL POST ACTUAL-->
-                {{!-- Agregar el resumen del post actual
-                  <div>
-                    <span class="striped-list-details">{{excerpt 'aaa' characters=200}}</span>
-                    <a href="{{url}}" id="title-{{id}}">read more.</a>
+                  <div class="meta-group">
+                    {{!#link 'user_profile' id=author.id}}
+                    <a href="#"> Katie #91KMIA8</a>
+                    {{!/link}}
+                    <ul class="header--post-data">
+                      <span>
+                        <li class="fas fa-calendar-alt"><span></span></li>
+                        22-07-2020
+                      </span>
+                      <span>
+                        <li class="fas fa-comment"><span></span></li>
+                        3,456
+                      </span>
+                      <span>
+                        <li class="fas fa-eye"><span></span></li>
+                        5 hours ago
+                      </span>
+                      <span>
+                        <li class="fas fa-thumbs-up"><span></span></li>
+                        8,567
+                      </span>
+                    </ul>
                   </div>
-                --}}
+                  <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                  
+                  <div class="striped-list-info-body">
+                    <span class="striped-list-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo maiores eos mollitia quae obcaecati ratione, voluptatibus porro dolore Animi illo maiores eos mollitia quae obcaecati ratione.</span>
+                    <a href="#" id="title-id-del-post">read more.</a>
+                  </div>
 
-                <div>
-                  {{!#if pinned}}
-                  <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
-                  {{!/if}}
-                  {{!#if featured}}
-                  <span class="status-label status-label-featured">{{t 'featured'}}</span>
-                  {{!/if}}
-                  {{!#is status 'none'}}
-                  {{!else}}
-                  <span
-                    class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
-                  {{!/is}}
-                </div>
-              </span>
-            </div>
-          </section>
-          {{!/each}}
+                  <div>
+                    {{!#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{!/if}}
+                    {{!#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{!/if}}
+                    {{!#is status 'none'}}
+                    {{!else}}
+                    <span
+                      class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
+                    {{!/is}}
+                  </div>
+                </span>
+              </div>
+            </section>
+            
+            <section role="region" aria-labelledby="title-{{!id}}">
+              <div class="striped-list-item">
+                <span class="striped-list-picture">
+                  <img
+                    src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
+                    alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+                <span class="striped-list-info">
+                  <a href="#" id="title-" class="striped-list-title">Webinar: How To Opimize Your Remote Work Experience</a>
+
+                  <div class="meta-group">
+                    {{!#link 'user_profile' id=author.id}}
+                    <a href="#"> Katie #91KMIA8</a>
+                    {{!/link}}
+                    <ul class="header--post-data">
+                      <span>
+                        <li class="fas fa-calendar-alt"><span></span></li>
+                        22-07-2020
+                      </span>
+                      <span>
+                        <li class="fas fa-comment"><span></span></li>
+                        3,456
+                      </span>
+                      <span>
+                        <li class="fas fa-eye"><span></span></li>
+                        5 hours ago
+                      </span>
+                      <span>
+                        <li class="fas fa-thumbs-up"><span></span></li>
+                        8,567
+                      </span>
+                    </ul>
+                  </div>
+                  <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                  
+                  <div class="striped-list-info-body">
+                    <span class="striped-list-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo maiores eos mollitia quae obcaecati ratione, voluptatibus porro dolore Animi illo maiores eos mollitia quae obcaecati ratione.</span>
+                    <a href="#" id="title-id-del-post">read more.</a>
+                  </div>
+
+                  <div>
+                    {{!#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{!/if}}
+                    {{!#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{!/if}}
+                    {{!#is status 'none'}}
+                    {{!else}}
+                    <span
+                      class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
+                    {{!/is}}
+                  </div>
+                </span>
+              </div>
+            </section>
+
+            <section role="region" aria-labelledby="title-{{!id}}">
+              <div class="striped-list-item">
+                <span class="striped-list-picture">
+                  <img
+                    src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
+                    alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+                <span class="striped-list-info">
+                  <a href="#" id="title-" class="striped-list-title">Webinar: How To Opimize Your Remote Work Experience</a>
+
+                  <div class="meta-group">
+                    {{!#link 'user_profile' id=author.id}}
+                    <a href="#"> Katie #91KMIA8</a>
+                    {{!/link}}
+                    <ul class="header--post-data">
+                      <span>
+                        <li class="fas fa-calendar-alt"><span></span></li>
+                        22-07-2020
+                      </span>
+                      <span>
+                        <li class="fas fa-comment"><span></span></li>
+                        3,456
+                      </span>
+                      <span>
+                        <li class="fas fa-eye"><span></span></li>
+                        5 hours ago
+                      </span>
+                      <span>
+                        <li class="fas fa-thumbs-up"><span></span></li>
+                        8,567
+                      </span>
+                    </ul>
+                  </div>
+                  <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                  
+                  <div class="striped-list-info-body">
+                    <span class="striped-list-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo maiores eos mollitia quae obcaecati ratione, voluptatibus porro dolore Animi illo maiores eos mollitia quae obcaecati ratione.</span>
+                    <a href="#" id="title-id-del-post">read more.</a>
+                  </div>
+
+                  <div>
+                    {{!#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{!/if}}
+                    {{!#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{!/if}}
+                    {{!#is status 'none'}}
+                    {{!else}}
+                    <span
+                      class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
+                    {{!/is}}
+                  </div>
+                </span>
+              </div>
+            </section>
+
+            <section role="region" aria-labelledby="title-{{!id}}">
+              <div class="striped-list-item">
+                <span class="striped-list-picture">
+                  <img
+                    src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
+                    alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+                <span class="striped-list-info">
+                  <a href="#" id="title-" class="striped-list-title">Webinar: How To Opimize Your Remote Work Experience</a>
+
+                  <div class="meta-group">
+                    {{!#link 'user_profile' id=author.id}}
+                    <a href="#"> Katie #91KMIA8</a>
+                    {{!/link}}
+                    <ul class="header--post-data">
+                      <span>
+                        <li class="fas fa-calendar-alt"><span></span></li>
+                        22-07-2020
+                      </span>
+                      <span>
+                        <li class="fas fa-comment"><span></span></li>
+                        3,456
+                      </span>
+                      <span>
+                        <li class="fas fa-eye"><span></span></li>
+                        5 hours ago
+                      </span>
+                      <span>
+                        <li class="fas fa-thumbs-up"><span></span></li>
+                        8,567
+                      </span>
+                    </ul>
+                  </div>
+                  <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                  
+                  <div class="striped-list-info-body">
+                    <span class="striped-list-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo maiores eos mollitia quae obcaecati ratione, voluptatibus porro dolore Animi illo maiores eos mollitia quae obcaecati ratione.</span>
+                    <a href="#" id="title-id-del-post">read more.</a>
+                  </div>
+
+                  <div>
+                    {{!#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{!/if}}
+                    {{!#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{!/if}}
+                    {{!#is status 'none'}}
+                    {{!else}}
+                    <span
+                      class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
+                    {{!/is}}
+                  </div>
+                </span>
+              </div>
+            </section>
+            {{!/each}}
+          </div>
         </div>
-      </div>
 
-      <div class="recent-section tab_content" id="recent">
-        <div id="main-content" class="posts-list striped-list">
-          {{!#each posts}}
-          <section role="region" aria-labelledby="title-{{!id}}">
-            <div class="striped-list-item">
-              <span class="striped-list-picture">
-                <img
-                  src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
-                  alt="Avatar" class="community-posts-user-avatar" srcset="">
-              </span>
-              <span class="striped-list-info">
-                <a href="#" id="title-" class="striped-list-title">Recent</a>
+        <div class="recent-section tab_content" id="recent">
+          <div id="main-content" class="posts-list">
+            {{!#each posts}}
+            <section role="region" aria-labelledby="title-{{!id}}">
+              <div class="striped-list-item">
+                <span class="striped-list-picture">
+                  <img
+                    src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
+                    alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+                <span class="striped-list-info">
+                  <a href="#" id="title-" class="striped-list-title">Webinar: How To Opimize Your Remote Work Experience</a>
 
-                <div class="meta-group">
-                  {{!#link 'user_profile' id=author.id}}
-                  <span> #</span>
-                  {{!/link}}
-                  <ul class="header--post-data">
-                    <span>
-                      <li class="fas fa-calendar-alt"><span>calendar</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-comment"><span>coment</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-eye"><span>viewed</span></li>
-                    </span>
-                    <span>
-                      <li class="fas fa-thumbs-up"><span>likes</span></li>
-                    </span>
-                  </ul>
-                </div>
-                <!-- TODO: RESUMEN DEL POST ACTUAL-->
-                {{!-- Agregar el resumen del post actual
-                  <div>
-                    <span class="striped-list-details">{{excerpt 'aaa' characters=200}}</span>
-                    <a href="{{url}}" id="title-{{id}}">read more.</a>
+                  <div class="meta-group">
+                    {{!#link 'user_profile' id=author.id}}
+                    <a href="#"> Katie #91KMIA8</a>
+                    {{!/link}}
+                    <ul class="header--post-data">
+                      <span>
+                        <li class="fas fa-calendar-alt"><span></span></li>
+                        22-07-2020
+                      </span>
+                      <span>
+                        <li class="fas fa-comment"><span></span></li>
+                        3,456
+                      </span>
+                      <span>
+                        <li class="fas fa-eye"><span></span></li>
+                        5 hours ago
+                      </span>
+                      <span>
+                        <li class="fas fa-thumbs-up"><span></span></li>
+                        8,567
+                      </span>
+                    </ul>
                   </div>
-                --}}
+                  <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                  
+                  <div class="striped-list-info-body">
+                    <span class="striped-list-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo maiores eos mollitia quae obcaecati ratione, voluptatibus porro dolore Animi illo maiores eos mollitia quae obcaecati ratione.</span>
+                    <a href="#" id="title-id-del-post">read more.</a>
+                  </div>
 
-                <div>
-                  {{!#if pinned}}
-                  <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
-                  {{!/if}}
-                  {{!#if featured}}
-                  <span class="status-label status-label-featured">{{t 'featured'}}</span>
-                  {{!/if}}
-                  {{!#is status 'none'}}
-                  {{!else}}
-                  <span
-                    class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
-                  {{!/is}}
-                </div>
-              </span>
-            </div>
-          </section>
-          {{!/each}}
+                  <div>
+                    {{!#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{!/if}}
+                    {{!#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{!/if}}
+                    {{!#is status 'none'}}
+                    {{!else}}
+                    <span
+                      class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
+                    {{!/is}}
+                  </div>
+                </span>
+              </div>
+            </section>
+            
+            <section role="region" aria-labelledby="title-{{!id}}">
+              <div class="striped-list-item">
+                <span class="striped-list-picture">
+                  <img
+                    src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
+                    alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+                <span class="striped-list-info">
+                  <a href="#" id="title-" class="striped-list-title">Webinar: How To Opimize Your Remote Work Experience</a>
+
+                  <div class="meta-group">
+                    {{!#link 'user_profile' id=author.id}}
+                    <a href="#"> Katie #91KMIA8</a>
+                    {{!/link}}
+                    <ul class="header--post-data">
+                      <span>
+                        <li class="fas fa-calendar-alt"><span></span></li>
+                        22-07-2020
+                      </span>
+                      <span>
+                        <li class="fas fa-comment"><span></span></li>
+                        3,456
+                      </span>
+                      <span>
+                        <li class="fas fa-eye"><span></span></li>
+                        5 hours ago
+                      </span>
+                      <span>
+                        <li class="fas fa-thumbs-up"><span></span></li>
+                        8,567
+                      </span>
+                    </ul>
+                  </div>
+                  <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                  
+                  <div class="striped-list-info-body">
+                    <span class="striped-list-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo maiores eos mollitia quae obcaecati ratione, voluptatibus porro dolore Animi illo maiores eos mollitia quae obcaecati ratione.</span>
+                    <a href="#" id="title-id-del-post">read more.</a>
+                  </div>
+
+                  <div>
+                    {{!#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{!/if}}
+                    {{!#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{!/if}}
+                    {{!#is status 'none'}}
+                    {{!else}}
+                    <span
+                      class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
+                    {{!/is}}
+                  </div>
+                </span>
+              </div>
+            </section>
+
+            <section role="region" aria-labelledby="title-{{!id}}">
+              <div class="striped-list-item">
+                <span class="striped-list-picture">
+                  <img
+                    src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
+                    alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+                <span class="striped-list-info">
+                  <a href="#" id="title-" class="striped-list-title">Webinar: How To Opimize Your Remote Work Experience</a>
+
+                  <div class="meta-group">
+                    {{!#link 'user_profile' id=author.id}}
+                    <a href="#"> Katie #91KMIA8</a>
+                    {{!/link}}
+                    <ul class="header--post-data">
+                      <span>
+                        <li class="fas fa-calendar-alt"><span></span></li>
+                        22-07-2020
+                      </span>
+                      <span>
+                        <li class="fas fa-comment"><span></span></li>
+                        3,456
+                      </span>
+                      <span>
+                        <li class="fas fa-eye"><span></span></li>
+                        5 hours ago
+                      </span>
+                      <span>
+                        <li class="fas fa-thumbs-up"><span></span></li>
+                        8,567
+                      </span>
+                    </ul>
+                  </div>
+                  <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                  
+                  <div class="striped-list-info-body">
+                    <span class="striped-list-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo maiores eos mollitia quae obcaecati ratione, voluptatibus porro dolore Animi illo maiores eos mollitia quae obcaecati ratione.</span>
+                    <a href="#" id="title-id-del-post">read more.</a>
+                  </div>
+
+                  <div>
+                    {{!#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{!/if}}
+                    {{!#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{!/if}}
+                    {{!#is status 'none'}}
+                    {{!else}}
+                    <span
+                      class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
+                    {{!/is}}
+                  </div>
+                </span>
+              </div>
+            </section>
+
+            <section role="region" aria-labelledby="title-{{!id}}">
+              <div class="striped-list-item">
+                <span class="striped-list-picture">
+                  <img
+                    src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g"
+                    alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+                <span class="striped-list-info">
+                  <a href="#" id="title-" class="striped-list-title">Webinar: How To Opimize Your Remote Work Experience</a>
+
+                  <div class="meta-group">
+                    {{!#link 'user_profile' id=author.id}}
+                    <a href="#"> Katie #91KMIA8</a>
+                    {{!/link}}
+                    <ul class="header--post-data">
+                      <span>
+                        <li class="fas fa-calendar-alt"><span></span></li>
+                        22-07-2020
+                      </span>
+                      <span>
+                        <li class="fas fa-comment"><span></span></li>
+                        3,456
+                      </span>
+                      <span>
+                        <li class="fas fa-eye"><span></span></li>
+                        5 hours ago
+                      </span>
+                      <span>
+                        <li class="fas fa-thumbs-up"><span></span></li>
+                        8,567
+                      </span>
+                    </ul>
+                  </div>
+                  <!-- TODO: RESUMEN DEL POST ACTUAL-->
+                  
+                  <div class="striped-list-info-body">
+                    <span class="striped-list-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo maiores eos mollitia quae obcaecati ratione, voluptatibus porro dolore Animi illo maiores eos mollitia quae obcaecati ratione.</span>
+                    <a href="#" id="title-id-del-post">read more.</a>
+                  </div>
+
+                  <div>
+                    {{!#if pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{!/if}}
+                    {{!#if featured}}
+                    <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{!/if}}
+                    {{!#is status 'none'}}
+                    {{!else}}
+                    <span
+                      class="status-label-{{!status_dasherized}} status-label striped-list-status">{{!status_name}}</span>
+                    {{!/is}}
+                  </div>
+                </span>
+              </div>
+            </section>
+            {{!/each}}
+          </div>
         </div>
       </div>
     </div>
@@ -252,52 +682,87 @@
           {{/if}}
         </section>
       </div>
-      <div class="articles-section-container-aside__box articles-section-container-aside__box--normal">
-        <div class="topic-aside-contributors-cards">
-          <div class="topic-aside-contributors-card">
-            <div class="topic-aside-contributors-picture">
-              <img src="https://i.pinimg.com/originals/c8/62/3b/c8623b908b8db5f2dbd604cdc41d05d0.jpg" alt="AVATAR"
-                class="topic-aside-avatar" />
+      <div class="articles-section-container-aside__contributors">
+        <span class="contributors-title">Top contributors</span>
+        <div class="contributors">
+
+          <div class="contributors-card contributors-card--first">
+            <div class="contributors-card-picture">
+              <img src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="AVATAR"
+                class="contributors-avatar--first" />
             </div>
-            <div class="topic-aside-contributors-data">
-              <a href="#" class="topic-contributor-data-top">Katie #91KMIA8</a>
-              <span class="topic-contributor-data-middle">Colonia, Germany</span>
-              <span class="topic-contributor-data-bottom">
+            <div class="contributors-card-data">
+              <a href="#" class="contributors-card-data-top">Katie #91KMIA8</a>
+              <span class="contributors-card-data-middle">Colonia, Germany</span>
+              <span class="contributors-card-data-bottom">
                 <span class="fas fa-comment">3,456</span>
                 <span class="fas fa-thumbs-up">8,567</span>
               </span>
             </div>
           </div>
+
+          <div class="contributors-card">
+            <div class="contributors-card-picture">
+              <img src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="AVATAR"
+                class="contributors-avatar" />
+            </div>
+            <div class="contributors-card-data">
+              <a href="#" class="contributors-card-data-top">Katie #91KMIA8</a>
+              <span class="contributors-card-data-middle">Colonia, Germany</span>
+              <span class="contributors-card-data-bottom">
+                <span class="fas fa-comment">3,456</span>
+                <span class="fas fa-thumbs-up">8,567</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="contributors-card">
+            <div class="contributors-card-picture">
+              <img src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="AVATAR"
+                class="contributors-avatar" />
+            </div>
+            <div class="contributors-card-data">
+              <a href="#" class="contributors-card-data-top">Katie #91KMIA8</a>
+              <span class="contributors-card-data-middle">Colonia, Germany</span>
+              <span class="contributors-card-data-bottom">
+                <span class="fas fa-comment">3,456</span>
+                <span class="fas fa-thumbs-up">8,567</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="contributors-card">
+            <div class="contributors-card-picture">
+              <img src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="AVATAR"
+                class="contributors-avatar" />
+            </div>
+            <div class="contributors-card-data">
+              <a href="#" class="contributors-card-data-top">Katie #91KMIA8</a>
+              <span class="contributors-card-data-middle">Colonia, Germany</span>
+              <span class="contributors-card-data-bottom">
+                <span class="fas fa-comment">3,456</span>
+                <span class="fas fa-thumbs-up">8,567</span>
+              </span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-
-    {{!--  {{#if featured_posts}}
-    <section class="section community-featured-posts">
-      <h2 class="title">{{t 'featured_posts'}}</h2>
-      <ul class="promoted-articles">
-        {{#each featured_posts}}
-          <li class="promoted-articles-item">
-            <a href="{{url}}">
-              {{title}}
-            </a>
-          </li>
-        {{/each}}
-      </ul>
-    </section>
-  {{/if}} --}}
-
-
-    {{!-- 
-  <section class="container community-footer">
-    <h2 class="community-footer-title">{{t 'suggest_new_post'}}</h2>
-    {{link 'new_post' class='button button-large'}}
-  </section> --}}
   </div>
 
   <script>
     $(document).ready(function () {
 
+      // Carousel del most popular articles en community topic list page
+      $(".carousel").slick();
+
+      // Remover el "(Community)" de "Recent Activity (Community)"
+      let recentActivity = $(".recent-activity-header").text();
+      let recentActivitySplit = recentActivity.split("(");
+      $(".recent-activity-header").html(recentActivitySplit[0]);
+
+      //Función para manejar el cambio entre las pestañas "Top" y "Recent"
       $(".tab_content").hide();
       $("ul.tabs li:first").addClass("active").show();
       $(".tab_content:first").show();
