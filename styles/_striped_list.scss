@@ -79,4 +79,42 @@
     font-weight: $font-weight-light;
     text-align: center;
   }
+
+  &.articles-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-top: none;
+    margin-top: 0;
+    align-items: center;
+
+    > section {
+      flex: 0 1 650px;
+      @include mobile {
+        padding-left: 10px;
+      }
+      @include tablet {
+        padding-left: 35px;
+      }
+      @include desktop {
+        padding-left: 70px;
+      }
+
+      .striped-list-item {
+        border-bottom: none;
+        padding: 24px 0;
+
+        .striped-list-info {
+          padding-left: 0;
+
+          .striped-list-title {
+            margin: 0;
+            line-height: 1.3;
+            font-size: 24px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
 }

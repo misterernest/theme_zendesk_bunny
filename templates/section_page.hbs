@@ -11,8 +11,8 @@
     </div>
   </nav>
 </div>
-<div class="container community-topic-container">
-  <div class="community-topic-container-left">
+<div class="container category-article-container">
+  <div class="category-article-container-left">
     <header class="page-header">
       <h1>
         {{section.name}}
@@ -22,30 +22,12 @@
       {{/if}}
     </header>
     {{#if section.articles}}
-      <div id="main-content" class="posts-list striped-list">
+      <div id="main-content" class="articles-list striped-list">
       {{#each section.articles}}
           <section role="region" aria-labelledby="title-">
             <div class="striped-list-item">
               <span class="striped-list-info">
                 <a href="{{url}}" id="title-{{id}}" class="striped-list-title">{{title}}</a>
-                {{#if internal}}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
-                    <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
-                    <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
-                  </svg>
-                {{/if}}
-
-                <div class="meta-group">
-                  <ul class="header__article-data">
-                    <span><li class="fas fa-calendar-alt"><span>calendar</span></li>{{date created_at class='metadata' format='short'}}</span>
-                    <span><li class="fas fa-thumbs-up"><span>like</span></li>{{upvote_count}}</span>
-                  </ul>
-                </div>
-
-                <div>
-                  <span class="striped-list-details">{{excerpt body characters=200}}</span>
-                  <a href="{{url}}" id="title-{{id}}">read more.</a>
-                </div>
               </span>
             </div>
           </section>
@@ -57,10 +39,6 @@
       </i>
     {{/if}}
     {{pagination}}
-
-  </div>
-
-  <div class="community-topic-container-right">
 
   </div>
 </div>
