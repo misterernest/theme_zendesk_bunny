@@ -118,83 +118,6 @@
   <h3 class="h3">Most popular articles</h3>
 
   <div class="carousel" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-
-    <div class="carousel-container">
-      <div class="carousel-container-item">
-        <div class="carousel-container-item__text">
-          <p>How long does a client have to request a project revisions on a project?</p>
-        </div>
-        <div class="carousel-container-item__user-data">
-          <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
-          <a href="#" class="">Katie #91KMIA8</a>
-        </div>
-        <div class="carousel-container-item__post-data">
-          <span class="fas fa-comment">45</span><span class="fas fa-thumbs-up">145</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-container">
-      <div class="carousel-container-item">
-        <div class="carousel-container-item__text">
-          <p>How long does a client have to request a project revisions on a project?</p>
-        </div>
-        <div class="carousel-container-item__user-data">
-          <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
-          <a href="#" class="">Katie #91KMIA8</a>
-        </div>
-        <div class="carousel-container-item__post-data">
-          <span class="fas fa-comment">45</span><span class="fas fa-thumbs-up">145</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-container">
-      <div class="carousel-container-item">
-        <div class="carousel-container-item__text">
-          <p>How long does a client have to request a project revisions on a project?</p>
-        </div>
-        <div class="carousel-container-item__user-data">
-          <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
-          <a href="#" class="">Katie #91KMIA8</a>
-        </div>
-        <div class="carousel-container-item__post-data">
-          <span class="fas fa-comment">45</span><span class="fas fa-thumbs-up">145</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-container">
-      <div class="carousel-container-item">
-        <div class="carousel-container-item__text">
-          <p>How long does a client have to request a project revisions on a project?</p>
-        </div>
-        <div class="carousel-container-item__user-data">
-          <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
-          <a href="#" class="">Katie #91KMIA8</a>
-        </div>
-        <div class="carousel-container-item__post-data">
-          <span class="fas fa-comment">45</span><span class="fas fa-thumbs-up">145</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-container">
-      <div class="carousel-container-item">
-        <div class="carousel-container-item__text">
-          <p>How long does a client have to request a project revisions on a project?</p>
-        </div>
-        <div class="carousel-container-item__user-data">
-          <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
-          <a href="#" class="">Katie #91KMIA8</a>
-        </div>
-        <div class="carousel-container-item__post-data">
-          <span class="fas fa-comment">45</span><span class="fas fa-thumbs-up">145</span>
-        </div>
-      </div>
-    </div>
-
-
   </div>
 
   <div class="articles-section-container">
@@ -745,7 +668,6 @@
               </span>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -754,8 +676,46 @@
   <script>
     $(document).ready(function () {
 
-      // Carousel del most popular articles en community topic list page
-      $(".carousel").slick();
+      // Llamada a API zendesk para obtener los posts
+
+      fillCarousel = async () => {
+        await $.ajax({
+          url: `/api/v2/community/topics/200126976/posts?page=1&per_page=12&sort_by=votes`,
+          method: "GET",
+          success: function (data){
+            
+            let { posts } = data;
+
+            console.log(posts);
+
+            posts.map(post => {
+              $(".carousel").append(
+                `<div class="carousel-container">
+                  <div class="carousel-container-item">
+                    <div class="carousel-container-item__text">
+                      <a href="${post.html_url} id="title-${post.id}">${post.title}</a>
+                    </div>
+                    <div class="carousel-container-item__user-data">
+                      <img class="carousel-container-item__image" src="https://secure.gravatar.com/avatar/304026b94e9b281622a68bb02817e6d3?default=https%3A%2F%2Fassets.zendesk.com%2Fhc%2Fassets%2Fdefault_avatar.png&r=g" alt="">
+                      <a href="#" class="">Katie #91KAMIA0</a>
+                    </div>
+                    <div class="carousel-container-item__post-data">
+                      <span class="fas fa-comment">${post.comment_count}</span>
+                      <span class="fas fa-thumbs-up">${post.vote_count}</span>
+                    </div>
+                  </div>
+                </div>`
+              );
+            })
+            console.log("se llena el carousel");
+            // Carousel del most popular articles en community topic list page
+            console.log("se aplica el slick");
+            $(".carousel").slick();
+          }
+        })
+      }
+
+      fillCarousel();
 
       // Remover el "(Community)" de "Recent Activity (Community)"
       let recentActivity = $(".recent-activity-header").text();
