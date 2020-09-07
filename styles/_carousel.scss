@@ -4,19 +4,34 @@
     margin-bottom: 60px;
 
     &-container {
+        
         &-item{
             background: #fff;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             width: 349px;
             height: 242px;
             margin: 0 5%;
             padding: 20px 27px;
             box-shadow: $shadows;
             border-radius: 5px;
+
+            &-section--left {
+                img {
+                    width: 50px;
+                    margin: 20px 20px 0 0;
+                }
+                flex: 1 1 20%;
+            }
+
+            &-section--right {
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 80%;
+            }
             
             &__text {
-                flex: 55%;
+                flex: 70%;
                 margin-top: 35px;
                 
                 a {
@@ -26,23 +41,11 @@
                 }
             }
 
-            &__user-data {
-                flex: 40%;
-                display: flex;
-                flex-direction: row;
-
-                a { 
-                    line-height: 2;
-                    font-size: 16px;
-                    font-weight: $font-weight-semibold;
-                }
-            }
-
             &__post-data {
-                flex: 5%;
+                flex: 30%;
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-end;
+                justify-content: flex-start;
                 font-family: $text_font;
                 font-size: 14.5px;
                 font-weight: $font-weight-regular;
