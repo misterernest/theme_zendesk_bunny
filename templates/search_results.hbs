@@ -108,19 +108,19 @@
     </aside>
 
     <section id="main-content" class="search-results-column">
+      {{#if results}}
       <h1 class="search-results-subheading">
         {{#is current_filter.identifier 'unified'}}
-          {{t 'results' query=query count=results_count}}
+        {{t 'results' query=query count=results_count}}
         {{else}}
-          {{#unless current_subfilter.identifier}}
-            {{t 'results' query=query count=results_count}}
-          {{else}}
-            {{t 'results_with_scope' query=query count=results_count scope_name=current_subfilter.name}}
-          {{/unless}}
+        {{#unless current_subfilter.identifier}}
+        {{t 'results' query=query count=results_count}}
+        {{else}}
+        {{t 'results_with_scope' query=query count=results_count scope_name=current_subfilter.name}}
+        {{/unless}}
         {{/is}}
       </h1>
-      {{#if results}}
-        <ul class="search-results-list">
+      <ul class="search-results-list">
           {{#each results}}
             <li class="search-result-list-item result-{{type}}">
               <h2 class="search-result-title">
@@ -175,12 +175,15 @@
           {{/each}}
         </ul>
       {{else}}
-        <p>
-          {{t 'no_results_unified'}}
-          {{#link 'help_center'}}
-            {{t 'browse_help_center'}}
-          {{/link}}
-        </p>
+        <div class="no-result">
+          <div class="no-result-img">
+            <img src="{{asset 'img_search_no-results.png'}}" alt="">
+          </div>
+          <h2>
+            Sorry! {{t 'results' query=query count=results_count}}
+          </h2>
+          <a href="javascript: history.go(-1)" class="button">Go Back</a>
+        </div>
       {{/if}}
     </section>
   </div>

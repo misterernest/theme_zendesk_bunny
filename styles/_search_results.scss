@@ -223,3 +223,20 @@ html[lang|="zh"] {
     background: yellow;
   }
 }
+
+.no-result {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  h2 {
+    font-size: 35px;
+    font-weight: 700;
+  }
+  a.button {
+    font-size: 19px;
+    font-weight: 600;
+    width: 170px;
+    height: 40px;
+  }
+}
