@@ -10,16 +10,28 @@
       {{search submit=false}}
     </div>
   </nav>
+  <div class="container-request-form">
+    <div class="page-header">
+      <h1>
+        {{t 'submit_a_request'}}
+        <span class="follow-up-hint">
+          {{follow_up}}
+        </span>
+      </h1>
+    </div>
 
-  <h1>
-    {{t 'submit_a_request'}}
-    <span class="follow-up-hint">
-      {{follow_up}}
-    </span>
-  </h1>
-
-  <div id="main-content" class="form">
-    {{request_form}}
+    <div id="main-content" class="form">
+      {{request_form}}
+    </div>
   </div>
 </div>
 <script src="{{asset 'js_sub-page.js'}}"></script>
+<script>
+  $(document).ready( function () {
+      $('#request_collaborators_').attr('placeholder', "Add your email (CC optional)");
+      $('#request_anonymous_requester_email').attr('placeholder', "Add your email");
+      $('#request_subject').attr('placeholder', 'Subject')
+      $('#request_description').attr('placeholder', 'Describe your request')
+      $('#request_custom_fields_28155118_label').html('What brings you to our platform?<span>(Optional)</span>')
+  })
+</script>

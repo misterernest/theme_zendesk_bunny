@@ -178,3 +178,107 @@
     padding-top: 20px;
   }
 }
+
+.container-request-form {
+  padding-top: 125px;
+  .page-header {
+    max-width: $max-width-container - 500px;
+    margin: 0 auto;
+  }
+  .form {
+    .request {
+      &-form {
+        .request_cc_emails,
+        .request_subject,
+        .request_description,
+        .request_anonymous_requester_email {
+          label {
+            display: none;
+          }
+          p {
+            display: none;
+          }
+        }
+
+        .request_description {
+          textarea {
+            height: 462px;
+            font-size: 22px;
+            font-weight: 500;
+          }
+        }
+        label[for="request-attachments"] {
+          display: none;
+        }
+        .request_custom_fields_28155118_label {
+          label {
+            display: block;
+          }
+        }
+        .form-field {
+          li {
+            height: 48px;
+            width: 100%;
+
+            > input {
+              min-width: 100%;
+              min-height: 100%;
+              font-size: 22px;
+              font-weight: 500;
+            }
+          }
+          input {
+            height: 48px;
+            font-size: 22px;
+            font-weight: 500;
+          }
+
+        }
+        .nesty-input {
+          height: 48px;
+          font-size: 22px;
+
+          &:after {
+            font-family: "Font Awesome 5 Free";
+            color: $brand_color;
+            content: '\f107';
+            font-weight: 900;
+            top: 10%;
+            font-size: 45px;
+          }
+        }
+
+        .upload-dropzone {
+          @include mobile{
+            max-width: 100%;
+          }
+          @include tablet {
+            max-width: 665px;
+          }
+          height: 102px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-style: dashed;
+        }
+
+        #request_custom_fields_28155118_label {
+          font-size: 22px;
+          font-weight: 600;
+          span {
+            font-weight: 400;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    input[type="submit"] {
+      height: 42px;
+      width: 171px;
+      margin: 0 auto;
+    }
+  }
+}
