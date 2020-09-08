@@ -546,9 +546,12 @@ ul.tabs li a {
 }
 
 .articles-section-container .articles-section-container-posts .tabs .active {
-  color: $text_color;
   background-color: #fff;
   border-bottom: 1px solid #fff;
+
+  a {
+    color: $text_color;
+  }
 }
 
 .tab_container {
