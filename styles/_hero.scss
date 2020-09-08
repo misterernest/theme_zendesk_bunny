@@ -18,10 +18,10 @@
 
   .banner-community {
     max-width: $max-width-container;
-    padding: 140px 0 0 0;
+    padding: 0;
+    top: 9.7vw;
 
     &__text-first {
-      margin-top: 40px;
       font-size: 50px;
       font-weight: $font-weight-bold;
       color: $text_color;
@@ -47,7 +47,6 @@
 
     form {
       display: flex;
-      margin-top: 50px;
 
       @include mobile {
         flex-direction: column;
@@ -99,4 +98,11 @@
       }
     }
   }
+}
+
+.text-banner-community {
+  max-width: $max-width-container;
+  margin: 0 auto;
+  position: relative;
+  top: 6.1vw;
 }
