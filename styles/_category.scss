@@ -238,6 +238,7 @@
           p {
             margin: 0 5px 0 0;
           }
+          > * { font-weight: $font-weight-regular; }
         }
         &--more {
           font-size: 14px;

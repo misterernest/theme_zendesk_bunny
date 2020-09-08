@@ -162,158 +162,6 @@
     <h3><h3>Most popular articles</h3></h3>
     <!-- TODO para borrar-->
     <div class="list-articles">
-      <div class="popular-article">
-        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
-        <div class="popular-article-content">
-          <div class="popular-article-content--title">
-            <a href="">What payment methods do you have available</a>
-          </div>
-          <div class="popular-article-content--excerpt">
-            <p>Clients can complete payments via PayPal, and Credit Card...</p>
-          </div>
-          <div class="popular-article-content--more">
-            <a href="">
-            <span>
-              Read more
-              <i class="fas fa-chevron-right"><span>more</span></i>
-            </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="popular-article">
-        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
-        <div class="popular-article-content">
-          <div class="popular-article-content--title">
-            <a href="">What payment methods do you have available</a>
-          </div>
-          <div class="popular-article-content--excerpt">
-            <p>Clients can complete payments via PayPal, and Credit Card...</p>
-          </div>
-          <div class="popular-article-content--more">
-            <a href="">
-            <span>
-              Read more
-              <i class="fas fa-chevron-right"><span>more</span></i>
-            </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="popular-article">
-        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
-        <div class="popular-article-content">
-          <div class="popular-article-content--title">
-            <a href="">What payment methods do you have available</a>
-          </div>
-          <div class="popular-article-content--excerpt">
-            <p>Clients can complete payments via PayPal, and Credit Card...</p>
-          </div>
-          <div class="popular-article-content--more">
-            <a href="">
-            <span>
-              Read more
-              <i class="fas fa-chevron-right"><span>more</span></i>
-            </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="popular-article">
-        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
-        <div class="popular-article-content">
-          <div class="popular-article-content--title">
-            <a href="">What payment methods do you have available</a>
-          </div>
-          <div class="popular-article-content--excerpt">
-            <p>Clients can complete payments via PayPal, and Credit Card...</p>
-          </div>
-          <div class="popular-article-content--more">
-            <a href="">
-            <span>
-              Read more
-              <i class="fas fa-chevron-right"><span>more</span></i>
-            </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="popular-article">
-        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
-        <div class="popular-article-content">
-          <div class="popular-article-content--title">
-            <a href="">What payment methods do you have available</a>
-          </div>
-          <div class="popular-article-content--excerpt">
-            <p>Clients can complete payments via PayPal, and Credit Card...</p>
-          </div>
-          <div class="popular-article-content--more">
-            <a href="">
-            <span>
-              Read more
-              <i class="fas fa-chevron-right"><span>more</span></i>
-            </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="popular-article">
-        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
-        <div class="popular-article-content">
-          <div class="popular-article-content--title">
-            <a href="">What payment methods do you have available</a>
-          </div>
-          <div class="popular-article-content--excerpt">
-            <p>Clients can complete payments via PayPal, and Credit Card...</p>
-          </div>
-          <div class="popular-article-content--more">
-            <a href="">
-            <span>
-              Read more
-              <i class="fas fa-chevron-right"><span>more</span></i>
-            </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="popular-article">
-        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
-        <div class="popular-article-content">
-          <div class="popular-article-content--title">
-            <a href="">What payment methods do you have available</a>
-          </div>
-          <div class="popular-article-content--excerpt">
-            <p>Clients can complete payments via PayPal, and Credit Card...</p>
-          </div>
-          <div class="popular-article-content--more">
-            <a href="">
-            <span>
-              Read more
-              <i class="fas fa-chevron-right"><span>more</span></i>
-            </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="popular-article">
-        <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
-        <div class="popular-article-content">
-          <div class="popular-article-content--title">
-            <a href="">What payment methods do you have available</a>
-          </div>
-          <div class="popular-article-content--excerpt">
-            <p>Clients can complete payments via PayPal, and Credit Card...</p>
-          </div>
-          <div class="popular-article-content--more">
-            <a href="">
-            <span>
-              Read more
-              <i class="fas fa-chevron-right"><span>more</span></i>
-            </span>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- fin TODO-->
@@ -374,3 +222,44 @@
     </div>
   </div>
 </div>
+<script>
+
+  fillMostPopularArticles = async () => {
+    await $.ajax({
+      url: `/api/v2/help_center/en-us/categories/200296218/articles?page=1&per_page=8&sort_by=votes`,
+      method: "GET",
+      success: function (data) {
+
+        let { articles } = data;
+
+        console.log(articles);
+
+        articles.map(article => {
+          $(".list-articles").append(
+            `<div class="popular-article">
+              <i class="bunny-icon"><img src="{{asset 'img_icon_carrot.svg'}}" alt="carrot bunny studio"></i>
+              <div class="popular-article-content">
+                <div class="popular-article-content--title">
+                  <a href="${article.html_url}">${article.title}</a>
+                </div>
+                <div class="popular-article-content--excerpt">
+                  <p>${article.body.substring(4, 100)}</p>
+                </div>
+                <div class="popular-article-content--more">
+                  <a href="${article.html_url}">
+                    <span>
+                      Read more
+                      <i class="fas fa-chevron-right"><span>more</span></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>`
+          );
+        })
+      }
+    })
+  }
+
+  fillMostPopularArticles();
+</script>
