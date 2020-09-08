@@ -102,13 +102,13 @@
       <div class="tab_container">
         <div class="recent-section tab_content" id="recent">
           <div id="recent-tab" class="posts-list">
-            
+
           </div>
         </div>
 
         <div class="top-section tab_content" id="top">
           <div id="top-tab" class="posts-list">
-            
+
           </div>
         </div>
       </div>
@@ -134,8 +134,8 @@
         await $.ajax({
           url: `/api/v2/community/topics/200126976/posts?page=1&per_page=18&sort_by=votes`,
           method: "GET",
-          success: function (data){
-            
+          success: function (data) {
+
             let { posts } = data;
             let postsCarousel = posts.slice(0, 8);
             let postsTopSection = posts.slice(8, 18);
@@ -205,31 +205,31 @@
                       </div>
                       <div>
                       ${post.pinned ?
-                        `<span class="status-label status-label-pinned">{{t 'pinned'}}</span>`
-                      : ''}
+                  `<span class="status-label status-label-pinned">{{t 'pinned'}}</span>`
+                  : ''}
                       ${post.featured ?
-                        `<span class="status-label status-label-featured">{{t 'featured'}}</span>`
-                      :''}
+                  `<span class="status-label status-label-featured">{{t 'featured'}}</span>`
+                  : ''}
                       
                       ${post.closed ?
-                        `<span class="status-label status-label-closed">{{t 'closed'}}</span>`
-                      : ''}
+                  `<span class="status-label status-label-closed">{{t 'closed'}}</span>`
+                  : ''}
 
                       ${post.status == "planned" ?
-                        `<span class="status-label status-label-planned striped-list-status">${post.status}</span>`
-                      : ''}
+                  `<span class="status-label status-label-planned striped-list-status">${post.status}</span>`
+                  : ''}
 
                       ${post.status == "answered" ?
-                        `<span class="status-label status-label-answered striped-list-status">${post.status}</span>`
-                      : ''}
+                  `<span class="status-label status-label-answered striped-list-status">${post.status}</span>`
+                  : ''}
 
                       ${post.status == "not_planned" ?
-                        `<span class="status-label status-label-not-planned striped-list-status">${post.status}</span>`
-                      : ''}
+                  `<span class="status-label status-label-not-planned striped-list-status">${post.status}</span>`
+                  : ''}
 
                       ${post.status == "completed" ?
-                        `<span class="status-label status-label-completed striped-list-status">${post.status}</span>`
-                      : ''}
+                  `<span class="status-label status-label-completed striped-list-status">${post.status}</span>`
+                  : ''}
                       </div>
                     </span>
                   </div>
@@ -250,12 +250,12 @@
         await $.ajax({
           url: `/api/v2/community/topics/200126976/posts?page=1&per_page=10&sort_by=created_at`,
           method: "GET",
-          success: function (data){
-            
+          success: function (data) {
+
             let { posts } = data;
 
             posts.map(post => {
-              
+
               $("#recent-tab").append(
                 `<section role="region" aria-labelledby="title-${post.id}">
                   <div class="striped-list-item">
@@ -300,31 +300,31 @@
                       </div>
                       <div>
                       ${post.pinned ?
-                        `<span class="status-label status-label-pinned">{{t 'pinned'}}</span>`
-                      : ''}
+                  `<span class="status-label status-label-pinned">{{t 'pinned'}}</span>`
+                  : ''}
                       ${post.featured ?
-                        `<span class="status-label status-label-featured">{{t 'featured'}}</span>`
-                      :''}
+                  `<span class="status-label status-label-featured">{{t 'featured'}}</span>`
+                  : ''}
                       
                       ${post.closed ?
-                        `<span class="status-label status-label-closed">{{t 'closed'}}</span>`
-                      : ''}
+                  `<span class="status-label status-label-closed">{{t 'closed'}}</span>`
+                  : ''}
 
                       ${post.status == "planned" ?
-                        `<span class="status-label status-label-planned striped-list-status">${post.status}</span>`
-                      : ''}
+                  `<span class="status-label status-label-planned striped-list-status">${post.status}</span>`
+                  : ''}
 
                       ${post.status == "answered" ?
-                        `<span class="status-label status-label-answered striped-list-status">${post.status}</span>`
-                      : ''}
+                  `<span class="status-label status-label-answered striped-list-status">${post.status}</span>`
+                  : ''}
 
                       ${post.status == "not_planned" ?
-                        `<span class="status-label status-label-not-planned striped-list-status">${post.status}</span>`
-                      : ''}
+                  `<span class="status-label status-label-not-planned striped-list-status">${post.status}</span>`
+                  : ''}
 
                       ${post.status == "completed" ?
-                        `<span class="status-label status-label-completed striped-list-status">${post.status}</span>`
-                      : ''}
+                  `<span class="status-label status-label-completed striped-list-status">${post.status}</span>`
+                  : ''}
                       </div>
                     </span>
                   </div>
