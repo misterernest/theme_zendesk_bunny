@@ -21,6 +21,8 @@
     margin-bottom: 10px;
   }
 
+
+
   h1 {
     flex-grow: 1;
     margin-bottom: 20px;
@@ -28,15 +30,40 @@
     font-size: 35px;
   }
 
+  &-article-page {
+    h1 {
+      flex-grow: 1;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 35px;
+      margin-top: 60px;
+    }
+  }
+
+  &-request-page {
+    h1 {
+      flex-grow: 1;
+      font-weight: 700;
+      font-size: 35px;
+      margin-bottom: 70px;
+    }
+  }
+
   &-description {
     @include tablet {
       max-width: 500px;
     }
+
     font-weight: $font-weight-light;
     margin: 0 0 30px 0;
     word-break: break-word;
     font-size: 23px;
     line-height: 1.2;
+  }
+
+  &-description--tiny {
+    font-size: 20px;
+    margin-bottom: 83px;
   }
 
   .icon-lock {
