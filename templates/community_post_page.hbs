@@ -107,14 +107,12 @@
 
         {{#if settings.show_post_sharing}}
         <footer class="post-footer">
-
-          <div class="meta-group">
-            <span class="tag tag--light">Booking</span>
-            <span class="tag tag--light">Rates</span>
-          </div>
-
+          <!-- TODO corregir vote sum-->
           <div class="meta-group meta-group--wide">
-            <a href="#" class="post-footer__button fas fa-thumbs-up">Like</a>
+            <span>
+              <li class="fas fa-thumbs-up post-meta__data"><span>like</span></li>
+                {{#post.vote 'up' class='post-vote-up'}}Like{{/post.vote}}
+            </span>
             <div class="post-share">
                 <span>
                   <i class="fas fa-share"><span>share</span></i>

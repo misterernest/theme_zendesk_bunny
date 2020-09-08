@@ -159,6 +159,9 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          position: relative;
+          bottom: -15px;
+
         }
       }
       &--right {
@@ -174,6 +177,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            bottom: -15px;
           }
         }
         &-first-text {
@@ -206,9 +211,10 @@
       padding: 87px 0 50px;
   }
 
-  h3 {
+  > h3 {
     font-size: 35px;
     font-weight: 600;
+    margin-bottom: 74px;
   }
   .list-articles {
     display: flex;flex-flow: row wrap;
@@ -238,7 +244,10 @@
           p {
             margin: 0 5px 0 0;
           }
-          > * { font-weight: $font-weight-regular; }
+          > * {
+            font-weight: $font-weight-regular;
+            font-size: 15px;
+          }
         }
         &--more {
           font-size: 14px;

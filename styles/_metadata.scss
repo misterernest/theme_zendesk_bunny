@@ -3,7 +3,16 @@
   display: block;
   margin-top: 5px;
 
-  &--wide { padding: 34px 0 8px 5px; }
+  &--wide {
+    padding: 34px 0 8px 5px;
+
+    .post-vote-up {
+      border: none;
+      background-color: transparent;
+      color: $link_color;
+      padding-left: 0;
+    }
+  }
 }
 
 .meta-group {
