@@ -78,7 +78,7 @@
 
       a {
         text-decoration: none;
-        padding: 15px 0;
+        padding: 15px 10px 15px 0;
       }
     }
 
@@ -89,15 +89,17 @@
     a {
       color: $text_color;
       display: block;
+      font-size: 20px;
+      font-weight: 500;
     }
   }
 
   li:hover {
     @include tablet {
-      border-bottom: 4px solid #ddd;
+      border-bottom: 8px solid #ddd;
 
       a:not([aria-current="page"]) {
-        padding: 15px 0 11px 0;
+        padding: 15px 10px 15px 0;
         text-decoration: none;
       }
     }
@@ -118,7 +120,7 @@
   li[aria-selected="true"],
   li.current {
     @include tablet {
-      border-bottom: 4px solid $brand_color;
+      border-bottom: 8px solid $brand_color;
       order: 1;
     }
 
