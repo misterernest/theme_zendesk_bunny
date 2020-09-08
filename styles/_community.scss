@@ -424,10 +424,15 @@
 .articles-section-container {
   
   display: flex;
-  flex-direction: row;
+
+  @include mobile { flex-flow: row wrap; }
+
+  @include tablet{ flex-flow: row wrap;} 
+  
+  @include desktop{ flex-flow: row nowrap; }
 
   &-posts {
-    flex: 1 0 1059px;
+    flex: 1 1 1059px;
 
     .posts-list {
       .striped-list-title {
