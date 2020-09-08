@@ -514,8 +514,6 @@ ul.tabs li {
   float: left;
   margin: 0;
   padding: 0;
-  height: 53px;
-  width: 116px;
   line-height: 31px;
   margin-bottom: -1px;
   overflow: hidden;
@@ -525,6 +523,17 @@ ul.tabs li {
   border: 1px solid #eee;
   display: flex;
 }
+
+ul.tabs li:first-child {
+  height: 55px;
+  width: 117px;
+}
+
+ul.tabs li:last-child {
+  height: 55px;
+  width: 108px;
+}
+
 ul.tabs li a {
 	text-decoration: none;
 	display: block;
