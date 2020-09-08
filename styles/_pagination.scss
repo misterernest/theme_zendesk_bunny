@@ -55,3 +55,39 @@
     }
   }
 }
+
+.pagination {
+
+  &-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  &-first,
+  &-first,
+  &-prev,
+  &-next,
+  &-last {
+    &-link {
+      border: none;
+      font-size: 20px;
+      line-height: 0.5;
+      align-items: baseline;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+        color: $link_color;
+      }
+    }
+    &-icon {
+      font-size: 30px;
+    }
+  }
+  &-prev,
+  &-next{
+    &-text {
+      color: $text_color;
+    }
+  }
+}

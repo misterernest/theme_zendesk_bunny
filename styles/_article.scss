@@ -190,6 +190,8 @@
       }
       .article-votes-controls {
         padding: 25px 0 22px;
+        display: flex;
+        justify-content: center;
         .article-vote {
           height: 31px;
           width: 74px;
