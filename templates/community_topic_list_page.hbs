@@ -13,33 +13,6 @@
 </section>
 
 <div class="container">
-  {{!-- <nav class="sub-nav">
-    {{breadcrumbs}}
-  </nav> --}}
-
-  {{!-- <header class="page-header community-header">
-      <span class="dropdown">
-          <button class="dropdown-toggle" aria-haspopup="true">
-            <h2 class="title">
-              {{t 'community_topics'}}
-            </h2>
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-          </button>
-        <span class="dropdown-menu" role="menu">
-          {{#link 'topics' role='menuitem' selected='true'}}
-            {{t 'show_topics'}}
-          {{/link}}
-          {{#link 'posts' role='menuitem'}}
-            {{t 'show_all_posts'}}
-          {{/link}}
-        </span>
-      </span>
-    <span class="post-to-community">
-      {{link 'new_post' class='button button-large'}}
-    </span>
-  </header> --}}
   <div class="description__text">
     <span class="section__message description__text--firstline">Here you can share your experience and ideas, ask and
       answer questions, and meet, other creatives like you.</span>
@@ -115,7 +88,7 @@
 
   {{pagination}}
 
-  <h3 class="h3">Most popular articles</h3>
+  <h3 class="h3">Most popular posts</h3>
 
   <div class="carousel" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
   </div>
@@ -212,12 +185,6 @@
                               ${post.comment_count}
                           </span>
                           <span>
-                            <li class="fas fa-eye post-meta__data">
-                              <span>created_at</span>
-                            </li>
-                              5 hours ago
-                          </span>
-                          <span>
                             <li class="fas fa-thumbs-up post-meta__data">
                               <span>created_at</span>
                             </li>
@@ -309,12 +276,6 @@
                               <span>created_at</span>
                             </li>
                               ${post.comment_count}
-                          </span>
-                          <span>
-                            <li class="fas fa-eye post-meta__data">
-                              <span>created_at</span>
-                            </li>
-                              5 hours ago
                           </span>
                           <span>
                             <li class="fas fa-thumbs-up post-meta__data">
