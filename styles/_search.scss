@@ -77,3 +77,21 @@ $input-placeholder-color: #77777777;
 .search-container {
   position: relative;
 }
+
+.search.search-full.home-search {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 605px;
+
+  input {
+    height: 49px;
+    &[type="search"] {
+      flex: 1 1 100%;
+      height: 51px;
+    }
+    &[type="submit"] {
+      flex: 0 0 116px;
+      margin-left: 6px;
+    }
+  }
+}
