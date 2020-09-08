@@ -10,26 +10,28 @@
       {{search submit=false}}
     </div>
   </nav>
+  <div class="container-new-post-form">
+    <div class="page-header page-header-new-post-page">
+      <h1 class="form-header">
+        {{t 'what_is_your_post_about'}}
+      </h1>
+    </div>
 
-  <h1 class="form-header">
-    {{t 'what_is_your_post_about'}}
-  </h1>
-
-  <div id="main-content" class="form">
-    {{#form 'post' class='new_community_post'}}
+    <div id="main-content" class="form">
+      {{#form 'post' class='new_community_post'}}
       <div class="form-field">
         {{#required 'title'}}
-          {{label 'title'}}
+        {{label 'title'}}
         {{else}}
-          {{#label 'title'}}
-            {{t 'title_label'}}<span class="optional">({{t 'optional'}})</span>
-          {{/label}}
+        {{#label 'title'}}
+        {{t 'title_label'}}<span class="optional">({{t 'optional'}})</span>
+        {{/label}}
         {{/required}}
         {{input 'title' autofocus=true}}
         {{#validate 'title'}}
-          <div class="notification notification-error notification-inline">
-            {{error 'title'}}
-          </div>
+        <div class="notification notification-error notification-inline">
+          {{error 'title'}}
+        </div>
         {{/validate}}
       </div>
 
@@ -37,38 +39,48 @@
 
       <div class="form-field">
         {{#required 'details'}}
-          {{label 'details'}}
+        {{label 'details'}}
         {{else}}
-          {{#label 'details'}}
-            {{t 'details_label'}}<span class="optional">({{t 'optional'}})</span>
-          {{/label}}
+        {{#label 'details'}}
+        {{t 'details_label'}}<span class="optional">({{t 'optional'}})</span>
+        {{/label}}
         {{/required}}
         {{wysiwyg 'details'}}
         {{#validate 'details'}}
-          <div class="notification notification-error notification-inline">
-            {{error 'details'}}
-          </div>
+        <div class="notification notification-error notification-inline">
+          {{error 'details'}}
+        </div>
         {{/validate}}
       </div>
 
       <div class="form-field">
         {{#required 'topic'}}
-          {{label 'topic'}}
+        {{label 'topic'}}
         {{else}}
-          {{#label 'topic'}}
-            {{t 'topic_label'}}<span class="optional">({{t 'optional'}})</span>
-          {{/label}}
+        {{#label 'topic'}}
+        {{t 'topic_label'}}<span class="optional">({{t 'optional'}})</span>
+        {{/label}}
         {{/required}}
         {{select 'topic'}}
         {{#validate 'topic'}}
-          <div class="notification notification-error notification-inline">
-            {{error 'topic'}}
-          </div>
+        <div class="notification notification-error notification-inline">
+          {{error 'topic'}}
+        </div>
         {{/validate}}
       </div>
 
       <footer>{{input type='submit'}}</footer>
-    {{/form}}
+      {{/form}}
+    </div>
   </div>
 </div>
 <script src="{{asset 'js_sub-page.js'}}"></script>
+<script>
+  $(document).ready( function () {
+    $('#community_post_title').attr('placeholder', "Title");
+    $('#request_anonymous_requester_email').attr('placeholder', "Add your email");
+    $('#request_subject').attr('placeholder', 'Subject')
+    $('#request_description').attr('placeholder', 'Describe your request')
+    $('#request_custom_fields_28155118_label').html('What brings you to our platform?<span>(Optional)</span>')
+  })
+</script>

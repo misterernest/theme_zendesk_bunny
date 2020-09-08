@@ -1,8 +1,9 @@
 /***** My activities *****/
 .my-activities {
   &-nav {
-    background-color: $secondary-shade;
+    background-color: $background_color;
     margin-bottom: 20px;
+    border-bottom: 1px solid $border-color;
   }
 
   &-sub-nav {
@@ -229,3 +230,60 @@
 }
 
 .no-activities { color: $secondary-text-color; }
+
+.my-activities-nav ~ .container.my-activities-results {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-top: 50px;
+
+  .my-activities-header {
+    display: flex;
+    flex-flow: column;
+    width: 30%;
+
+
+    .my-activities-sub-nav {
+
+      .collapsible-nav-border {
+        border-bottom: 0;
+      }
+      .collapsible-nav-list {
+        flex-direction: column;
+
+        li {
+          &.current {
+            border: none;
+
+            &:hover {
+              font-weight: 900;
+            }
+            a {
+              font-weight: 700;
+              font-size: 18px;
+            }
+          }
+          a {
+            font-weight: 600;
+            font-size: 18px;
+            &:hover {
+              font-weight: 900;
+            }
+          }
+
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  .container-filter-result-actvities {
+    width: 100%;
+
+    .no-activities {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}

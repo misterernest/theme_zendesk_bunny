@@ -92,13 +92,20 @@
   &-list {
     margin-bottom: 25px;
     > li {
-      padding: 20px 0;
+      padding: 20px 0 25px;
+      border-bottom: 1px solid $border-color;
       &:first-child {
         border-top: 1px solid $border-color;
       }
 
       h2 {
         margin-bottom: 0;
+
+        a{
+          color: $text_color;
+          font-size: 26px;
+          font-weight: 600;
+        }
       }
     }
   }
@@ -141,6 +148,11 @@
   &-description {
     margin-top: 10px;
     word-break: break-word;
+    font-size: 17px;
+    font-weight: 400;
+    a {
+      font-weight: 600;
+    }
   }
 }
 
@@ -202,6 +214,8 @@
 
     li {
       @include desktop { display: table-cell; }
+      font-size: 16px;
+      font-weight: 400;
     }
 
     li, li a, li a:visited {
@@ -221,5 +235,91 @@ html[lang|="zh"] {
   .search-results-description em {
     font-style: normal;
     background: yellow;
+  }
+}
+
+.no-result {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 60px;
+
+  .no-result-img {
+    margin-bottom: 38px;
+  }
+
+  h2 {
+    font-size: 35px;
+    font-weight: 700;
+  }
+  a.button {
+    font-size: 19px;
+    font-weight: 600;
+    width: 170px;
+    height: 40px;
+  }
+}
+
+.search-results-sidebar {
+  .collapsible-sidebar {
+    &-title {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 45px;
+    }
+    ul.multibrand-filter-list {
+      a.sidenav-item {
+        font-size: 20px;
+        font-weight: 400;
+        padding-left: 0;
+        line-height: 1.2;
+        margin-bottom: 0;
+
+        &:hover {
+          background-color: transparent;
+          font-weight: 700;
+        }
+        &.current {
+          background-color: transparent;
+          font-weight: 600;
+
+          &:hover {
+            font-weight: 700;
+          }
+
+          & ~ .container-subfilter-selected {
+            padding: 0 0 0 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section.filters-in-section {
+  > ul.multibrand-filter-list {
+    display: none;
+  }
+}
+
+.search-results-column {
+  h1 {
+    font-size: 35px;
+    font-weight: 700;
+  }
+  .count-result-query {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .search-results-list {
+    margin-top: 90px;
+    .search-result-list-item {
+      .search-results-title {
+        a {
+          color: $text_color;
+        }
+      }
+    }
   }
 }

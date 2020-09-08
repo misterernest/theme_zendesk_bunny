@@ -4,7 +4,7 @@
 
 .profile-header {
   padding: 30px 0;
-  background-color: $primary-shade;
+  background-color: $background_color;
 }
 
 .profile-header .container {
@@ -26,7 +26,6 @@
 .profile-avatar {
   position: relative;
   line-height: 0;
-  align-self: center;
   margin-right: 10px;
 
   [dir="rtl"] & {
@@ -36,8 +35,8 @@
 }
 
 .profile-avatar .user-avatar {
-  width: 65px;
-  height: 65px;
+  width: 85px;
+  height: 85px;
 }
 
 .profile-avatar .icon-agent {
@@ -56,6 +55,9 @@
 
   .name {
     margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: $link_color;
   }
 }
 
@@ -240,8 +242,10 @@
 // Navigation
 
 .profile-nav {
-  background-color: $secondary-shade;
+  background-color: $background_color;
   margin-bottom: 37px;
+  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $border-color;
 }
 
 // Sections
@@ -553,4 +557,118 @@
   width: 1em;
   height: 1em;
   margin: auto;
+}
+
+.basic-info {
+  display: flex;
+  flex-flow: column;
+
+  .name-edit-container {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .aditional-info {
+    display: flex;
+    flex-flow: column;
+
+    .info-social {
+      display: flex;
+      flex-flow: row;
+
+      &.rating {
+        .detail {
+          margin-right: 20px;
+          .stat-value {
+            font-size: 18px;
+            font-weight: 600;
+          }
+          .stat-label {
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+      &.activity {
+        border-top: none;
+        padding-top: 10px;
+        .detail {
+          margin-right: 24px;
+
+          .stat-value {
+            color: #8a8b94;
+            font-size: 14px;
+            font-weight: 500;
+          }
+          .stat-label {
+            color: #8a8b94;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+.profile-info {
+  .options {
+    height: auto;
+    align-items: center;
+    .user-profile-actions {
+      button {
+        font-size: 0;
+        background-color: transparent;
+        border: none;
+        outline-color: transparent;
+        padding: 0;
+
+        &:hover,
+        &:focus,
+        &:active {
+          outline-color: transparent;
+          background-color: transparent;
+          border: none;
+        }
+        &:before {
+          content: "\f044";
+          color: #5f6275;
+          margin-right: 5px;
+          font-size: 15.5px;
+          font-family: "Font Awesome 5 Free";
+        }
+      }
+    }
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 500;
+    color: #838383;
+  }
+}
+
+.profile-nav {
+  margin-bottom: 43px;
+
+  .container {
+    .collapsible-nav {
+      .collapsible-nav-list {
+        li {
+          &.current {
+
+          }
+        }
+      }
+    }
+  }
+}
+.profile-nav ~ .container {
+  .profile-section {
+    .no-activity {
+      padding-top: 48px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #838383;
+    }
+  }
 }

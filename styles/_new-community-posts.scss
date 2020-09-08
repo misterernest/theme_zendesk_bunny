@@ -1,0 +1,28 @@
+.container-new-post-form {
+  padding-top: 125px;
+
+  .page-header-new-post-page {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .form {
+    .new_community_post {
+      .form-field {
+        label {
+          display: none;
+        }
+        input[type="text"],
+        .nesty-input{
+          height: 48px;
+        }
+        input[type="text"]::placeholder,
+        .nesty-input {
+          font-size: 22px;
+          font-weight: 500;
+          color: #939598;
+        }
+      }
+    }
+  }
+}

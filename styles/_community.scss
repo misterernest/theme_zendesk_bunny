@@ -401,6 +401,9 @@
   }
   a {
     background: $link_color;
+    max-width: 274px;
+    margin: 0 auto;
+    height: 37px;
   }
 }
 
@@ -408,7 +411,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 65px;
+  margin: 54px 0 65px 0;
 
   &--firstline {
     text-align: center;
@@ -424,10 +427,15 @@
 .articles-section-container {
   
   display: flex;
-  flex-direction: row;
+
+  @include mobile { flex-flow: row wrap; }
+
+  @include tablet{ flex-flow: row wrap;} 
+  
+  @include desktop{ flex-flow: row nowrap; }
 
   &-posts {
-    flex: 1 0 1059px;
+    flex: 1 1 1059px;
 
     .posts-list {
       .striped-list-title {
@@ -461,7 +469,7 @@
   &-aside {
     display: flex;
     flex-direction: column;
-    flex: 1 0 413px;
+    flex: 1 1 413px;
     margin-left: 47px;
 
     > * {
@@ -472,7 +480,9 @@
     &__image {
       background: url($community_banner_topic_list);
       background-size: 100%;
-      height: 453px;
+      height: 445px;
+      background-repeat: no-repeat;
+      margin-top: 51px;
     }
 
     &__box {
@@ -500,36 +510,51 @@ ul.tabs {
 	float: left;
 	list-style: none;
   //height: 32px;
-	width: 100%;
+  width: 100%;
+  color: $link_color;
 }
 ul.tabs li {
-	float: left;
-	margin: 0;
-	padding: 0;
-  height: 62px;
-  width: 335px; 
-	line-height: 31px; 
-	margin-bottom: -1px; 
-	overflow: hidden;
-	position: relative;
-  background: #e0e0e0;
-  //box-shadow: $shadows;
+  float: left;
+  margin: 0;
+  padding: 0;
+  line-height: 31px;
+  margin-bottom: -1px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  margin-right: 5px;
+  border: 1px solid #eee;
+  display: flex;
 }
+
+ul.tabs li:first-child {
+  height: 55px;
+  width: 117px;
+}
+
+ul.tabs li:last-child {
+  height: 55px;
+  width: 108px;
+}
+
 ul.tabs li a {
 	text-decoration: none;
 	display: block;
 	font-size: 1.2em;
-	padding: 0 20px;
+	padding: 10px 20px;
   outline: none;
   height: 100%;
+  font-weight: $font-weight-semibold;
+  margin:0 auto;
 }
-ul.tabs li a:hover {
-	background: #ccc;
-}
-html ul.tabs li.active, html ul.tabs li.active a:hover  { 
-	background: #fff;
+
+.articles-section-container .articles-section-container-posts .tabs .active {
+  background-color: #fff;
   border-bottom: 1px solid #fff;
-  color: #000;
+
+  a {
+    color: $text_color;
+  }
 }
 
 .tab_container {
@@ -538,7 +563,7 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 	clear: both;
 	float: left; width: 100%;
   background: #fff;
-  box-shadow: $shadows;
+  border: 1px solid $border-color;
 }
 .tab_content {
 	padding: 20px;
@@ -548,4 +573,32 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 .h3 {
   font-size: 28px;
   font-weight: $font-weight-semibold;
+}
+
+.community-banner-aside--text {
+  color: #fff;
+  position: relative;
+  height: 100%;
+  width: 82%;
+  top: 265px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  &-first {
+    font-size: 27px;
+    font-weight: $font-weight-extrabold;
+  }
+
+  &-second {
+    font-size: 16px;
+    font-weight: $font-weight-regular;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .shine-with-us-button {
+    height: 38px;
+  }
 }
