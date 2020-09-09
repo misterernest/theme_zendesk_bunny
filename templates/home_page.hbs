@@ -140,36 +140,12 @@
   </section>
 </div>
 
-{{!--#if promoted_articles--}}
 <div class="container-articles section">
   <section class="container">
     <h3>Most popular articles</h3>
-    <!-- TODO para borrar-->
     <div class="list-articles">
       
     </div>
-
-    <!-- fin TODO-->
-    <!-- TODO volver ciclo de articulos con mas comentarios -->
-    <!--
-    {{!&#45;&#45;#each promoted_articles&#45;&#45;}}
-    <div class="popu-article">
-      <div class="article-container">
-        <div class="article__top">
-          <a href="{{url}}" class="article__tittle">{{!&#45;&#45;title&#45;&#45;}}</a>
-          {{!&#45;&#45;#if internal&#45;&#45;}}
-          <span class="icon-lock" title="{{t 'internal'}}"></span>
-          {{!&#45;&#45;/if&#45;&#45;}}
-        </div>
-        <div class="article__middle">
-          <p class="article__desc">{{!&#45;&#45;excerpt body characters=50!&#45;&#45;}}</p>
-        </div>
-        <div class="article__bottom">
-          <a class="article__button" href="{{!&#45;&#45;url&#45;&#45;}}">Read more</a>
-        </div>
-      </div>
-    </div>
-    {{!&#45;&#45;/each&#45;&#45;}}-->
   </section>
 </div>
 {{!--/if--}}
@@ -178,7 +154,7 @@
   <div class="second-banner banners-container">
     <div class="second-banner second-banner--left client">
       <div class="second-banner--container-text">
-        <span class="second-banner--left-first-text">Need extra help from our team?</span>
+        <span class="second-banner--left-first-text">Need extra help from<br>our team?</span>
         <span class="second-banner--left-second-text"></span>
         {{#link 'new_request' class='button button-large'}}CONTACT US HERE{{/link}}
       </div>
@@ -186,7 +162,7 @@
     <div class="second-banner second-banner--right client">
       <div class="second-banner--container-text">
         <span class="second-banner--right-first-text">What kind of talent creative work do you need?</span>
-        <a href="#" class="button button-large">submit your project</a>
+        <a href="https://bunnystudio.com/" class="button button-large">submit your project</a>
       </div>
     </div>
   </div>
@@ -215,7 +191,7 @@
                   <a href="${article.html_url}">${article.title}</a>
                 </div>
                 <div class="popular-article-content--excerpt">
-                  <p>${article.body.substring(0, 100)}</p>
+                  <p>${article.body.replace(/(<([^>]+)>)/ig, '').substring(0, 100)}</p>
                 </div>
                 <div class="popular-article-content--more">
                   <a href="${article.html_url}">

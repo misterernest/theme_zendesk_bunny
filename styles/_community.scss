@@ -380,11 +380,14 @@
     .striped-list-title {
       font-size: 24px;
       color: $text_color;
+      text-decoration: none;
+      font-weight: 600;
     }
-    
+    .container--striped-list-details {
+      margin: 10px 0 20px;
+    }
     .striped-list-details {
-      margin: 12px 0;
-      font-size: 14px;
+      font-size: 18px;
 
       & + a {
         font-size: 14px;
@@ -442,6 +445,7 @@
         color: $text_color;
         font-size: 24px;
         font-weight: $font-weight-semibold;
+        text-decoration: none;
       }
       .meta-group {
         a {
@@ -450,7 +454,8 @@
         }
       } 
       .striped-list-details, a {
-        font-size: 14px;
+        font-size: 18px;
+        line-height: 20px;
         font-weight: $font-weight-regular;
       }
       
@@ -543,10 +548,10 @@ ul.tabs li:last-child {
 }
 
 ul.tabs li a {
-	text-decoration: none;
-	display: block;
-	font-size: 1.2em;
-	padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 24px;
+  padding: 10px 20px;
   outline: none;
   height: 100%;
   font-weight: $font-weight-semibold;
@@ -594,7 +599,6 @@ ul.tabs li a {
 .community-banner-aside--text {
   color: #fff;
   position: relative;
-  height: 100%;
   width: 82%;
   top: 265px;
   margin: 0 auto;

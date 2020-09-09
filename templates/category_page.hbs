@@ -176,7 +176,7 @@
       <div class="second-banner second-banner--left pros">
     {{/is}}
         <div class="second-banner--container-text">
-          <span class="second-banner--left-first-text">Need extra help from our team?</span>
+          <span class="second-banner--left-first-text">Need extra help from<br>our team?</span>
           <span class="second-banner--left-second-text"></span>
           {{#link 'new_request' class='button button-large'}}CONTACT US HERE{{/link}}
         </div>
@@ -189,7 +189,7 @@
     {{/is}}
         <div class="second-banner--container-text">
           {{#is category.id 200296637}}
-            <span class="second-banner--right-first-text">What kind of talent creative work do you need?</span>
+            <span class="second-banner--right-first-text">What kind of talent creative<br>work do you need?</span>
             <a href="https://bunnystudio.com/" class="button button-large">submit your project</a>
           {{/is}}
           {{#is category.id 200296218}}
@@ -223,7 +223,7 @@
                   <a href="${article.html_url}">${article.title}</a>
                 </div>
                 <div class="popular-article-content--excerpt">
-                  <p>${article.body.substring(0, 100)}</p>
+                  <p>${article.body.replace(/(<([^>]+)>)/ig, '').substring(0, 100)}</p>
                 </div>
                 <div class="popular-article-content--more">
                   <a href="${article.html_url}">

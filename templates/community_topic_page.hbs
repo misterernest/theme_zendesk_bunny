@@ -41,7 +41,7 @@
                 
                 <div class="meta-group">
                   {{#link 'user_profile' id=author.id}}
-                    <span>{{author.name}} #{{author.id}}</span>
+                    <span class="author-post">{{author.name}} #{{author.id}}</span>
                   {{/link}}
                   <ul class="header--post-data">
                     <span><li class="fas fa-calendar-alt"><span>calendar</span></li>{{date created_at class='metadata' format='short'}}</span>
@@ -49,13 +49,22 @@
                     <span><li class="fas fa-thumbs-up"><span>likes</span></li>{{vote_sum}}</span>
                   </ul>
                 </div>
-                <!-- TODO: RESUMEN DEL POST ACTUAL-->
-                {{!-- Agregar el resumen del post actual
-                  <div>
-                    <span class="striped-list-details">{{excerpt 'aaa' characters=200}}</span>
-                    <a href="{{url}}" id="title-{{id}}">read more.</a>
-                  </div>
-                --}}
+                <div class="container--striped-list-details">
+                  <span class="striped-list-details" id="details-{{id}}"></span>
+                  <a href="{{url}}">read more.</a>
+                  <script>
+                   (async (postID) => {
+                     await $.ajax({
+                       url: `/api/v2/community/posts/${postID}`,
+                       method: "GET",
+                       success: function (data) {
+                         let { post } = data;
+                         $('#details-{{id}}').append(post.details.replace(/(<([^>]+)>)/ig, '').substring(0, 200))
+                       }
+                     })
+                   })({{id}})
+                 </script>
+                </div>
 
                 <div class="container-status-label">
                   {{#if pinned}}
@@ -148,4 +157,8 @@
 <script src="{{asset 'js_sub-page.js'}}"></script>
 <script>
   $('.actual #help_center').remove();
+</script>
+
+<script>
+
 </script>
