@@ -683,7 +683,7 @@ ul {
 
 .header .header-container .page-title.link-base {
   text-align: end;
-  padding-right: 10px;
+  padding-right: 40px;
 }
 
 .header .header-container .page-title.link-base span a {
@@ -1798,6 +1798,11 @@ main.third-page {
   padding: 42px 0;
 }
 
+.recent-activity-item:last-child {
+  border-bottom: none;
+  padding-bottom: 5px;
+}
+
 .recent-activity-item-parent {
   font-size: 16px;
   display: none;
@@ -1809,7 +1814,9 @@ main.third-page {
   display: inline-block;
   width: 100%;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 21px;
 }
 
 @media (min-width: 768px) {
@@ -1817,12 +1824,6 @@ main.third-page {
     width: 100%;
     margin: 0;
   }
-}
-
-.recent-activity-item-link {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 10px;
 }
 
 .recent-activity-item-meta {
@@ -1881,8 +1882,8 @@ main.third-page {
   display: inline-block;
 }
 
-.recent-activity-controls {
-  padding-top: 15px;
+.recent-activity-controls a {
+  display: none;
 }
 
 .recent-activity-accessibility-label {
@@ -2020,6 +2021,7 @@ main.third-page {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .pro-join-community-banner__image .banner-community__text {
@@ -2107,7 +2109,7 @@ main.third-page {
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: -15px;
+  bottom: -5px;
 }
 
 .second-banner.banners-container .second-banner--right.client {
@@ -2130,7 +2132,7 @@ main.third-page {
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: -15px;
+  bottom: -5px;
 }
 
 .second-banner.banners-container .second-banner--right-first-text {
@@ -2138,7 +2140,9 @@ main.third-page {
 }
 
 .second-banner.banners-container .second-banner--right-second-text {
-  font-size: 22px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 .section__message {
@@ -2161,7 +2165,7 @@ main.third-page {
   padding: 87px 0 50px;
 }
 
-.container-articles > h3 {
+.container-articles .container > h3 {
   font-size: 35px;
   font-weight: 600;
   margin-bottom: 74px;
@@ -2199,6 +2203,7 @@ main.third-page {
 
 .container-articles .list-articles .popular-article .popular-article-content--title a {
   color: $text_color;
+  text-decoration: none;
 }
 
 .container-articles .list-articles .popular-article .popular-article-content--excerpt {
@@ -3574,11 +3579,16 @@ main.third-page {
 .striped-list .striped-list-info .striped-list-title {
   font-size: 24px;
   color: $text_color;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.striped-list .striped-list-info .container--striped-list-details {
+  margin: 10px 0 20px;
 }
 
 .striped-list .striped-list-info .striped-list-details {
-  margin: 12px 0;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .striped-list .striped-list-info .striped-list-details + a {
@@ -3648,6 +3658,7 @@ main.third-page {
   color: $text_color;
   font-size: 24px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .articles-section-container-posts .posts-list .meta-group a {
@@ -3656,7 +3667,8 @@ main.third-page {
 }
 
 .articles-section-container-posts .posts-list .striped-list-details, .articles-section-container-posts .posts-list a {
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 20px;
   font-weight: 500;
 }
 
@@ -3746,7 +3758,7 @@ ul.tabs li:last-child {
 ul.tabs li a {
   text-decoration: none;
   display: block;
-  font-size: 1.2em;
+  font-size: 24px;
   padding: 10px 20px;
   outline: none;
   height: 100%;
@@ -3790,7 +3802,6 @@ ul.tabs li a {
 .community-banner-aside--text {
   color: #fff;
   position: relative;
-  height: 100%;
   width: 82%;
   top: 265px;
   margin: 0 auto;
@@ -3958,6 +3969,7 @@ ul.tabs li a {
   line-height: 1.3;
   font-size: 24px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 /***** Status labels *****/
@@ -4055,7 +4067,7 @@ ul.tabs li a {
 
 .meta-group > .container-status-label:not(.status-label) {
   display: flex;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 /***** Post *****/
@@ -4158,6 +4170,7 @@ ul.tabs li a {
 .post-content {
   line-height: 29px;
   font-size: 18px;
+  padding-top: 20px;
 }
 
 .post-info-container {
@@ -5375,6 +5388,10 @@ ul.tabs li a {
 
 .meta-group span {
   margin-right: 10px;
+}
+
+.meta-group span.author-post {
+  font-weight: 600;
 }
 
 .meta-group--status-label status-label {
@@ -6834,7 +6851,7 @@ html[dir="rtl"] .notification-left-aligned {
   display: flex;
   flex-direction: row;
   width: 349px;
-  height: 242px;
+  height: 198px;
   margin: 0 5%;
   padding: 20px 27px;
   box-shadow: 0px 0px 5px #5f627540;
@@ -6862,9 +6879,11 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 .carousel-container-item__text a {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: $text_color;
+  text-decoration: none;
+  line-height: 22px;
 }
 
 .carousel-container-item__post-data {
@@ -6970,8 +6989,13 @@ html[dir="rtl"] .notification-left-aligned {
   margin: 0 auto;
 }
 
-.container-new-post-form .form .new_community_post .form-field label {
+.container-new-post-form .form .new_community_post .form-field label:not([for="community_post_topic_id"]) {
   display: none;
+}
+
+.container-new-post-form .form .new_community_post .form-field label[for="community_post_topic_id"] {
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .container-new-post-form .form .new_community_post .form-field input[type="text"],
@@ -6984,4 +7008,13 @@ html[dir="rtl"] .notification-left-aligned {
   font-size: 22px;
   font-weight: 500;
   color: #939598;
+}
+
+.container-new-post-form .form .new_community_post .form-field .nesty-input:after {
+  font-family: "Font Awesome 5 Free";
+  color: $brand_color;
+  content: '\f107';
+  font-weight: 900;
+  top: 10%;
+  font-size: 45px;
 }
