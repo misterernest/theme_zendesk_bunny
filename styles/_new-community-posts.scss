@@ -9,8 +9,12 @@
   .form {
     .new_community_post {
       .form-field {
-        label {
+        label:not([for="community_post_topic_id"]) {
           display: none;
+        }
+        label[for="community_post_topic_id"] {
+          font-size: 22px;
+          font-weight: 500;
         }
         input[type="text"],
         .nesty-input{
@@ -21,6 +25,16 @@
           font-size: 22px;
           font-weight: 500;
           color: #939598;
+        }
+        .nesty-input {
+          &:after {
+            font-family: "Font Awesome 5 Free";
+            color: $brand_color;
+            content: '\f107';
+            font-weight: 900;
+            top: 10%;
+            font-size: 45px;
+          }
         }
       }
     }
