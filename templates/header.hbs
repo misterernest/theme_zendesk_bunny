@@ -7,8 +7,12 @@
       <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}">
       {{/link}}
     </div>
-    <div class="page-title">
-      <span>HELP CENTER</span>
+    <div class="page-title actual">
+      <span id="community">{{#link 'community'}}COMMUNITY{{/link}}</span>
+      <span id="help_center"><a href="/hc/en-us/">HELP CENTER</a></span>
+    </div>
+    <div class="page-title link-base">
+      <span id="help_center"><a href="/hc/en-us/categories/200296218-Help-for-Pros">HELP FOR PROS</a></span>
     </div>
     <div class="nav-wrapper">
       {{#if signed_in}}

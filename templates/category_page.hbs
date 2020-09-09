@@ -213,7 +213,6 @@
 
             let { articles } = data;
 
-            console.log(articles);
 
             articles.map(article => {
               $(".list-articles").append(
@@ -255,7 +254,6 @@
 
               let { articles } = data;
 
-              console.log(articles);
 
               articles.map(article => {
                 $(".list-articles").append(
@@ -287,3 +285,7 @@
         fillMostPopularArticles();
       </script>
         {{/is}}
+    <script>
+      $('.actual #community').remove();
+      $('.link-base #help_center').remove();
+    </script>

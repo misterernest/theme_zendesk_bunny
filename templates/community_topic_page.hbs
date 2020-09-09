@@ -57,7 +57,7 @@
                   </div>
                 --}}
 
-                <div>
+                <div class="container-status-label">
                   {{#if pinned}}
                     <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
                   {{/if}}
@@ -146,3 +146,6 @@
   </div>
 </div>
 <script src="{{asset 'js_sub-page.js'}}"></script>
+<script>
+  $('.actual #help_center').remove();
+</script>

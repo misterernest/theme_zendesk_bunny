@@ -179,7 +179,6 @@
             })
 
             postsTopSection.map(post => {
-              console.log("llenando");
               $("#top-tab").append(
                 `<section role="region" aria-labelledby="title-${post.id}">
                   <div class="striped-list-item">
@@ -251,12 +250,9 @@
                   </div>
                 </section>`
               );
-              console.log("lleno")
             })
 
-            console.log("se llena el carousel");
             // Carousel del most popular articles en community topic list page
-            console.log("se aplica el slick");
             $(".carousel").slick();
           }
         })
@@ -374,4 +370,7 @@
         return false;
       });
     });
+  </script>
+  <script>
+    $('.actual #help_center').remove();
   </script>
