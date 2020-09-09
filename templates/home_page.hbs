@@ -179,7 +179,7 @@
     <div class="second-banner second-banner--left client">
       <div class="second-banner--container-text">
         <span class="second-banner--left-first-text">Need extra help from our team?</span>
-        <span class="second-banner--left-second-text">Dot not worry, take it easy!</span>
+        <span class="second-banner--left-second-text"></span>
         {{#link 'new_request' class='button button-large'}}CONTACT US HERE{{/link}}
       </div>
     </div>
@@ -234,4 +234,9 @@
   }
 
   fillMostPopular();
+</script>
+
+<script>
+  $('.actual #community').remove();
+  $('.link-base #help_center').remove();
 </script>

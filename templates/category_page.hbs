@@ -156,36 +156,16 @@
     </section>
   </section>
 </div>
-{{!--#if promoted_articles--}}
+
 <div class="container-articles section">
   <section class="container">
-    <h3><h3>Most popular articles</h3></h3>
+  <h3>Most popular articles</h3>
     <!-- TODO para borrar-->
     <div class="list-articles">
     </div>
-
-    <!-- fin TODO-->
-    {{#each promoted_articles}}
-    <div class="popu-article">
-      <div class="article-container">
-        <div class="article__top">
-          <a href="{{url}}" class="article__tittle">{{title}}</a>
-          {{#if internal}}
-          <span class="icon-lock" title="{{t 'internal'}}"></span>
-          {{/if}}
-        </div>
-        <div class="article__middle">
-          <p class="article__desc">{{excerpt body characters=50}}</p>
-        </div>
-        <div class="article__bottom">
-          <a class="article__button" href="{{url}}">Read more</a>
-        </div>
-      </div>
-    </div>
-    {{/each}}
   </section>
 </div>
-{{!--/if--}}
+
 
 <div class="container">
   <div class="second-banner banners-container">
@@ -197,7 +177,7 @@
     {{/is}}
         <div class="second-banner--container-text">
           <span class="second-banner--left-first-text">Need extra help from our team?</span>
-          <span class="second-banner--left-second-text">Dot not worry, take it easy!</span>
+          <span class="second-banner--left-second-text"></span>
           {{#link 'new_request' class='button button-large'}}CONTACT US HERE{{/link}}
         </div>
     </div>
@@ -214,8 +194,8 @@
           {{/is}}
           {{#is category.id 200296218}}
               <span class="second-banner--right-first-text">Community for Pros</span>
-          <span class="second-banner--right-second-text">Get help from other Pros and our team</span>
-              {{#link 'community' class="button button-large"}}JOIN OUR CONVERSATION{{/link}}
+          <span class="second-banner--right-second-text">Get help from other<br>Pros and our team</span>
+              {{#link 'community' class="button button-large"}}Let’s start a conversation{{/link}}
           {{/is}}
 
         </div>
@@ -233,7 +213,6 @@
 
             let { articles } = data;
 
-            console.log(articles);
 
             articles.map(article => {
               $(".list-articles").append(
@@ -275,7 +254,6 @@
 
               let { articles } = data;
 
-              console.log(articles);
 
               articles.map(article => {
                 $(".list-articles").append(
@@ -307,3 +285,7 @@
         fillMostPopularArticles();
       </script>
         {{/is}}
+    <script>
+      $('.actual #community').remove();
+      $('.link-base #help_center').remove();
+    </script>

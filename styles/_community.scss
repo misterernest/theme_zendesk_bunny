@@ -456,6 +456,11 @@
       
       .striped-list-info-body {
         margin: 20px 0;
+
+        & ~ div {
+          position: absolute;
+
+        }
       }
       .header--post-data {
         span {
@@ -488,7 +493,7 @@
     &__box {
       border-radius: 5px;
       box-shadow: $shadows;
-      padding: 33px 25px;
+      padding: 33px 28px;
 
       .community-activity, .activity {
         padding: 0;
@@ -558,12 +563,23 @@ ul.tabs li a {
 }
 
 .tab_container {
-	border-top: none;
-	overflow: hidden;
-	clear: both;
-	float: left; width: 100%;
+  border-top: none;
+  overflow: hidden;
+  clear: both;
+  float: left; width: 100%;
   background: #fff;
   border: 1px solid $border-color;
+
+  .recent-section {
+    .posts-list {
+      section:last-child {
+        .striped-list-item {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
 }
 .tab_content {
 	padding: 20px;

@@ -52,9 +52,10 @@
                 font-weight: $font-weight-regular;
                 color: $link_color;
 
-                > * {
-                    margin-left: 10px;
+                span {
+                    margin-right: 10px;
                 }
+
             }
 
             &__image {

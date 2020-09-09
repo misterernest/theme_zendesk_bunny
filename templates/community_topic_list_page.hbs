@@ -3,9 +3,9 @@
 <section class="section hero community-hero">
   <h2 class="visibility-hidden">{{ t 'search'}}</h2>
   <div class="text-banner-community">
-    <span class="banner-community__text-first">Welcome our Community</span>
+    <span class="banner-community__text-first">Welcome to our Community!</span>
     <div class="banner-community__text-second">
-      <span>of creatives </span><span class="banner-community__text-second--orange">like you!</span>
+      <span>What would you like to </span><span class="banner-community__text-second--orange">talk about?</span>
     </div>
   </div>
   <div class="hero-inner banner-community">
@@ -124,7 +124,7 @@
         <span class="community-banner-aside--text">
           <div class="community-banner-aside--text-first">Shine with us!</div>
           <div class="community-banner-aside--text-second">Take advantage of your creative talent and join us and become a Bunny Pro right now!</div>
-          <a href="https://es.bunnystudio.com/voice/talent#/" class="button button-large shine-with-us-button">APPLY NOW</a>
+          <a href="https://bunnystudio.com/voice/talent" class="button button-large shine-with-us-button">APPLY NOW</a>
         </span>
       </div>
       <div class="articles-section-container-aside__box articles-section-container-aside__box--bordered">
@@ -165,8 +165,12 @@
                         <a href="${post.html_url} id="title-${post.id}">${post.title}</a>
                       </div>
                       <div class="carousel-container-item__post-data">
-                        <li class="fas fa-comment post-meta__data"><span>comment</span></li>${post.comment_count}</span>
-                        <li class="fas fa-comment post-meta__data"><span>comment</span></li>${post.vote_count}</span>
+                        <span>
+                            <li class="fas fa-comment post-meta__data"><span>comment</span></li>${post.comment_count}</span>
+                        </span>
+                        <span>
+                            <li class="fas fa-thumbs-up post-meta__data"><span>comment</span></li>${post.vote_count}</span>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -175,7 +179,6 @@
             })
 
             postsTopSection.map(post => {
-              console.log("llenando");
               $("#top-tab").append(
                 `<section role="region" aria-labelledby="title-${post.id}">
                   <div class="striped-list-item">
@@ -203,7 +206,7 @@
                           </span>
                           <span>
                             <li class="fas fa-thumbs-up post-meta__data">
-                              <span>created_at</span>
+                              <span>like</span>
                             </li>
                               ${post.vote_count}
                           </span>
@@ -215,7 +218,7 @@
                         <span class="striped-list-details">${post.details.substring(0, 180)}</span>
                         <a href="${post.html_url}" id="title-id-del-post">read more.</a>
                       </div>
-                      <div>
+                      <div class="container-status-label">
                       ${post.pinned ?
                   `<span class="status-label status-label-pinned">{{t 'pinned'}}</span>`
                   : ''}
@@ -247,12 +250,9 @@
                   </div>
                 </section>`
               );
-              console.log("lleno")
             })
 
-            console.log("se llena el carousel");
             // Carousel del most popular articles en community topic list page
-            console.log("se aplica el slick");
             $(".carousel").slick();
           }
         })
@@ -370,4 +370,7 @@
         return false;
       });
     });
+  </script>
+  <script>
+    $('.actual #help_center').remove();
   </script>

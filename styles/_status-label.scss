@@ -6,10 +6,13 @@
   font-size: 12px;
   font-weight: $font-weight-base;
   margin-right: 2px;
-  padding: 2.5px 10px;
   vertical-align: middle;
   white-space: nowrap;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 17px;
+  padding: 0 8px;
 
   &:hover,
   &:active,
@@ -20,7 +23,9 @@
   &-pinned,
   &-featured,
   &-official {
-    background-color: $brand_color;
+    background-color: #ffffff;
+    border: 1px solid $brand_color;
+    color: $brand_color;
   }
 
   &-official {
@@ -87,5 +92,16 @@
   &-hold,
   &-pending {
     text-transform: lowercase; // To be consistent with Lotus
+  }
+}
+
+.container-status-label {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.meta-group {
+  > .container-status-label:not(.status-label) {
+    display: flex;
+    margin-top: 5px;
   }
 }

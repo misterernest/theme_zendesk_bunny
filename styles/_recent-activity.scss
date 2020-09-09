@@ -4,9 +4,12 @@
   &-header {
     font-size: 26px;
     font-weight: $font-weight-semibold;
+    margin-bottom: 0;
   }
 
-  &-list { padding: 0; }
+  &-list {
+    padding: 0 7px;
+  }
 
   &-item {
     border-bottom: 1px solid $border-color;
@@ -35,7 +38,7 @@
   }
 
   &-item-link {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: $font-weight-bold;
     margin-bottom: 10px;
   }

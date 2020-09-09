@@ -72,18 +72,20 @@
                     <li class="fas fa-thumbs-up post-meta__data"><span>like</span></li>
                     {{post.vote_sum}}
                   </span>
-                  {{#if post.pinned}}
-                  <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
-                  {{/if}}
+                  <div class="container-status-label">
+                    {{#if post.pinned}}
+                    <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{/if}}
 
-                  {{#if post.featured}}
+                    {{#if post.featured}}
                     <span class="status-label status-label-featured">{{t 'featured'}}</span>
-                  {{/if}}
+                    {{/if}}
 
-                  {{#is post.status 'none'}}
-                  {{else}}
+                    {{#is post.status 'none'}}
+                    {{else}}
                     <span class="status-label-{{post.status_dasherized}} status-label">{{post.status_name}}</span>
-                  {{/is}}
+                    {{/is}}
+                  </div>
                 </ul>
               </div>
 
@@ -107,14 +109,12 @@
 
         {{#if settings.show_post_sharing}}
         <footer class="post-footer">
-
-          <div class="meta-group">
-            <span class="tag tag--light">Booking</span>
-            <span class="tag tag--light">Rates</span>
-          </div>
-
+          <!-- TODO corregir vote sum-->
           <div class="meta-group meta-group--wide">
-            <a href="#" class="post-footer__button fas fa-thumbs-up">Like</a>
+            <span>
+              <li class="fas fa-thumbs-up post-meta__data"><span>like</span></li>
+                {{#post.vote 'up' class='post-vote-up'}}Like{{/post.vote}}
+            </span>
             <div class="post-share">
                 <span>
                   <i class="fas fa-share"><span>share</span></i>
@@ -264,3 +264,7 @@
   </div>
 </div>
 <script src="{{asset 'js_sub-page.js'}}"></script>
+
+<script>
+  $('.actual #help_center').remove();
+</script>
