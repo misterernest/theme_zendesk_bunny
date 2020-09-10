@@ -7,13 +7,25 @@
         margin: 3px 0;
         
         &-item{
+            @include mobile {
+                padding: 20px 15px;
+            }
+
+            @include tablet {
+                padding: 20px 15px;
+            }
+
+            @include desktop {
+                max-width: 349px;
+                padding: 20px 15px;
+            }
+
+            width: 95%;
+            margin: 0 auto;
             background: #fff;
             display: flex;
             flex-direction: row;
-            width: 349px;
-            height: 198px;
-            margin: 0 5%;
-            padding: 20px 27px;
+            height: 198px;            
             box-shadow: $shadows;
             border-radius: 5px;
 
@@ -21,19 +33,32 @@
                 img {
                     width: 50px;
                     margin: 20px 20px 0 0;
+
+                    @include mobile {
+                        width: 20px;
+                        margin: 30px 0;
+                    }
                 }
                 flex: 1 1 20%;
+
+                @include tablet {
+                    flex: 1 1 15%;
+                }
             }
 
             &-section--right {
                 display: flex;
                 flex-direction: column;
                 flex: 1 1 80%;
+
+                @include tablet {
+                    flex: 1 1 85%;
+                }
             }
             
             &__text {
                 flex: 70%;
-                margin-top: 35px;
+                margin-top: 25px;
                 
                 a {
                     font-size: 18px;
@@ -53,6 +78,7 @@
                 font-size: 14.5px;
                 font-weight: $font-weight-regular;
                 color: $link_color;
+                align-items: flex-end;
 
                 span {
                     margin-right: 10px;
@@ -75,17 +101,34 @@
     .slick-slider {
         
         .slick-next {
+            @include mobile { display: none; }
+
+            @include tablet { display: none; }
+
             right: -40px;
         }
         
         .slick-prev {
+            @include mobile { display: none; }
+
+            @include tablet { display: none; }
+            
             left: -70px;
         }
         
         .slick-next:before, .slick-prev:before {
             font-size: 59px;
             color: $link_color;
+
+            /* @include mobile { display: none; }
+
+            @include tablet { display: none; }
+
+            @include desktop { display: block; } */
         }
     } 
 }
 
+button.slick-next.slick-arrow {
+    display: none;
+}

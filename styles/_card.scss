@@ -6,21 +6,39 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-  
-    .card {
-      box-shadow: $shadows;
-      border-radius: 5px;
-      background: $background_color;
-      margin: 0 0 50px;
-      text-decoration: none;
-      color: $text_color;
-      height: 301px;
-      flex: 0 1 335px;
-  
+
+  .card {
+    @include mobile { margin: 25px auto; }
+
+    @include tablet { margin: 25px auto; }
+
+    @include desktop { margin: 0 0 50px; }
+
+    box-shadow: $shadows;
+    border-radius: 5px;
+    background: $background_color;
+    text-decoration: none;
+    color: $text_color;
+    height: 301px;
+    flex: 0 1 335px;
+    position: relative;
+    background: $background_color;
+    margin: 0 0 50px;
+    display: flex;
+    flex-flow: column;
+
+      &-empty {
+        height: 1px;
+        background-color: transparent;
+        flex: 0 1 335px;
+      }
+
       &-container {
+        color: $text_color;
+        text-decoration: none;
         display: flex;
         flex-direction: column;
-        padding: 29px 10px 24px;
+        padding: 29px 10px 0;
   
         .card__top {
           text-align: center;
@@ -46,5 +64,65 @@
           }
         }
       }
-  }
-  }
+
+      &-hover {
+
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: absolute;
+        border-radius: 5px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 100%;
+        height: 0;
+        padding: 100% 30px 0 30px;
+        z-index: -1;
+        transition: height ease-in 0s, all ease-in 0.3s;
+        a {
+          color: transparent;
+          font-size: 0;
+        }
+        .card-top {
+          color: transparent;
+          font-size: 0;
+        }
+        .card-middle {
+          color: transparent;
+          font-size: 0;
+        }
+      }
+
+    &:hover {
+      .card-top {
+        color: #ffffff;
+        font-size: 20px;
+      }
+      .card-middle {
+        color: #ffffff;
+        font-size: 16px;
+      }
+      .card-hover {
+        background-color: $brand_color;
+        top: 0;
+        height: 100%;
+        padding: 30px;
+        line-height: 2;
+        z-index: 0;
+        transition: height ease-in 0s, all ease-in 0.3s;
+        .card__middle {
+          justify-content: space-between;
+          display: flex;
+          flex-flow: column;
+          a {
+            color: #ffffff;
+            font-size: 14px;
+
+          }
+        }
+      }
+    }
+    }
+}
