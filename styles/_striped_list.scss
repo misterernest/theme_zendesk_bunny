@@ -105,6 +105,8 @@
       }
 
       .striped-list-item {
+        @include mobile { padding-left: 0; }
+        
         border-bottom: none;
         padding: 24px 0;
         padding-left: 40px;
