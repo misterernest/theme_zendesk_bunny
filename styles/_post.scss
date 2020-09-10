@@ -230,8 +230,9 @@
 
   &-comments {
     @include desktop { margin: 50px 0 65px 0; }
+
     margin: 50px 0 65px 0;
-    padding: 0 10px;
+    padding: 30px 25px;
     border: 1px solid #ddd;
     border-radius: 5px;
   }

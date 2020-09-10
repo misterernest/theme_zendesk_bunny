@@ -216,8 +216,8 @@
                       <!-- TODO: RESUMEN DEL POST ACTUAL-->
                       
                       <div class="striped-list-info-body">
-                        <span class="striped-list-details">${post.details.substring(0, 180)}</span>
-                        <a href="${post.html_url}" id="title-id-del-post">read more.</a>
+                        <span class="striped-list-details">${post.details.substring(0, 150)}...</span>
+                        <a href="${post.html_url}" id="title-${post.id}">read more.</a>
                       </div>
                       <div class="container-status-label">
                       ${post.pinned ?
@@ -232,7 +232,7 @@
                   : ''}
 
                       ${post.status == "planned" ?
-                  `<span class="status-label status-label-planned striped-list-status">${post.status}</span>`
+                  `<span class="status-label status-label-planned striped-list-status">planned</span>`
                   : ''}
 
                       ${post.status == "answered" ?
@@ -348,8 +348,8 @@
                       <!-- TODO: RESUMEN DEL POST ACTUAL-->
                       
                       <div class="striped-list-info-body">
-                        <span class="striped-list-details">${post.details.substring(0, 180)}</span>
-                        <a href="${post.html_url}" id="title-id-del-post">read more.</a>
+                        <span class="striped-list-details">${post.details.substring(0, 150)}...</span>
+                        <a href="${post.html_url}" id="title-${post.id}">read more.</a>
                       </div>
                       <div>
                       ${post.pinned ?
