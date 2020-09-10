@@ -66,8 +66,8 @@
     </span>
     <section class="cards">
       {{#each sections }}
-      <a href="{{url}}" class="card">
-        <div class="card-container">
+      <div  class="card">
+        <a href="{{url}}" class="card-container">
           <div class="card__top">
             {{#is name 'Update'}}
             <img class="card__image" src="{{asset 'img_sec_update.png'}}" id="cat-{{id}}" alt="{{name}}">
@@ -150,9 +150,23 @@
           <div class="card__bottom">
             <p class="card__description">{{description}}</p>
           </div>
+        </a>
+        <div class="card-hover">
+          <div class="card-top">
+            <b class="card__title">{{name}}</b>
+          </div>
+          <div class="card__middle">
+            {{#each articles}}
+            <a href="{{url}}">{{excerpt title characters=20}}</a>
+            {{/each}}
+            <a href="{{url}}">See all</a>
+          </div>
         </div>
-      </a>
+      </div>
       {{/each}}
+      <div class="card-empty"></div>
+      <div class="card-empty"></div>
+      <div class="card-empty"></div>
     </section>
   </section>
 </div>
