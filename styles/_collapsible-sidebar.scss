@@ -1,5 +1,7 @@
 /* Sidebar navigation that collapses on mobile */
 .collapsible-sidebar {
+  @include mobile { max-height: none; }
+  
   @include desktop {
     max-height: none;
     padding: 0;
