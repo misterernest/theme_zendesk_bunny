@@ -8,17 +8,24 @@
     justify-content: space-between;
 
   .card {
-    position: relative;
+    @include mobile { margin: 25px auto; }
+
+    @include tablet { margin: 25px auto; }
+
+    @include desktop { margin: 0 0 50px; }
+
     box-shadow: $shadows;
     border-radius: 5px;
     background: $background_color;
-    margin: 0 0 50px;
     text-decoration: none;
+    color: $text_color;
     height: 301px;
     flex: 0 1 335px;
+    position: relative;
+    background: $background_color;
+    margin: 0 0 50px;
     display: flex;
     flex-flow: column;
-    color: $text_color;
 
       &-empty {
         height: 1px;

@@ -477,10 +477,15 @@
   }
 
   &-aside {
+    @include mobile { margin: 0 auto; }
+
+    @include tablet { margin: 0 auto; }
+
+    @include desktop { margin-left: 47px; }
+    
     display: flex;
     flex-direction: column;
     flex: 1 1 413px;
-    margin-left: 47px;
 
     > * {
       background: $background_color;

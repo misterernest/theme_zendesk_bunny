@@ -120,12 +120,15 @@
             font-size: 59px;
             color: $link_color;
 
-            @include mobile { display: none; }
+            /* @include mobile { display: none; }
 
             @include tablet { display: none; }
 
-            @include desktop { display: block; }
+            @include desktop { display: block; } */
         }
     } 
 }
 
+button.slick-next.slick-arrow {
+    display: none;
+}
