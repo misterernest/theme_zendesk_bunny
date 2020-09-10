@@ -41,8 +41,8 @@
 
   <section class="cards">
     {{#each topics}}
-    <a href="{{url}}" class="card">
-      <div class="card-container">
+    <div class="card">
+      <a class="card-container" href="{{url}}">
         <div class="card__top">
 
           {{#is name 'Tips and advice'}}
@@ -84,9 +84,13 @@
         <div class="card__bottom">
           <p class="card__description">{{excerpt description characters=70}}</p>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
     {{/each}}
+
+    <div class="card-empty"></div>
+    <div class="card-empty"></div>
+    <div class="card-empty"></div>
   </section>
 
   {{pagination}}
