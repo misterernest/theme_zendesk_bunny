@@ -8,10 +8,15 @@
     justify-content: space-between;
   
     .card {
+      @include mobile { margin: 25px auto; }
+
+      @include tablet { margin: 25px auto; }
+      
+      @include desktop { margin: 0 0 50px; }
+
       box-shadow: $shadows;
       border-radius: 5px;
       background: $background_color;
-      margin: 0 0 50px;
       text-decoration: none;
       color: $text_color;
       height: 301px;
