@@ -86,8 +86,10 @@
           font-size: 0;
         }
         .card-top {
-          color: transparent;
-          font-size: 0;
+          .card__title {
+            color: transparent;
+            font-size: 0;
+          }
         }
         .card-middle {
           color: transparent;
@@ -97,8 +99,10 @@
 
     &:hover {
       .card-top {
-        color: #ffffff;
-        font-size: 20px;
+        .card__title {
+          color: #ffffff;
+          font-size: 20px;
+        }
       }
       .card-middle {
         color: #ffffff;
@@ -119,6 +123,10 @@
           a {
             color: #ffffff;
             font-size: 14px;
+
+            &.see-more {
+              font-weight: 600;
+            }
 
           }
         }

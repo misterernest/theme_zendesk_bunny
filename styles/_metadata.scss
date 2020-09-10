@@ -11,6 +11,10 @@
       background-color: transparent;
       color: $link_color;
       padding-left: 0;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }

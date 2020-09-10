@@ -153,13 +153,13 @@
         </a>
         <div class="card-hover">
           <div class="card-top">
-            <b class="card__title">{{name}}</b>
+            <a class="card__title" href="{{url}}">{{name}}</a>
           </div>
           <div class="card__middle">
             {{#each articles}}
             <a href="{{url}}">{{excerpt title characters=20}}</a>
             {{/each}}
-            <a href="{{url}}">See all</a>
+            <a class="see-more" href="{{url}}">See all</a>
           </div>
         </div>
       </div>
