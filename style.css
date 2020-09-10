@@ -3118,8 +3118,8 @@ main.third-page {
 }
 
 .vote-sum {
-  color: lighten($text_color, 20%);
-  display: block;
+  color: $brand_color;
+  display: inline-block;
   margin: 3px 0;
 }
 
@@ -3859,6 +3859,19 @@ ul.tabs li a {
 
 .community-banner-aside--text .shine-with-us-button {
   height: 38px;
+}
+
+.config-post > div {
+  display: inline-block;
+}
+
+.config-post > div button {
+  border: none;
+  background-color: transparent;
+}
+
+.config-post > div button:focus {
+  outline: none;
 }
 
 /***** Striped list *****/
@@ -5421,6 +5434,10 @@ ul.tabs li a {
   padding-left: 0;
 }
 
+.meta-group--wide .post-vote-up:focus {
+  outline: none;
+}
+
 .meta-group > *:not(.status-label) {
   display: inline;
   font-family: inherit;
@@ -6930,7 +6947,7 @@ html[dir="rtl"] .notification-left-aligned {
   font-size: 0;
 }
 
-.cards .card-hover .card-top {
+.cards .card-hover .card-top .card__title {
   color: transparent;
   font-size: 0;
 }
@@ -6940,7 +6957,7 @@ html[dir="rtl"] .notification-left-aligned {
   font-size: 0;
 }
 
-.cards .card:hover .card-top {
+.cards .card:hover .card-top .card__title {
   color: #ffffff;
   font-size: 20px;
 }
@@ -6969,6 +6986,10 @@ html[dir="rtl"] .notification-left-aligned {
 .cards .card:hover .card-hover .card__middle a {
   color: #ffffff;
   font-size: 14px;
+}
+
+.cards .card:hover .card-hover .card__middle a.see-more {
+  font-weight: 600;
 }
 
 /* ----- Carousel -------*/
