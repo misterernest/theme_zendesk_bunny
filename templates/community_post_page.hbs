@@ -66,12 +66,15 @@
                     {{post.comment_count}}
                   </span>
                   <span>
-                    <li class="fas fa-eye post-meta__data"><span>viewed</span></li>
-                  </span>
-                  <span>
                     <li class="fas fa-thumbs-up post-meta__data"><span>like</span></li>
-                    {{post.vote_sum}}
+                    {{post.vote 'sum' class='vote-sum'}}
                   </span>
+                  <span class="config-post">
+                    {{#post.actions class="config"}}
+                      <li class="fas fa-cog"><span>actions</span></li>
+                    {{/post.actions}}
+                  </span>
+
                   <div class="container-status-label">
                     {{#if post.pinned}}
                     <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
@@ -112,7 +115,7 @@
           <div class="meta-group meta-group--wide">
             <span>
               <li class="fas fa-thumbs-up post-meta__data"><span>like</span></li>
-                {{#post.vote 'up' class='post-vote-up'}}Like{{/post.vote}}
+                {{#post.vote 'up' class='post-vote-up' selected_class='vote-voted'}}Like{{/post.vote}}
             </span>
             <div class="post-share">
                 <span>
@@ -172,6 +175,7 @@
                         <li class="fas fa-cog"><span>actions</span></li>
                       </span>
                     {{/actions}}
+
                     <div class="meta-group--status-label">
                       {{#if official}}
                         <span class="comment-official status-label status-label-official">{{t 'official_comment'}}</span>

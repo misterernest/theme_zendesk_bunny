@@ -627,3 +627,18 @@ ul.tabs li a {
     height: 38px;
   }
 }
+
+.config-post {
+  > div {
+    display: inline-block;
+
+    button {
+      border: none;
+      background-color: transparent;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

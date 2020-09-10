@@ -14,8 +14,8 @@
 }
 
 .vote-sum {
-  color: $secondary-text-color;
-  display: block;
+  color: $brand_color;
+  display: inline-block;
   margin: 3px 0;
 
   [dir="rtl"] & {
