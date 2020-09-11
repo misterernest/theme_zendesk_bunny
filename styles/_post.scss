@@ -103,14 +103,19 @@
     padding-top: 10px;
     vertical-align: middle;
 
+    span[title] {
+      color: $link_color;
+      font-weight: 600;
+    }
+
     [dir="rtl"] & {
       margin-left: 0;
       margin-right: 10px;
     }
 
     span > a {
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 17px;
+      font-weight: 600;
     }
 
     &__data {

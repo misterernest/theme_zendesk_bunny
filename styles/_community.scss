@@ -278,6 +278,7 @@
     }
   }
 
+
   //contributor card first: clase para el TOP contributor, primero en la lita
   &-card--first {
     background-image: url($img_sec_top_contributor);
@@ -454,10 +455,14 @@
           font-weight: $font-weight-semibold;
         }
       } 
-      .striped-list-details, a {
+      .striped-list-details,
+      a,
+      .striped-list-details p {
         font-size: 18px;
-        line-height: 20px;
+        line-height: 27px;
         font-weight: $font-weight-regular;
+        display: block;
+        margin: 0;
 
       }
       
