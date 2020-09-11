@@ -50,7 +50,8 @@
     color: #43b35e;
     border: 1px solid #43b35e;
   }
-  &-answered {
+  &-answered,
+  &-planned {
     border-radius: 5px;
     color: $link_color;
     border: 1px solid $link_color;

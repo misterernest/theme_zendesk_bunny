@@ -39,7 +39,8 @@
     }
 
     .comment-form-controls {
-      display: block;
+      display: flex;
+      place-content: flex-end;
     }
     .comment-ccs { display: block; }
 

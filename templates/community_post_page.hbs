@@ -163,10 +163,6 @@
                       <li class="fas fa-thumbs-up post-meta__data"><span>like</span></li>
                       {{vote 'sum' class='vote-sum'}}
                     </span>
-                    <span>
-                      <li class="fas fa-thumbs-up post-meta__data"><span>like</span></li>
-                      {{vote_sum}}
-                    </span>
                     {{#actions}}
                       <span>
                         <li class="fas fa-cog"><span>actions</span></li>
@@ -226,19 +222,21 @@
 
       {{pagination}}
 
-      <section class="post-comments">
-        {{#form 'comment' class='comment-form'}}
-        <span class="comment-form__title">Reply</span>
-        <div class="comment-container">
-          {{wysiwyg 'body'}}
-          <div class="comment-form-controls">
-            {{checkbox 'official'}}
-            {{label 'official'}}
-            {{input type='submit' class="button button-large" value="SEND"}}
-          </div>
-        </div>
+      
+        {{#form 'comment' class='comment-form post-comments'}}
+          
+            <span class="comment-form__title">Reply</span>
+            <div class="comment-container">
+              {{wysiwyg 'body'}}
+              <div class="comment-form-controls">
+                {{checkbox 'official'}}
+                {{label 'official'}}
+                {{input type='submit' class="button button-large" value="SEND"}}
+              </div>
+            </div>
+          
         {{/form}}
-      </section>
+
 
       <p class="comment-callout">{{comment_callout}}</p>
     </div>
@@ -250,16 +248,6 @@
       <span class="post-sidebar__button">
         {{#link 'new_post' class='button button-large'}}START YOUR CONVERSATION{{/link}}
       </span>
-
-      {{!
-        La data de los tópicos no relacionados genera un error.
-      }}
-      {{!-- {{#if settings.show_recently_viewed_articles}}
-        {{recent_articles}}
-      {{/if}}
-      {{#if settings.show_related_articles}}
-        {{related_articles}}
-      {{/if}} --}}
     </section>
   </div>
 </div>

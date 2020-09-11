@@ -249,6 +249,10 @@ html[lang|="zh"] {
   }
 
   h2 {
+    @include mobile { text-align: center; }
+
+    @include tablet { text-align: center; }
+
     font-size: 35px;
     font-weight: 700;
   }

@@ -4,6 +4,11 @@
   align-items: center;
   margin-top: 10%;
   .content.error-page-container {
+    @include mobile { 
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+
     max-width: 600px;
     display: flex;
     flex-flow: row nowrap;
@@ -24,11 +29,16 @@
         }
       }
       .container-info-error {
-
+        
+        
       }
     }
 
     .container-info-error {
+      @include mobile { text-align: center; }
+
+      @include tablet { text-align: center; }
+
       h1 {
         font-size: 70px;
         font-weight: 900;
@@ -50,6 +60,10 @@
       }
 
       .button {
+        @include mobile { margin: 0 auto; }
+
+        @include tablet { margin: 0 auto; }
+
         font-size: 19px;
         font-weight: 600;
         width: 236px;

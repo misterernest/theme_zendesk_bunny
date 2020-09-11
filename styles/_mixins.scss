@@ -11,6 +11,12 @@
   }
 }
 
+@mixin big-screen {
+  @media (min-width: #{$max-width-container + 300px}) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media (max-width: #{$tablet-width}) {
     @content;
