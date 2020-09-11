@@ -3766,10 +3766,14 @@ main.third-page {
   font-weight: 600;
 }
 
-.articles-section-container-posts .posts-list .striped-list-details, .articles-section-container-posts .posts-list a {
+.articles-section-container-posts .posts-list .striped-list-details,
+.articles-section-container-posts .posts-list a,
+.articles-section-container-posts .posts-list .striped-list-details p {
   font-size: 18px;
-  line-height: 20px;
+  line-height: 27px;
   font-weight: 500;
+  display: block;
+  margin: 0;
 }
 
 .articles-section-container-posts .posts-list a {
@@ -3983,7 +3987,7 @@ ul.tabs li a {
 }
 
 .striped-list-item .striped-list-picture {
-  margin-top: 7.5px;
+  margin-top: 4px;
 }
 
 .striped-list-info {
@@ -4337,14 +4341,19 @@ ul.tabs li a {
   vertical-align: middle;
 }
 
+.post-meta span[title] {
+  color: $link_color;
+  font-weight: 600;
+}
+
 [dir="rtl"] .post-meta {
   margin-left: 0;
   margin-right: 10px;
 }
 
 .post-meta span > a {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .post-meta__data {
