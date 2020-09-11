@@ -69,40 +69,90 @@
   position: relative;
 
   .pro-join-community-banner__button {
-    font-size: 0.875vw;
+
     white-space: nowrap;
     position: absolute;
     background: #fff;
     color: $text_color;
     border: 2px solid $text_color;
     border-radius: 4px;
-    top: 40%;
-    right: 10%;
-    height: 30.7%;
-    width: 16.9%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 600;
     text-decoration: none;
+
+
+
+    @include mobile {
+      font-size: 0.875vw;
+      height: 30.7%;
+      width: 16.9%;
+      top: 40%;
+      right: 10%;
+    }
+    @include tablet {
+      font-size: 0.875vw;
+      height: 30.7%;
+      width: 16.9%;
+      top: 40%;
+      right: 10%;
+    }
+
+    @include big-screen {
+      height: 46px;
+      width: 249px;
+      font-size: 18px;
+      top: 58px;
+      right: 155px;
+    }
   }
   .banner-community {
 
     &__text {
       display: flex;
-      left: 13%;
-      top: 28%;
       position: absolute;
       flex-flow: column;
+
+      @include mobile {
+        left: 13%;
+        top: 28%;
+      }
+      @include tablet {
+        left: 13%;
+        top: 28%;
+      }
+      @include big-screen {
+        left: 195px;
+        top: 43px;
+      }
       &_big {
-        font-size: 2.1vw;
         font-weight: bold;
         letter-spacing: -1px;
-        line-height: 2.1vw;
+        @include mobile {
+          font-size: 2.1vw;
+          line-height: 2.1vw;
+        }
+        @include tablet {
+          font-size: 2.1vw;
+          line-height: 2.1vw;
+        }
+        @include big-screen {
+          font-size: 40px;
+          line-height: 40px
+        }
       }
       &_medium {
-        font-size: 1.40625vw;
         font-weight: 600;
+        @include mobile {
+          font-size: 1.40625vw;
+        }
+        @include tablet {
+          font-size: 1.40625vw;
+        }
+        @include big-screen {
+          font-size: 27px;
+        }
       }
     }
   }
