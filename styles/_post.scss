@@ -209,17 +209,24 @@
     padding: 12px 0 30px 10px;
 
     &__text {
-      font-size: 15px;
+      font-size: 18px;
       text-align: center;
     }
 
     &__button {
       a {
-        @include mobile { margin: auto; }
+        margin: 0 auto;
+        @include mobile {
+          width: 234px;
+        }
 
-        @include tablet { margin: auto; }
+        @include tablet {
+          width: 234px;
+        }
 
-        @include desktop { margin: 0 18%; }
+        @include desktop {
+          width: 100%;
+        }
         
         padding: 0 15px;
         line-height: 1.8;
