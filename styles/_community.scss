@@ -10,7 +10,7 @@
     text-align: center;
 
     &-title {
-      font-size: 16px;
+      font-size: 20px;
       margin-bottom: 20px;
     }
   }
@@ -198,6 +198,7 @@
         text-align: center;
         font-size: 19px;
         font-weight: 200;
+        margin-top: 50px;
       }
 
       span > a {
@@ -383,6 +384,11 @@
       color: $text_color;
       text-decoration: none;
       font-weight: 600;
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
     }
     .container--striped-list-details {
       margin: 10px 0 20px;
@@ -400,9 +406,8 @@
 }
 
 .community-footer {
-  margin-bottom: 70px;
   h2 {
-    font-weight: bold;
+    font-weight: 600;
   }
   a {
     background: $link_color;
@@ -448,6 +453,11 @@
         font-size: 24px;
         font-weight: $font-weight-semibold;
         text-decoration: none;
+        text-transform: lowercase;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
       .meta-group {
         a {
@@ -589,7 +599,8 @@ ul.tabs li a {
   background: #fff;
   border: 1px solid $border-color;
 
-  .recent-section {
+  .recent-section,
+  .top-section {
     .posts-list {
       section:last-child {
         .striped-list-item {

@@ -220,7 +220,7 @@
                       <!-- TODO: RESUMEN DEL POST ACTUAL-->
                       
                       <div class="striped-list-info-body">
-                        <span class="striped-list-details">${post.details.substring(0, 150)}...</span>
+                        <span class="striped-list-details">${post.details.replace(/(<([^>]+)>)/ig, '').substring(0, 150)}...</span>
                         <a href="${post.html_url}" id="title-${post.id}">read more.</a>
                       </div>
                       <div class="container-status-label">
@@ -352,7 +352,7 @@
                       <!-- TODO: RESUMEN DEL POST ACTUAL-->
                       
                       <div class="striped-list-info-body">
-                        <span class="striped-list-details">${post.details.substring(0, 150)}...</span>
+                        <span class="striped-list-details">${post.details.replace(/(<([^>]+)>)/ig, '').substring(0, 150)}...</span>
                         <a href="${post.html_url}" id="title-${post.id}">read more.</a>
                       </div>
                       <div>
