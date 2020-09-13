@@ -1,5 +1,5 @@
 <h1 class="visibility-hidden">{{ t 'community'}}</h1>
-
+<span class="visibility-hidden">{{breadcrumbs}}</span>
 <section class="section hero community-hero">
   <h2 class="visibility-hidden">{{ t 'search'}}</h2>
   <div class="text-banner-community">
@@ -25,14 +25,24 @@
   </div>
 
   <nav class="sub-nav sub-nav--centered">
-    <li><a href="#">Voice-overs</a></li>
-    <li><a href="#">Video</a></li>
-    <li><a href="#">Audio</a></li>
-    <li><a href="#">Design</a></li>
-    <li><a href="#">Post-production</a></li>
-    <li><a href="#">Traslation</a></li>
-    <li><a href="#">Transcription</a></li>
-    <li><a href="#">Writing</a></li>
+    <span class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true">
+          <h2 class="title">
+            {{t 'all_posts'}}
+          </h2>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+          </svg>
+        </button>
+        <span class="dropdown-menu" role="menu">
+          {{#link 'topics' role='menuitem'}}
+            {{t 'show_topics'}}
+          {{/link}}
+          {{#link 'posts' role='menuitem' selected='true'}}
+            {{t 'show_all_posts'}}
+          {{/link}}
+        </span>
+      </span>
   </nav>
 
   {{#unless topics}}
@@ -220,8 +230,10 @@
                       <!-- TODO: RESUMEN DEL POST ACTUAL-->
                       
                       <div class="striped-list-info-body">
-                        <span class="striped-list-details">${post.details.substring(0, 150)}...</span>
-                        <a href="${post.html_url}" id="title-${post.id}">read more.</a>
+                        <span class="striped-list-details">${post.details.replace(/(<([^>]+)>)/ig, '').substring(0, 150)}...
+                          <a href="${post.html_url}" id="title-${post.id}">read more.</a>
+                        </span>
+
                       </div>
                       <div class="container-status-label">
                       ${post.pinned ?
@@ -352,8 +364,9 @@
                       <!-- TODO: RESUMEN DEL POST ACTUAL-->
                       
                       <div class="striped-list-info-body">
-                        <span class="striped-list-details">${post.details.substring(0, 150)}...</span>
-                        <a href="${post.html_url}" id="title-${post.id}">read more.</a>
+                        <span class="striped-list-details">${post.details.replace(/(<([^>]+)>)/ig, '').substring(0, 150)}...
+                            <a href="${post.html_url}" id="title-${post.id}">read more.</a>
+                        </span>
                       </div>
                       <div>
                       ${post.pinned ?
@@ -417,5 +430,40 @@
     });
   </script>
   <script>
-    $('.actual #help_center').remove();
+    $(document).ready(function () {
+              let linkActual = $('ol.breadcrumbs li:nth-child(2) a').attr('href');
+              let textLinkActual = $('ol.breadcrumbs li:nth-child(2)').attr('title');
+              $('#link_actual a').attr('href',linkActual);
+              $('#link_actual a').append(textLinkActual);
+            }
+    )
+  </script>
+
+  <script>
+
+    /* */
+    (async () => {
+      await $.ajax({
+        url: `/api/v2/users/me/session.json`,
+        method: "GET",
+        success: function (data) {
+          let userId = String(data.session.user_id);
+          (async (idUser) => {
+            await $.ajax({
+              url: `/api/v2/users/${idUser}.json`,
+              method: "GET",
+              success: function (data) {
+                let { user } = data;
+                if (user.active && (user.role == 'admin' || user.role == 'agent')) {
+                  $('.sub-nav.sub-nav--centered').show()
+                }
+              }
+            })
+          })(userId)
+        }
+      })
+    })();
+
+
+
   </script>

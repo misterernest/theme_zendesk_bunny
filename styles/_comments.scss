@@ -123,6 +123,12 @@
   &-meta {
     flex: 1 0 auto;
 
+    span[title] {
+      font-weight: 600;
+      font-size: 17px;
+      color: $brand_color;
+    }
+
     span > a {
       font-weight: 600;
       font-size: 18px;

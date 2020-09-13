@@ -116,6 +116,15 @@
         line-height: 2;
         z-index: 0;
         transition: height ease-in 0s, all ease-in 0.3s;
+        text-align: center;
+
+        .card-top {
+          text-align: center;
+          width: 100%;
+          .card__title {
+            font-weight: 600;
+          }
+        }
         .card__middle {
           justify-content: space-between;
           display: flex;

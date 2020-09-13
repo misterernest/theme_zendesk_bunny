@@ -254,6 +254,7 @@
         }
 
         .upload-dropzone {
+          background-color: #ffffff;
           @include mobile{
             max-width: 100%;
           }

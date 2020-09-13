@@ -1,161 +1,208 @@
-<h1 class="visibility-hidden">{{ t 'community'}}</h1>
-
-<section class="section hero community-hero">
-  <h2 class="visibility-hidden">{{ t 'search'}}</h2>
-  <div class="hero-inner">
-    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
-    </svg>
-    {{search submit=false class='search search-full' scoped=settings.scoped_community_search}}
-  </div>
-</section>
-
+<div class="container-divider"></div>
 <div class="container">
   <nav class="sub-nav">
     {{breadcrumbs}}
+    <div class="search-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon">
+        <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+        <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+      </svg>
+      {{search scoped=settings.scoped_community_search submit=false}}
+    </div>
   </nav>
-
-  <header class="page-header community-header">
-      <span class="dropdown">
-        <button class="dropdown-toggle" aria-haspopup="true">
-          <h2 class="title">
-            {{t 'all_posts'}}
-          </h2>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-          </svg>
-        </button>
-        <span class="dropdown-menu" role="menu">
-          {{#link 'topics' role='menuitem'}}
-            {{t 'show_topics'}}
-          {{/link}}
-          {{#link 'posts' role='menuitem' selected='true'}}
-            {{t 'show_all_posts'}}
-          {{/link}}
-        </span>
-      </span>
-    <span class="post-to-community">
-      {{link 'new_post' class='button button-large'}}
-    </span>
-  </header>
-
-  <div class="topic-header">
-    <span class="topic-filters">
-      <span class="dropdown">
-        <button class="dropdown-toggle" aria-haspopup="true">
-          {{current_filter.label}}
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-          </svg>
-        </button>
-        <span class="dropdown-menu" role="menu">
-          {{#each filters}}
-            <a href="{{url}}" aria-selected="{{selected}}" role="menuitem">
-              {{name}}
-            </a>
-          {{/each}}
-        </span>
-      </span>
-      <span class="dropdown">
-        <button class="dropdown-toggle" aria-haspopup="true">
-          {{current_sorter.label}}
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-          </svg>
-        </button>
-        <span class="dropdown-menu" role="menu">
-          {{#each sorters}}
-            <a href="{{url}}" aria-selected="{{selected}}" role="menuitem">
-              {{name}}
-            </a>
-          {{/each}}
-        </span>
-      </span>
-    </span>
-  </div>
-
-  <div id="main-content" class="posts-list striped-list">
-    {{#unless posts}}
-      <div class="no-posts-with-filter">
-        {{t 'no_posts_with_filter'}}
-      </div>
-    {{/unless}}
-    {{#each posts}}
-      <section role="region" aria-labelledby="title-{{id}}">
-        <div class="striped-list-item {{#if featured}}post-featured{{/if}}">
-          <span class="striped-list-info">
-            <a href="{{url}}" id="title-{{id}}" class="striped-list-title">{{title}}</a>
-            <span class="post-overview-item">
-              {{#if pinned}}
-                <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
-              {{/if}}
-
-              {{#if featured}}
-                <span class="status-label status-label-featured">{{t 'featured'}}</span>
-              {{/if}}
-
-              {{#is status 'none'}}
-              {{else}}
-                <span class="status-label-{{status_dasherized}} status-label striped-list-status">{{status_name}}</span>
-              {{/is}}
-            </span>
-
-            <ul class="meta-group">
-              <li class="meta-data">{{author.name}}</li>
-              {{#if editor}}
-                <li class="meta-data">{{date edited_at timeago=true}}</li>
-                <li class="meta-data">{{t 'edited'}}</li>
-              {{else}}
-                <li class="meta-data">{{date created_at timeago=true}}</li>
-              {{/if}}
-            </ul>
-          </span>
-
-          <div class="post-overview-count striped-list-count">
-            <span class="striped-list-count-item">
-              <span class="striped-list-number">{{vote_sum}}</span>
-              {{t 'vote' count=vote_sum}}
-            </span>
-            <span class="striped-list-count-item">
-              <span class="striped-list-number">{{comment_count}}</span>
-              {{t 'comment' count=comment_count}}
-            </span>
-          </div>
-        </div>
-      </section>
-    {{/each}}
-  </div>
-
-  {{pagination}}
-
-  {{#if featured_posts}}
-    <section class="section community-featured-posts">
-      <h2 class="title">{{t 'featured_posts'}}</h2>
-      <ul class="promoted-articles">
-        {{#each featured_posts}}
-          <li class="promoted-articles-item">
-            <a href="{{url}}">
-              {{title}}
-            </a>
-          </li>
-        {{/each}}
-      </ul>
-    </section>
-  {{/if}}
-
-  <section class="community-activity activity">
-    {{#if help_center.community_enabled}}
-      {{recent_activity scope='community'}}
-    {{/if}}
-  </section>
-
-  <section class="container community-footer">
-    <h2 class="community-footer-title">{{t 'suggest_new_post'}}</h2>
-    {{link 'new_post' class='button button-large'}}
-  </section>
 </div>
 
+<div class="container community-topic-container community-posts-list">
+  <div class="community-topic-container-left">
+    <header class="page-header community-header">
+        <span class="dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            <h2 class="title">
+              {{t 'all_posts'}}
+            </h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+          </button>
+          <span class="dropdown-menu" role="menu">
+            {{#link 'topics' role='menuitem'}}
+              {{t 'show_topics'}}
+            {{/link}}
+            {{#link 'posts' role='menuitem' selected='true'}}
+              {{t 'show_all_posts'}}
+            {{/link}}
+          </span>
+        </span>
+    </header>
+
+    <div class="topic-header">
+      <span class="topic-filters">
+        <span class="dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            {{current_filter.label}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+          </button>
+          <span class="dropdown-menu" role="menu">
+            {{#each filters}}
+              <a href="{{url}}" aria-selected="{{selected}}" role="menuitem">
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </span>
+        <span class="dropdown">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            {{current_sorter.label}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+          </button>
+          <span class="dropdown-menu" role="menu">
+            {{#each sorters}}
+              <a href="{{url}}" aria-selected="{{selected}}" role="menuitem">
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </span>
+      </span>
+    </div>
+
+    <div id="main-content" class="posts-list striped-list">
+      {{#unless posts}}
+        <div class="no-posts-with-filter">
+          {{t 'no_posts_with_filter'}}
+        </div>
+      {{/unless}}
+      {{#each posts}}
+      <section role="region" aria-labelledby="title-{{id}}">
+        <div class="striped-list-item {{#if featured}}post-featured{{/if}}">
+                <span class="striped-list-picture">
+                  <img src="{{author.avatar_url}}" alt="Avatar" class="community-posts-user-avatar" srcset="">
+                </span>
+          <span class="striped-list-info">
+                  <a href="{{url}}" id="title-{{id}}" class="striped-list-title">{{title}}</a>
+
+                  <div class="meta-group">
+                    {{#link 'user_profile' id=author.id}}
+                      <span class="author-post">{{author.name}} #{{author.id}}</span>
+                    {{/link}}
+                    <ul class="header--post-data">
+                      <span><li class="fas fa-calendar-alt"><span>calendar</span></li>{{date created_at class='metadata' format='short'}}</span>
+                      <span><li class="fas fa-comment"><span>coment</span></li>{{comment_count}}</span>
+                      <span><li class="fas fa-thumbs-up"><span>likes</span></li>{{vote_sum}}</span>
+                      <span><li class="fas fa-thumbs-up"><span>likes</span></li>{{date edited_at timeago=true}}</span>
+                    </ul>
+                  </div>
+                  <div class="container--striped-list-details">
+                    <span class="striped-list-details" id="details-{{id}}"></span>
+                    <a href="{{url}}">read more.</a>
+                    <script>
+                     (async (postID) => {
+                       await $.ajax({
+                         url: `/api/v2/community/posts/${postID}`,
+                         method: "GET",
+                         success: function (data) {
+                           let { post } = data;
+                           $('#details-{{id}}').append(post.details.replace(/(<([^>]+)>)/ig, '').substring(0, 200))
+                         }
+                       })
+                     })({{id}})
+                   </script>
+                  </div>
+
+                  <div class="container-status-label">
+                    {{#if pinned}}
+                      <span class="status-label status-label-pinned">{{t 'pinned'}}</span>
+                    {{/if}}
+                    {{#if featured}}
+                      <span class="status-label status-label-featured">{{t 'featured'}}</span>
+                    {{/if}}
+                    {{#is status 'none'}}
+                    {{else}}
+                      <span class="status-label-{{status_dasherized}} status-label striped-list-status">{{status_name}}</span>
+                    {{/is}}
+                  </div>
+                </span>
+        </div>
+      </section>
+      {{/each}}
+    </div>
+
+    {{pagination}}
+  </div>
+  <div class="community-topic-container-right">
+    <section class="community__topic-aside">
+      <div class="topic-aside-top">
+        <p class="topic-aside-top-text">Share with others creatives about your stories, experiences and ask the community for advice.</p>
+        <span class="post-to-community">
+            {{#link 'new_post' class='button button-large'}}START YOUR CONVERSATION{{/link}}
+          </span>
+      </div>
+
+      {{!--
+      <div class="topic-aside-middle">
+        <div class="topic-aside-labels-section">
+          <h2>Labels</h2>
+          <div class="topic-aside-labels">
+            <a href="#" class="tag">Booking</a>
+            <a href="#" class="tag">Rates</a>
+            <a href="#" class="tag">Booking</a>
+            <a href="#" class="tag">Rates</a>
+            <a href="#" class="tag">Booking</a>
+            <a href="#" class="tag">Rates</a>
+          </div>
+        </div>
+      </div>
+      --}}
+      {{!--
+      <div class="topic-aside-bottom">
+        <div class="topic-aside-contributors-title">
+          <h2>Top contributors</h2>
+        </div>
+        <div class="topic-aside-contributors-cards">
+          <div class="topic-aside-contributors-card">
+            <div class="topic-aside-contributors-picture">
+              <img src="https://i.pinimg.com/originals/c8/62/3b/c8623b908b8db5f2dbd604cdc41d05d0.jpg" alt="AVATAR" class="topic-aside-avatar"/>
+            </div>
+            <div class="topic-aside-contributors-data">
+              <a href="#" class="topic-contributor-data-top">Katie #91KMIA8</a>
+              <span class="topic-contributor-data-middle">Colonia, Germany</span>
+              <span class="topic-contributor-data-bottom">
+                  <span class="fas fa-comment">3,456</span>
+                  <span class="fas fa-thumbs-up">8,567</span>
+                </span>
+            </div>
+          </div>
+
+          <div class="topic-aside-contributors-card">
+            <div class="topic-aside-contributors-picture">
+              <img src="https://i.pinimg.com/originals/c8/62/3b/c8623b908b8db5f2dbd604cdc41d05d0.jpg" alt="AVATAR" class="topic-aside-avatar"/>
+            </div>
+            <div class="topic-aside-contributors-data">
+              <a href="#" class="topic-contributor-data-top">Katie #91KMIA8</a>
+              <span class="topic-contributor-data-middle">Colonia, Germany</span>
+              <span class="topic-contributor-data-bottom">
+                  <span class="fas fa-comment">3,456</span>
+                  <span class="fas fa-thumbs-up">8,567</span>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      --}}
+    </section>
+  </div>
+</div>
+<script src="{{asset 'js_sub-page.js'}}"></script>
 <script>
-  $('.actual #help_center').remove();
+  $(document).ready(function () {
+            let linkActual = $('ol.breadcrumbs li:nth-child(2) a').attr('href');
+            let textLinkActual = $('ol.breadcrumbs li:nth-child(2)').attr('title');
+            $('#link_actual a').attr('href',linkActual);
+            $('#link_actual a').append(textLinkActual);
+          }
+  )
 </script>
