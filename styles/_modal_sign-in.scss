@@ -1,0 +1,33 @@
+.modal.signin {
+  .login.help_center {
+
+    .interface outer {
+      a {
+        color: $link_color;
+      }
+
+      .interface.inner {
+        a {
+          color: $link_color
+        }
+        .services.internal {
+          input[type=submit] {
+            background: $link_color;
+          }
+        }
+      }
+    }
+    .footnotes {
+      a {
+        color: $link_color;
+      }
+    }
+  }
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  background: $link_color;
+}
