@@ -155,7 +155,12 @@
     {{link 'new_post' class='button button-large'}}
   </section>
 </div>
-
 <script>
-  $('.actual #help_center').remove();
+  $(document).ready(function () {
+            let linkActual = $('ol.breadcrumbs li:nth-child(2) a').attr('href');
+            let textLinkActual = $('ol.breadcrumbs li:nth-child(2)').attr('title');
+            $('#link_actual a').attr('href',linkActual);
+            $('#link_actual a').append(textLinkActual);
+          }
+  )
 </script>

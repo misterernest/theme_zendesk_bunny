@@ -1,5 +1,5 @@
 <h1 class="visibility-hidden">{{ t 'community'}}</h1>
-
+<span class="visibility-hidden">{{breadcrumbs}}</span>
 <section class="section hero community-hero">
   <h2 class="visibility-hidden">{{ t 'search'}}</h2>
   <div class="text-banner-community">
@@ -220,8 +220,10 @@
                       <!-- TODO: RESUMEN DEL POST ACTUAL-->
                       
                       <div class="striped-list-info-body">
-                        <span class="striped-list-details">${post.details.replace(/(<([^>]+)>)/ig, '').substring(0, 150)}...</span>
-                        <a href="${post.html_url}" id="title-${post.id}">read more.</a>
+                        <span class="striped-list-details">${post.details.replace(/(<([^>]+)>)/ig, '').substring(0, 150)}...
+                          <a href="${post.html_url}" id="title-${post.id}">read more.</a>
+                        </span>
+
                       </div>
                       <div class="container-status-label">
                       ${post.pinned ?
@@ -352,8 +354,9 @@
                       <!-- TODO: RESUMEN DEL POST ACTUAL-->
                       
                       <div class="striped-list-info-body">
-                        <span class="striped-list-details">${post.details.replace(/(<([^>]+)>)/ig, '').substring(0, 150)}...</span>
-                        <a href="${post.html_url}" id="title-${post.id}">read more.</a>
+                        <span class="striped-list-details">${post.details.replace(/(<([^>]+)>)/ig, '').substring(0, 150)}...
+                            <a href="${post.html_url}" id="title-${post.id}">read more.</a>
+                        </span>
                       </div>
                       <div>
                       ${post.pinned ?
@@ -417,5 +420,11 @@
     });
   </script>
   <script>
-    $('.actual #help_center').remove();
+    $(document).ready(function () {
+              let linkActual = $('ol.breadcrumbs li:nth-child(2) a').attr('href');
+              let textLinkActual = $('ol.breadcrumbs li:nth-child(2)').attr('title');
+              $('#link_actual a').attr('href',linkActual);
+              $('#link_actual a').append(textLinkActual);
+            }
+    )
   </script>

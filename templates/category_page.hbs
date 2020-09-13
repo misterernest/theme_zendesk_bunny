@@ -1,5 +1,5 @@
 <h1 class="visibility-hidden">{{ help_center.name }}</h1>
-
+<span class="visibility-hidden">{{breadcrumbs}}</span>
 <section id="main-content" class="section hero">
   <div class="hero-text">
     <span class="hero-text--first-text">Hi there, welcome<br>to our community!</span>
@@ -160,7 +160,7 @@
           </div>
           <div class="card__middle">
             {{#each articles}}
-            <a href="{{url}}">{{excerpt title characters=20}}</a>
+            <a href="{{url}}">{{excerpt title characters=40}}</a>
             {{/each}}
             <a class="see-more" href="{{url}}">See all</a>
           </div>
@@ -303,6 +303,11 @@
       </script>
         {{/is}}
     <script>
-      $('.actual #community').remove();
-      $('.link-base #help_center').remove();
+      $(document).ready(function () {
+                let linkActual = $('ol.breadcrumbs li:nth-child(2) a').attr('href');
+                let textLinkActual = $('ol.breadcrumbs li:nth-child(2)').attr('title');
+                $('#link_actual a').attr('href',linkActual);
+                $('#link_actual a').append(textLinkActual);
+              }
+      )
     </script>

@@ -74,7 +74,6 @@
     </div>
   </div>
 </div>
-<script src="{{asset 'js_sub-page.js'}}"></script>
 <script>
   $(document).ready( function () {
     $('#community_post_title').attr('placeholder', "Title");
@@ -86,5 +85,11 @@
 </script>
 
 <script>
-  $('.actual #help_center').remove();
+  $(document).ready(function () {
+            let linkActual = $('ol.breadcrumbs li:nth-child(2) a').attr('href');
+            let textLinkActual = $('ol.breadcrumbs li:nth-child(2)').attr('title');
+            $('#link_actual a').attr('href',linkActual);
+            $('#link_actual a').append(textLinkActual);
+          }
+  )
 </script>
