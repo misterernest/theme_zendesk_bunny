@@ -20,6 +20,19 @@
       flex: 0 1 244px;
       align-items: flex-start;
 
+      &.customer,
+      &.about {
+        @include mobile{
+          display: none;
+        }
+        @include tablet {
+          display: none;
+        }
+        @include desktop {
+          display: flex;
+        }
+      }
+
       .title { 
         color: $brand_text_color;
         font-size: 14px;

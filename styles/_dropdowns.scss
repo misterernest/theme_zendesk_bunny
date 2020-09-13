@@ -19,6 +19,11 @@
   > * {
     display: inline-block;
   }
+  h2 {
+    @include mobile{
+      margin: 0;
+    }
+  }
 }
 
 .dropdown-menu {

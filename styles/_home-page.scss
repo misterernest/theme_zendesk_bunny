@@ -3,6 +3,10 @@ main {
   background: $background_color_second;
   padding-bottom: 143px;
 
+  @include mobile{
+    padding-bottom: 10px;
+  }
+
   &.third-page {
     background: $background_color_third_page;
   }

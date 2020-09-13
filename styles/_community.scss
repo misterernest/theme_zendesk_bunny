@@ -421,11 +421,34 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 54px 0 65px 0;
+
+  @include mobile{
+    margin: 54px 0 10px 0;
+
+  }
+  @include tablet {
+    margin: 54px 0 30px 0;
+
+  }
+  @include desktop {
+    margin: 54px 0 65px 0;
+
+  }
 
   &--firstline {
     text-align: center;
     margin: 0;
+
+    @include mobile{
+      font-size: 20px;
+      margin: 20px auto;
+    }
+    @include tablet {
+
+    }
+    @include desktop {
+
+    }
   }
 
   &--secondline {
@@ -446,6 +469,11 @@
 
   &-posts {
     flex: 1 1 1059px;
+    max-width: 100%;
+
+    @include mobile {
+      display: none;
+    }
 
     .posts-list {
       .striped-list-title {
@@ -478,7 +506,6 @@
       
       a {
         font-size: 15px;
-        white-space: nowrap;
       }
       
       .striped-list-info-body {
@@ -508,6 +535,7 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 413px;
+    max-width: 100%;
 
     > * {
       background: $background_color;
@@ -516,16 +544,25 @@
 
     &__image {
       background: url($community_banner_topic_list);
-      background-size: 100%;
-      height: 445px;
+      height: 451px;
+      max-width: 100%;
+      width: calc(451px * 0.91);
       background-repeat: no-repeat;
+      background-position: center;
       margin-top: 51px;
+      border-radius: 5px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &__box {
       border-radius: 5px;
       box-shadow: $shadows;
       padding: 33px 28px;
+
+      @include mobile{
+        display: none;
+      }
 
       .community-activity, .activity {
         padding: 0;
@@ -622,6 +659,16 @@ ul.tabs li a {
 .h3 {
   font-size: 28px;
   font-weight: $font-weight-semibold;
+  @include mobile{
+    font-size: 20px;
+    text-align: center;
+  }
+  @include tablet {
+
+  }
+  @include desktop {
+
+  }
 }
 
 .community-banner-aside--text {

@@ -12,12 +12,23 @@ $page__title_font-size: 20px;
     position: relative;
     align-items: center;
     display: flex;
-    height: $header_height;
     justify-content: space-between;
+    @include mobile {
+      height: 57px;
+    }
+    @include tablet {
+      height: 57px;
+    }
+    @include desktop {
+      height: $header_height;
+    }
 
     .page-title {
-      font-size: 15px;
+      @include mobile{
+        display: none;
+      }
       &.link-base {
+        font-size: 15px;
         text-align: end;
         padding-right: 23px;
 
@@ -33,6 +44,9 @@ $page__title_font-size: 20px;
         }
       }
       &.actual {
+        font-size: 22px;
+        text-transform: uppercase;
+        padding-left: 35px;
         span {
           a {
             color: #ffffff;
@@ -54,7 +68,15 @@ $page__title_font-size: 20px;
   line-height: 1;
 
   img {
-    max-height: $logo_max-height;
+    @include mobile {
+      max-height: 36px;
+    }
+    @include tablet {
+      max-height: 36px;
+    }
+    @include desktop {
+      max-height: $logo_max-height;
+    }
   }
 }
 
@@ -113,12 +135,20 @@ $page__title_font-size: 20px;
     &.sign-in {
       display: inline-block;
       color: $brand_text_color;
-      padding: 10px 27px;
       background: $link_color;
       border-radius: 6px;
       font-size: 15px;
       line-height: 1;
       text-transform: uppercase;
+      @include mobile{
+        padding: 5px 20px;
+      }
+      @include tablet {
+        padding: 5px 20px;
+      }
+      @include desktop {
+        padding: 10px 27px;
+      }
     }
   }
 
