@@ -681,17 +681,31 @@ ul {
   }
 }
 
+.header .header-container .page-title {
+  font-size: 15px;
+}
+
 .header .header-container .page-title.link-base {
   text-align: end;
-  padding-right: 60px;
+  padding-right: 23px;
 }
 
 .header .header-container .page-title.link-base span a {
   color: #ffffff;
+  text-decoration: none;
+}
+
+.header .header-container .page-title.link-base span a:hover {
+  color: $link_color;
 }
 
 .header .header-container .page-title.actual span a {
   color: #ffffff;
+  text-decoration: none;
+}
+
+.header .header-container .page-title.actual span a:hover {
+  color: $link_color;
 }
 
 .logo {
@@ -3005,6 +3019,12 @@ main.third-page {
   flex: 1 0 auto;
 }
 
+.comment-meta span[title] {
+  font-weight: 600;
+  font-size: 17px;
+  color: $brand_color;
+}
+
 .comment-meta span > a {
   font-weight: 600;
   font-size: 18px;
@@ -3276,7 +3296,7 @@ main.third-page {
 }
 
 .community-footer-title {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
@@ -3507,6 +3527,7 @@ main.third-page {
   text-align: center;
   font-size: 19px;
   font-weight: 200;
+  margin-top: 50px;
 }
 
 .community-topic-container-right .topic-aside-top span > a {
@@ -3680,6 +3701,11 @@ main.third-page {
   color: $text_color;
   text-decoration: none;
   font-weight: 600;
+  text-transform: lowercase;
+}
+
+.striped-list .striped-list-info .striped-list-title::first-letter {
+  text-transform: uppercase;
 }
 
 .striped-list .striped-list-info .container--striped-list-details {
@@ -3696,12 +3722,8 @@ main.third-page {
   white-space: nowrap;
 }
 
-.community-footer {
-  margin-bottom: 70px;
-}
-
 .community-footer h2 {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .community-footer a {
@@ -3759,6 +3781,11 @@ main.third-page {
   font-size: 24px;
   font-weight: 600;
   text-decoration: none;
+  text-transform: lowercase;
+}
+
+.articles-section-container-posts .posts-list .striped-list-title::first-letter {
+  text-transform: uppercase;
 }
 
 .articles-section-container-posts .posts-list .meta-group a {
@@ -3772,12 +3799,13 @@ main.third-page {
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
-  display: block;
+  display: inline-block;
   margin: 0;
 }
 
 .articles-section-container-posts .posts-list a {
   font-size: 15px;
+  white-space: nowrap;
 }
 
 .articles-section-container-posts .posts-list .striped-list-info-body {
@@ -3910,7 +3938,8 @@ ul.tabs li a {
   border: 1px solid #dddddd77;
 }
 
-.tab_container .recent-section .posts-list section:last-child .striped-list-item {
+.tab_container .recent-section .posts-list section:last-child .striped-list-item,
+.tab_container .top-section .posts-list section:last-child .striped-list-item {
   border-bottom: none;
 }
 
@@ -3962,6 +3991,10 @@ ul.tabs li a {
 
 .config-post > div button:focus {
   outline: none;
+}
+
+.community-posts-list .posts-list.striped-list {
+  border-top: none;
 }
 
 /***** Striped list *****/
@@ -4129,7 +4162,7 @@ ul.tabs li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 17px;
+  height: 23px;
   padding: 0 8px;
 }
 
@@ -4508,30 +4541,31 @@ ul.tabs li a {
 }
 
 .post-sidebar__text {
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
 }
 
 .post-sidebar__button a {
+  margin: 0 auto;
   padding: 0 15px;
   line-height: 1.8;
 }
 
 @media (max-width: 768px) {
   .post-sidebar__button a {
-    margin: auto;
+    width: 234px;
   }
 }
 
 @media (min-width: 768px) {
   .post-sidebar__button a {
-    margin: auto;
+    width: 234px;
   }
 }
 
 @media (min-width: 1024px) {
   .post-sidebar__button a {
-    margin: 0 18%;
+    width: 100%;
   }
 }
 
@@ -5390,6 +5424,7 @@ ul.tabs li a {
 }
 
 .container-request-form .form .request-form .upload-dropzone {
+  background-color: #ffffff;
   height: 102px;
   margin: 0 auto;
   display: flex;
@@ -5435,7 +5470,7 @@ ul.tabs li a {
 
 /***** Pagination *****/
 .pagination {
-  margin: 20px 0;
+  margin: 65px 0 20px;
   text-align: center;
 }
 
@@ -7089,6 +7124,16 @@ html[dir="rtl"] .notification-left-aligned {
   line-height: 2;
   z-index: 0;
   transition: height ease-in 0s, all ease-in 0.3s;
+  text-align: center;
+}
+
+.cards .card:hover .card-hover .card-top {
+  text-align: center;
+  width: 100%;
+}
+
+.cards .card:hover .card-hover .card-top .card__title {
+  font-weight: 600;
 }
 
 .cards .card:hover .card-hover .card__middle {
