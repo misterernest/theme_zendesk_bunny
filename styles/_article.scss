@@ -354,6 +354,11 @@
       color: $text_color;
       font-size: 20px;
       font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        color: $link_color;
+      }
     }
   }
   .recent-articles {

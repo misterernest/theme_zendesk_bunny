@@ -1,5 +1,8 @@
 .sub-nav {
-  @include mobile { margin-bottom: 40px; }
+  @include mobile {
+    margin-bottom: 40px;
+    height: auto;
+  }
 
   @include tablet {
     align-items: baseline;
@@ -41,12 +44,22 @@
   }
 
   &--centered {
-    justify-content: center;
     text-decoration: none;
     list-style: none;
     display: none;
     justify-content: space-between;
-    padding: 0 126px;
     font-size: 20px;
+
+    @include mobile{
+      padding: 0 10px 0 0;
+      margin: 0;
+    }
+    @include tablet {
+      padding: 0 20px 0 0;
+    }
+    @include desktop {
+      padding: 0 126px;
+
+    }
   }
 }

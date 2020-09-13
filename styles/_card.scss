@@ -8,8 +8,11 @@
     justify-content: space-between;
 
   .card {
-    @include mobile { margin: 25px auto; }
-
+    @include mobile {
+      margin: 10px auto;
+      height: auto;
+      padding: 10px 0;
+    }
     @include tablet { margin: 25px auto; }
 
     @include desktop { margin: 0 0 50px; }
@@ -39,11 +42,22 @@
         display: flex;
         flex-direction: column;
         padding: 29px 10px 0;
+
+        @include mobile{
+          flex-direction: row;
+          padding: 0 10px;
+          height: 70px;
+        }
   
         .card__top {
           text-align: center;
+          @include mobile{
+            width: 70px;
+          }
+
           .card__image {
             margin: 0 auto;
+            height: 100%;
           }
         }
         .card__middle {
@@ -51,6 +65,12 @@
           font-size: 18px;
           font-weight: 700;
           text-align: center;
+
+          @include mobile{
+            display: flex;
+            align-items: center;
+            margin: auto auto auto 10px;
+          }
   
         }
   
@@ -58,7 +78,9 @@
           font-size: 17px;
           font-weight: 400;
           text-align: center;
-
+          @include mobile{
+            display: none;
+          }
           .card__description {
             margin: 0;
           }

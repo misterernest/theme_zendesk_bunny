@@ -294,6 +294,12 @@
           "label": "pros_banner_right_label"
         },
         {
+          "identifier": "pros_banner_right_mobile",
+          "type": "file",
+          "description": "category_pros_banner_right_mobile",
+          "label": "pros_banner_right_label_mobile"
+        },
+        {
           "identifier": "community_banner_topic_list",
           "type": "file",
           "description": "community_banner_topic_list",
