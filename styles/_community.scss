@@ -665,3 +665,9 @@ ul.tabs li a {
     }
   }
 }
+
+.community-posts-list {
+  .posts-list.striped-list {
+    border-top: none;
+  }
+}
