@@ -8,6 +8,9 @@
     display: grid;
     grid-template-columns: repeat(8, 12.5%);
     grid-template-rows: 84px 88px;
+    @include mobile {
+      padding: 0 10px;
+    }
     &--arrow-left {
       grid-column: 2 / span 2;
       grid-row: 1 / span 1;
@@ -27,6 +30,10 @@
       grid-row: 1 / span 1;
       justify-self: center;
       align-self: center;
+
+      @include mobile{
+        font-size: 23px;
+      }
     }
     &--button-client {
       grid-column: 1 / span 4;
@@ -40,6 +47,9 @@
     }
     img {
       max-width: 100%;
+      @include mobile {
+        width: 90%;
+      }
     }
   }
 }
