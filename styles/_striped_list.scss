@@ -91,7 +91,15 @@
     border-top: none;
     margin-top: 0;
     align-items: center;
+    &.column-section {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
 
+      > section {
+        flex: 1;
+      }
+    }
     > section {
       flex: 0 1 650px;
       @include mobile {

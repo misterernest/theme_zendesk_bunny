@@ -44,6 +44,15 @@
 </div>
 <script src="{{asset 'js_sub-page.js'}}"></script>
 <script>
-  $('.actual #community').remove();
-  $('.link-base #help_center').remove();
+  let linkActual = $('ol.breadcrumbs li:nth-child(2) a').attr('href');
+  let textLinkActual = $('ol.breadcrumbs li:nth-child(2)').attr('title');
+  $('#link_actual a').attr('href',linkActual);
+  $('#link_actual a').append(textLinkActual);
+</script>
+<script>
+  (() => {
+    if ($('#main-content section').length < 6){
+      $('#main-content').addClass('column-section')
+    }
+  })();
 </script>
