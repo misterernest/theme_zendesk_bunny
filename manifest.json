@@ -276,16 +276,34 @@
           "label": "client_banner_left_label"
         },
         {
+          "identifier": "client_banner_left_mobile",
+          "type": "file",
+          "description": "category_client_banner_left_mobile",
+          "label": "client_banner_left_label_mobile"
+        },
+        {
           "identifier": "client_banner_right",
           "type": "file",
           "description": "category_client_banner_right",
           "label": "client_banner_right_label"
         },
         {
+          "identifier": "client_banner_right_mobile",
+          "type": "file",
+          "description": "category_client_banner_right_mobile",
+          "label": "client_banner_right_label_mobile"
+        },
+        {
           "identifier": "pros_banner_left",
           "type": "file",
           "description": "category_pros_banner_left",
           "label": "ipros_banner_left_label"
+        },
+        {
+          "identifier": "pros_banner_left_mobile",
+          "type": "file",
+          "description": "category_pros_banner_left_mobile",
+          "label": "ipros_banner_left_label_mobile"
         },
         {
           "identifier": "pros_banner_right",
