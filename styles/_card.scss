@@ -12,6 +12,7 @@
       margin: 10px auto;
       height: auto;
       padding: 10px 0;
+      flex: 100%;
     }
     @include tablet { margin: 25px auto; }
 
@@ -118,50 +119,53 @@
           font-size: 0;
         }
       }
-
-    &:hover {
-      .card-top {
-        .card__title {
-          color: #ffffff;
-          font-size: 20px;
-        }
-      }
-      .card-middle {
-        color: #ffffff;
-        font-size: 16px;
-      }
-      .card-hover {
-        background-color: $brand_color;
-        top: 0;
-        height: 100%;
-        padding: 30px;
-        line-height: 2;
-        z-index: 0;
-        transition: height ease-in 0s, all ease-in 0.3s;
-        text-align: center;
-
+    @include tablet {
+      &:hover {
         .card-top {
-          text-align: center;
-          width: 100%;
           .card__title {
-            font-weight: 600;
+            color: #ffffff;
+            font-size: 20px;
           }
         }
-        .card__middle {
-          justify-content: space-between;
-          display: flex;
-          flex-flow: column;
-          a {
-            color: #ffffff;
-            font-size: 14px;
+        .card-middle {
+          color: #ffffff;
+          font-size: 16px;
+        }
+        .card-hover {
+          background-color: $brand_color;
+          top: 0;
+          height: 100%;
+          padding: 30px;
+          line-height: 2;
+          z-index: 0;
+          transition: height ease-in 0s, all ease-in 0.3s;
+          text-align: center;
 
-            &.see-more {
+          .card-top {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10px;
+            .card__title {
               font-weight: 600;
             }
+          }
+          .card__middle {
+            justify-content: space-between;
+            display: flex;
+            flex-flow: column;
+            a {
+              color: #ffffff;
+              font-size: 14px;
+              margin-bottom: 5px;
 
+              &.see-more {
+                font-weight: 600;
+              }
+
+            }
           }
         }
       }
     }
-    }
+  }
 }

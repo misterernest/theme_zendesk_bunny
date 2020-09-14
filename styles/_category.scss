@@ -68,6 +68,10 @@
   background-size: 100%;
   position: relative;
 
+  @include mobile {
+    display: none;
+  }
+
   .pro-join-community-banner__button {
 
     white-space: nowrap;
@@ -172,13 +176,26 @@
     }
 
     .second-banner {
-      flex: 0 1 728px;
-      height: 223px;
       background-repeat: no-repeat;
       background-size: 100%;
       font-weight: 700;
-      padding: 35px 0 35px 35px;
-      line-height: 32px;
+      @include mobile {
+        height: 83vw;
+        margin-bottom: 20px;
+      }
+
+      @include tablet {
+        flex-basis: 42vw;
+        height: 13vw;
+        padding: 2vw 0 2vw 2vw;
+        line-height: 32px;
+      }
+      @include big-screen {
+        flex: 0 1 728px;
+        height: 223px;
+        padding: 35px 0 35px 35px;
+        line-height: 32px;
+      }
 
       &--container-text {
         color: #fff;
@@ -189,19 +206,58 @@
         display: flex;
         flex-flow: column;
         justify-content: space-between;
+        @include mobile {
+          width: 100%;
+          padding: 7vw;
+          text-align: center;
+          justify-content: flex-start;
+        }
 
       }
 
       &--left {
-        &.client {background-image: url("$client_banner_left");}
-        &.pros {background-image: url("$pros_banner_left");}
+        &.client {
+          @include mobile {
+            background-image: url("$client_banner_left_mobile");
+          }
+          @include tablet {
+            background-image: url("$client_banner_left");
+          }
+          @include big-screen {
+            background-image: url("$client_banner_left");
+          }
+        }
+        &.pros {
+          @include mobile {
+            background-image: url("$pros_banner_left_mobile");
+          }
+          @include tablet {
+            background-image: url("$pros_banner_left");
+          }
+          @include big-screen {
+            background-image: url("$pros_banner_left");
+          }
+        }
         &-first-text {
           font-size: 1.47059vw;
           margin-bottom: 10px;
+          @include mobile{
+            font-size: 6vw;
+            line-height: 1.2;
+            text-align: left;
+          }
+          @include tablet {
+            font-size: 1.7vw;
+            line-height: 1.5;
+          }
+          @include big-screen {
+            font-size: 30px;
+            line-height: 1.2;
+          }
         }
         &-second-text {
           font-size: 22px;
-          margin-bottom: 10px;
+          display: none;
         }
         a.button.button-large {
           width: 12.448vw;
@@ -211,40 +267,118 @@
           justify-content: center;
           align-items: center;
           position: relative;
-          bottom: -5px;
-
+          @include mobile {
+            width: 34.5vw;
+            height: 6.5vw;
+            top: 7vw;
+            font-size: 2.5vw;
+          }
+          @include tablet {
+            bottom: -5px;
+          }
         }
       }
       &--right {
         &.client {
-          background-image: url("$client_banner_right");}
+          @include mobile {
+            background-image: url("$client_banner_right_mobile");
+          }
+          @include tablet {
+            background-image: url("$client_banner_right");
+          }
+          @include big-screen {
+            background-image: url("$client_banner_right");
+          }
+        }
         &.pros {
           background-image: url("$pros_banner_right");
           @include mobile {
             background-image: url("$pros_banner_right_mobile");
           }
+
+          .second-banner--container-text {
+            a.button.button-large {
+              @include mobile {
+                width: 40vw;
+              }
+            }
+          }
         }
         .second-banner--container-text {
           width: 60%;
+          @include mobile {
+            width: 100%;
+            height: 100%;
+          }
 
           a.button.button-large {
-            width: 14.8635vw;
-            height: 2.206vw;
-            font-size: 0.892856vw;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             bottom: -5px;
+            @include mobile {
+              width: 34.5vw;
+              height: 6.5vw;
+              top: 7vw;
+              font-size: 2.5vw;
+            }
+            @include tablet {
+              width: 14.8635vw;
+              height: 2.206vw;
+              font-size: 0.892856vw;
+            }
+            @include desktop {
+
+            }
+            @include big-screen {
+              font-size: 15px;
+            }
           }
         }
         &-first-text {
-          font-size: 1.47059vw;
+          @include mobile {
+            font-size: 5.5vw;
+            text-align: left;
+          }
+          > br {
+            @include mobile {
+              display: none;
+            }
+          }
+          @include tablet {
+            font-size: 1.7vw;
+            line-height: 1.5;
+          }
+          @include desktop {
+
+          }
+          @include big-screen {
+            font-size: 32px;
+          }
         }
         &-second-text {
-          font-size: 20px;
           line-height: 1.2;
           font-weight: 600;
+
+          @include mobile {
+            text-align: left;
+          }
+          @include tablet {
+            font-size: 1.41vw;
+            line-height: 1;
+          }
+          @include desktop {
+          }
+          @include big-screen {
+            font-size: 20px;
+          }
+
+          > br {
+            @include mobile{
+              display: none;
+            }
+          }
         }
       }
     }
@@ -275,11 +409,19 @@
   }
 
   .container {
-    padding: 87px 0 50px;
     @include mobile {
       max-width: 90%;
       margin: 0 auto;
       padding: 20px 0;
+    }
+    @include tablet {
+      padding: 50px 50px 30px;
+    }
+    @include desktop {
+      padding: 87px 5% 50px;
+    }
+    @include big-screen {
+      padding: 87px 0 50px;
     }
 
     > h3 {
@@ -296,14 +438,18 @@
   }
 
   .list-articles {
-    display: flex;flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
+
     .popular-article {
       flex: 1 1 315px;
       display: flex;
       flex-flow: row;
       padding: 0 3vw 50px 0;
-
+      @include mobile {
+        flex: 1 1 768px;
+      }
       &:nth-of-type(1n + 4) {
         @include mobile {
           display: none;
