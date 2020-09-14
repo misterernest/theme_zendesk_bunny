@@ -2,6 +2,19 @@
 
 <header class="header">
   <div class="header-container">
+    <div class="menu-mobile-container">
+      <i class="fas fa-bars" id="menu-mobile"><span>menu</span></i>
+      <div class="content-menu" id="content-menu">
+        <div class="menu-header">
+          <i class="fas fa-times" id="close-menu"><span>close</span></i>
+        </div>
+        <div class="menu-middle">
+          <a href="/hc/en-us/categories/200296637-Help-for-Clients">Help for Clients</a>
+          <a href="/hc/en-us/categories/200296218-Help-for-Pros">Help for Pros</a>
+          {{link 'community'}}
+        </div>
+      </div>
+    </div>
     <div class="logo">
       <a id='logo-bunny' href="/hc/en-us/">
         <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}">
@@ -40,3 +53,20 @@
     </div>
   </div>
 </header>
+<script>
+  $('#menu-mobile').click(() => {
+    if ($('#content-menu').hasClass('show')) {
+      $('#content-menu').removeClass('show');
+    } else {
+      $('#content-menu').addClass('show');
+    }
+  })
+
+  $('#close-menu').click(() => {
+    if ($('#content-menu').hasClass('show')) {
+      $('#content-menu').removeClass('show');
+    } else {
+      $('#content-menu').addClass('show');
+    }
+  })
+</script>
