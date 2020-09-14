@@ -99,7 +99,28 @@
           <p class="card__description">{{excerpt description characters=70}}</p>
         </div>
       </a>
+      <div class="card-hover">
+        <div class="card-top">
+          <a class="card__title" href="{{url}}">{{name}}</a>
+        </div>
+        <div class="card__middle" id="{{id}}"></div>
+      </div>
     </div>
+    <script>
+      (async (topicID) => {
+        await $.ajax({
+          url: `/api/v2/community/topics/${topicID}/posts?&sort_by=votes&per_page=6`,
+          method: "GET",
+          success: function (data) {
+            let { posts } = data;
+            posts.map( post => {
+              $(`#${topicID}`).append(`<a href="${post.html_url}">${post.title.substring(0, 30)}...</a>`)
+            });
+            $(`#${topicID}`).append(`<a class="see-more" href="{{url}}">See all</a>`)
+          }
+        })
+      })({{id}});
+    </script>
     {{/each}}
 
     <div class="card-empty"></div>
@@ -388,8 +409,7 @@
   </script>
 
   <script>
-
-    /* */
+    /* CHECK USER ROLE */
     (async () => {
       await $.ajax({
         url: `/api/v2/users/me/session.json`,
@@ -411,7 +431,4 @@
         }
       })
     })();
-
-
-
   </script>
