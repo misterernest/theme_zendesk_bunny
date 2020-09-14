@@ -660,6 +660,7 @@ ul {
 /***** Header *****/
 .header {
   background-color: $brand_background_color;
+  z-index: 6;
 }
 
 .header .header-container {
@@ -925,6 +926,62 @@ ul {
 [dir="rtl"] .skip-navigation:focus, [dir="rtl"] .skip-navigation:active {
   left: initial;
   right: auto;
+}
+
+@media (min-width: 768px) {
+  .menu-mobile-container {
+    display: none;
+  }
+}
+
+.menu-mobile-container > i.fas:before, .menu-mobile-container > .fas.notification-inline.notification-error::before {
+  font-size: 35px;
+  color: $link_color;
+}
+
+.menu-mobile-container .content-menu:not(.show) {
+  display: none;
+}
+
+.menu-mobile-container .content-menu.show {
+  flex-direction: column;
+  align-items: unset;
+  width: 100%;
+  height: 100%;
+  padding: 10px 1.25rem;
+  margin: 57px 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-color: #ffffff;
+  z-index: 5;
+}
+
+.menu-mobile-container .content-menu.show .menu-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-mobile-container .content-menu.show .menu-header i.fas {
+  padding: 20px;
+}
+
+.menu-mobile-container .content-menu.show .menu-header i.fas:before, .menu-mobile-container .content-menu.show .menu-header .fas.notification-inline.notification-error::before {
+  font-size: 36px;
+}
+
+.menu-mobile-container .content-menu.show .menu-middle {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-mobile-container .content-menu.show .menu-middle a {
+  margin: 15px 0px 15px 10px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /***** User info in header *****/
@@ -4643,6 +4700,16 @@ ul.tabs li a {
   align-items: center;
 }
 
+.striped-list.articles-list.column-section {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.striped-list.articles-list.column-section > section {
+  flex: 1;
+}
+
 .striped-list.articles-list > section {
   flex: 0 1 650px;
 }
@@ -7733,6 +7800,7 @@ html[dir="rtl"] .notification-left-aligned {
     justify-content: space-between;
     display: flex;
     flex-flow: column;
+    width: 100%;
   }
   .cards .card:hover .card-hover .card__middle a {
     color: #ffffff;
