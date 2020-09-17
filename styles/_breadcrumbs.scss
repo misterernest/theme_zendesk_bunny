@@ -1,5 +1,8 @@
 /***** Breadcrumbs *****/
 .breadcrumbs {
+  @include mobile {
+    display: none;
+  }
   @include tablet {
     margin: 0;
   }
