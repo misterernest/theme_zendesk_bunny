@@ -36,7 +36,7 @@
   .banner-community {
     max-width: $max-width-container;
     padding: 0;
-    top: 9.7vw;
+    top: 7.7vw;
 
     &__text-first {
       
@@ -47,7 +47,7 @@
       @include mobile{
         font-size: 25px;
         line-height: 30px;
-        display: inline-flex;
+        margin-bottom: 15px;
       }
       @include tablet {
         font-size: 30px;
@@ -184,7 +184,10 @@
   position: relative;
 
   @include mobile{
-    padding: 37px 0 10px;
+    padding: 20px 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   @include tablet {
 

@@ -15,6 +15,7 @@ $page__title_font-size: 20px;
     justify-content: space-between;
     @include mobile {
       height: 57px;
+      justify-content: flex-start;
     }
     @include tablet {
       height: 57px;
@@ -110,6 +111,10 @@ $page__title_font-size: 20px;
 }
 
 .nav-wrapper {
+  @include mobile{
+    margin-right: 0;
+    margin-left: auto;
+  }
   a {
     @include tablet {
       display: inline-block;
@@ -227,6 +232,8 @@ $page__title_font-size: 20px;
   }
 }
 .menu-mobile-container {
+
+  margin-right: 30px;
   @include tablet {
     display: none;
   }
