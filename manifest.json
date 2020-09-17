@@ -258,6 +258,12 @@
           "label": "homepage_background_image_label"
         },
         {
+          "identifier": "homepage_background_image_mobile",
+          "type": "file",
+          "description": "homepage_background_image_description",
+          "label": "homepage_background_image_label_mobile"
+        },
+        {
           "identifier": "community_background_image",
           "type": "file",
           "description": "community_background_image_description",
