@@ -242,9 +242,9 @@
           font-size: 1.47059vw;
           margin-bottom: 10px;
           @include mobile{
-            font-size: 6vw;
+            font-size: 8vw;
             line-height: 1.2;
-            text-align: left;
+            text-align: center;
           }
           @include tablet {
             font-size: 1.7vw;
@@ -253,6 +253,12 @@
           @include big-screen {
             font-size: 30px;
             line-height: 1.2;
+          }
+
+          br {
+            @include mobile {
+              display: none;
+            }
           }
         }
         &-second-text {
@@ -268,10 +274,11 @@
           align-items: center;
           position: relative;
           @include mobile {
-            width: 34.5vw;
-            height: 6.5vw;
-            top: 7vw;
-            font-size: 2.5vw;
+            width: 61.5vw;
+            height: 8.5vw;
+            top: 2vw;
+            font-size: 4.5vw;
+            margin: 0 auto;
           }
           @include tablet {
             bottom: -5px;
