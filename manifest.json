@@ -334,6 +334,12 @@
           "type": "file",
           "description": "img_sec_top_contributor",
           "label": "img_sec_top_contributor_label"
+        },
+        {
+          "identifier": "community_background_image_mobile",
+          "type": "file",
+          "description": "community_background_image_mobile",
+          "label": "community_background_image_mobile_label"
         }
       ]
     },
