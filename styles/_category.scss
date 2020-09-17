@@ -306,7 +306,11 @@
           .second-banner--container-text {
             a.button.button-large {
               @include mobile {
-                width: 40vw;
+                width: 71.5vw;
+                height: 8.5vw;
+                top: 5vw;
+                font-size: 4.2vw;
+                margin: 0 auto;
               }
             }
           }
@@ -349,6 +353,7 @@
             font-size: 7vw;
             text-align: center;
             line-height: 1;
+            margin-bottom: 5vw;
           }
           > br {
             @include mobile {
@@ -371,7 +376,8 @@
           font-weight: 600;
 
           @include mobile {
-            text-align: left;
+            text-align: center;
+            font-size: 5.5vw;
           }
           @include tablet {
             font-size: 1.41vw;
