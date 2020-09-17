@@ -2,7 +2,7 @@
 .community {
   &-hero {
     @include mobile {
-      background-image: url($community_background_image_mobile);  
+      background-image: url($community_bg_image_mobile);
     }
     
     background-image: url($community_background_image);
