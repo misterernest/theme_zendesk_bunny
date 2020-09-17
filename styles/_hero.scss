@@ -10,7 +10,7 @@
   width: 100%;
 
   @include mobile{
-    background-image: url($homepage_background_image_mobile);
+    background-image: url($homepage_bg_image_mobile);
     background-position: bottom;
     height: 40vw;
   }

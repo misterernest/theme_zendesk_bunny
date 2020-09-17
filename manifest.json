@@ -258,7 +258,7 @@
           "label": "homepage_background_image_label"
         },
         {
-          "identifier": "homepage_background_image_mobile",
+          "identifier": "homepage_bg_image_mobile",
           "type": "file",
           "description": "homepage_background_image_description",
           "label": "homepage_background_image_label_mobile"
@@ -336,7 +336,7 @@
           "label": "img_sec_top_contributor_label"
         },
         {
-          "identifier": "community_background_image_mobile",
+          "identifier": "community_bg_image_mobile",
           "type": "file",
           "description": "community_background_image_mobile",
           "label": "community_background_image_mobile_label"
