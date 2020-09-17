@@ -1415,7 +1415,7 @@ ul {
 
 @media (max-width: 768px) {
   .hero {
-    background-image: url($homepage_background_image_mobile);
+    background-image: url($homepage_bg_image_mobile);
     background-position: bottom;
     height: 40vw;
   }
@@ -3928,7 +3928,7 @@ main.third-page {
 
 @media (max-width: 768px) {
   .community-hero {
-    background-image: url($community_background_image_mobile);
+    background-image: url($community_bg_image_mobile);
   }
 }
 
