@@ -74,7 +74,7 @@
         flex-direction: column;
         font-size: 20px;
         line-height: 20px;
-        display: inline;
+        display: inline-block;
       }
       @include tablet {
         font-size: 30px;
