@@ -276,7 +276,7 @@
           @include mobile {
             width: 61.5vw;
             height: 8.5vw;
-            top: 2vw;
+            top: 5vw;
             font-size: 4.5vw;
             margin: 0 auto;
           }
@@ -325,10 +325,11 @@
             position: relative;
             bottom: -5px;
             @include mobile {
-              width: 34.5vw;
-              height: 6.5vw;
-              top: 7vw;
-              font-size: 2.5vw;
+              width: 61.5vw;
+              height: 8.5vw;
+              top: 6vw;
+              font-size: 4.5vw;
+              margin: 0 auto;
             }
             @include tablet {
               width: 14.8635vw;
@@ -345,8 +346,9 @@
         }
         &-first-text {
           @include mobile {
-            font-size: 5.5vw;
-            text-align: left;
+            font-size: 7vw;
+            text-align: center;
+            line-height: 1;
           }
           > br {
             @include mobile {
